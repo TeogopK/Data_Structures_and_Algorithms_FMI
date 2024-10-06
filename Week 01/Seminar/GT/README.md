@@ -2,6 +2,8 @@
 - поинтъри и референции
 - типове данни
 - double compare
+  - **Бонус:** Как работят float и double - [тук](https://fabiensanglard.net/floating_point_visually_explained/?fbclid=IwAR1lwXOIifhzJmXkx49eniqaHE1iI7-MB6ofwR5mHgFOOO_NJWn-WxXbQBk)
+
 - рекурсия
   - pros and cons
     
