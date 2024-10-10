@@ -83,6 +83,7 @@
 double get_Pi() {
     return 3.14;
 }
+```
 
 *O(1)* - връщането на елемент от масив:
   
@@ -107,13 +108,15 @@ void traverse_array(int arr[], int N) {
 *O(N<sup>2</sup>)* - обхождане на масив с големина *N* *N* пъти (чрез вложен цикъл). Обхождане на матрица с размер *NxN*.
 
 ```cpp
-void traverse_matrix(int N) {
+void traverse_matrix(const std::vector<std::vector<int>>& matrix, int N) {
     for (int i = 0; i < N; ++i) {
         for (int j = 0; j < N; ++j) {
-            std::cout << i << " " << j << std::endl;
+            std::cout << matrix[i][j] << " ";
         }
+        std::cout << std::endl;
     }
 }
+
 ```
 
 ---
@@ -140,6 +143,7 @@ int count_deuces(int N, int count = 0) {
     
     return count_deuces(N / 2, count + 1);
 }
+```
 
 ---
 
