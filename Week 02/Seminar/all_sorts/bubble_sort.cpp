@@ -102,25 +102,6 @@ void optimized_bubble_sort(vector<int> &arr, bool verbose = false)
     }
 }
 
-// iterating until the last swap index of the previous iteration
-void evenMoreOptimizedBubbleSort(int* arr, size_t size) {
-	int lastSwappedIndex = size - 1;
-	for (size_t i = 0; i < size; i++) {
-		int currentSwappedIndex = -1;
-		for (size_t j = 0; j < lastSwappedIndex; j++) {
-			if (arr[j] > arr[j + 1]) {
-				currentSwappedIndex = j;
-				swap(arr[j], arr[j + 1]);
-			}
-		}
-
-		if (currentSwappedIndex == -1) {
-			return;
-		}
-		lastSwappedIndex = currentSwappedIndex;
-	}
-}
-
 // Worst case bubble sort (Count number of swaps)
 void worst_case_bubble_sort(int N)
 {
