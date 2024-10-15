@@ -82,7 +82,7 @@ void bubbleSort(std::vector<int>& arr) {
 }
 ```
 
-Може броят стъпки да бъде намален?
+Има ли излишни итерации в тази имплементация и ако да - как да ги намалим?
 
 ```c++
 void optimizedBubbleSort(std::vector<int>& arr) {
