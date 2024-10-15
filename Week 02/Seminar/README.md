@@ -324,6 +324,9 @@ void quickSort(std::vector<int>& arr, int low, int high) {
         quickSort(arr, pi + 1, high);
     }
 }
+
+// how to use
+quickSort(arr, 0, arr.size() - 1);
 ```
 
 Quick sort е по-бърз от Merge sort за малки масиви. Има по-малка константа и изисква по-малко допълнителна памет.
