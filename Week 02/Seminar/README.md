@@ -379,9 +379,9 @@ Counting sort, когато е възможно ползването му, по�
 
 |          | Merge sort | Quick sort         | Counting sort |
 | -------- | ---------- | ------------------ | ------------- |
-| BC       | *O(NlogN)* | *O(NlogN)*         | *O(N + K)*    |
-| AC       | *O(NlogN)* | *O(NlogN)*         | *O(N + K)*    |
-| WC       | *O(NlogN)* | *O(N<sup>2</sup>)* | *O(N + K)*    |
+| Best case       | *O(NlogN)* | *O(NlogN)*         | *O(N + K)*    |
+| Average Case       | *O(NlogN)* | *O(NlogN)*         | *O(N + K)*    |
+| Worst Case       | *O(NlogN)* | *O(N<sup>2</sup>)* | *O(N + K)*    |
 | Памет    | *O(N)*     | *O(logN)*          | *O(N + K)*    |
 | Стабилен | да         | не                 | да            |
 
