@@ -82,6 +82,29 @@ void bubbleSort(std::vector<int>& arr) {
 }
 ```
 
+Може броят стъпки да бъде намален?
+
+```c++
+void optimizedBubbleSort(std::vector<int>& arr) {
+	int lastSwappedIndex = arr.size() - 1;
+	for (size_t i = 0; i < arr.size(); i++) {
+		int currentSwappedIndex = 0; // what if we used -1?
+		for (size_t j = 0; j < lastSwappedIndex; j++) {
+			if (arr[j] > arr[j + 1]) {
+				currentSwappedIndex = j;
+				swap(arr[j], arr[j + 1]);
+			}
+		}
+
+		if (currentSwappedIndex == 0) {
+			return;
+		}
+		lastSwappedIndex = currentSwappedIndex;
+	}
+}
+```
+
+
 ## Selection sort (Метод на пряката селекция)
 
 | Selection sort        | n = input size       |
