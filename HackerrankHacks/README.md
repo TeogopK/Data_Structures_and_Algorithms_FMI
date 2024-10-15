@@ -1,3 +1,5 @@
+Крадаптирано от [тук](https://github.com/Stoyan-Zlatev/Data-Sructures-and-Algorithms/blob/main/Tips.md)
+
 # Полезни трикове
 
 #### Асинхронност на потоците за четене и писане
