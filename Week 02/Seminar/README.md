@@ -218,46 +218,55 @@ void insertionSort(std::vector<int>& arr) {
 Идея: Масивът се разделя на две половинки подмасиви. Всяка половинка продължава да се разделя. Процесът спира при достигане на масив с един елемент, който сам по-себе си е сортиран.
   
 ```c++
-void mergeSort(std::vector<int>& arr) {
-    if (arr.size() > 1) {
-        int middle = arr.size() / 2;
-
-        std::vector<int> left_arr(arr.begin(), arr.begin() + middle);
-        std::vector<int> right_arr(arr.begin() + middle, arr.end());
-
-        mergeSort(left_arr);
-        mergeSort(right_arr);
-
-        merge(arr, left_arr, right_arr);
+void _mergeSort(std::vector<int>& arr, size_t left, size_t right, std::vector<int>& buffer) {
+    if(right - left <= 1) {
+	return;
     }
+
+    size_t mid = left + (right - left) / 2;
+    
+    _mergeSort(arr, left, mid, buffer);
+    _mergeSort(arr, mid, right, buffer);
+    _merge(arr, left, mid, right, buffer);
+}
+
+void mergeSort(std::vector<int>& arr) {
+    if(arr.size() <= 1) {
+	return;
+    }
+
+    std::vector<int> buffer(arr.size());
+    _mergeSort(arr, 0, arr.size(), buffer);
 }
 ```
 
 Тогава започва обратния процес по сливане на подмасивите. Две вече сортирани половинки се сливат в по-голям подмасив, като се "придърпват" в правилния ред елементи ту от левия, ту от десния.
 
 ```c++
-void merge(std::vector<int>& arr, std::vector<int>& left_arr, std::vector<int>& right_arr) {
-    int left_size = left_arr.size();
-    int right_size = right_arr.size();
-    
-    int index = 0;
-    int left = 0;
-    int right = 0;
+void _merge(std::vector<int>& arr, size_t left, size_t mid, size_t right, std::vector<int>& buffer) {
+    size_t leftIdx = left;
+    size_t rightIdx = mid;
+    size_t index = 0;
 
-    while (left < left_size && right < right_size) {
-        if (left_arr[left] <= right_arr[right]) {
-            arr[index++] = left_arr[left++];
-        } else {
-            arr[index++] = right_arr[right++];
+    while (leftIdx < mid && rightIdx < right) {
+        if (arr[leftIdx] <= arr[rightIdx]) {
+            buffer[index++] = arr[leftIdx++];
+        }
+        else {
+            buffer[index++] = arr[rightIdx++];
         }
     }
 
-    while (left < left_size) {
-        arr[index++] = left_arr[left++];
+    while (leftIdx < mid) {
+        buffer[index++] = arr[leftIdx++];
     }
 
-    while (right < right_size) {
-        arr[index++] = right_arr[right++];
+    while (rightIdx < right) {
+        buffer[index++] = arr[rightIdx++];
+    }
+
+    for (size_t i = 0; i < index; i++) {
+	arr[left + i] = buffer[i];
     }
 }
 ```
