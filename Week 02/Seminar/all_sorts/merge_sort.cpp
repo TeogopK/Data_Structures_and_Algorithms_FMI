@@ -21,137 +21,132 @@ Merge Sort Algorithm
 #include <string>
 
 using namespace std;
+
 // Function to merge two halves for integers with verbose output
-void merge(vector<int> &arr, vector<int> &left_arr, vector<int> &right_arr)
+void merge(vector<int> &arr, vector<int> &temp, int left_start, int right_start, int right_end)
 {
+    int left = left_start;
+    int left_end = right_start - 1;
+    int index = left_start;
+    int right = right_start;
+
     cout << "Start of merging <- ";
     cout << "Left: ";
-    for (int n : left_arr)
-        cout << n << " ";
+    for (int i = left_start; i <= left_end; i++)
+        cout << arr[i] << " ";
     cout << "| Right: ";
-    for (int n : right_arr)
-        cout << n << " ";
+    for (int i = right_start; i <= right_end; i++)
+        cout << arr[i] << " ";
     cout << endl;
 
-    int index = 0, left = 0, right = 0;
-    int left_size = left_arr.size();
-    int right_size = right_arr.size();
-
-    while (left < left_size && right < right_size)
+    while (left <= left_end && right <= right_end)
     {
-        if (left_arr[left] <= right_arr[right])
+        if (arr[left] <= arr[right])
         {
-            arr[index] = left_arr[left];
-            left++;
+            temp[index++] = arr[left++];
         }
         else
         {
-            arr[index] = right_arr[right];
-            right++;
+            temp[index++] = arr[right++];
         }
-        index++;
     }
 
-    while (left < left_size)
+    while (left <= left_end)
     {
-        arr[index] = left_arr[left];
-        left++;
-        index++;
+        temp[index++] = arr[left++];
     }
 
-    while (right < right_size)
+    while (right <= right_end)
     {
-        arr[index] = right_arr[right];
-        right++;
-        index++;
+        temp[index++] = arr[right++];
+    }
+
+    for (int i = left_start; i <= right_end; i++)
+    {
+        arr[i] = temp[i];
     }
 
     cout << "End of merging: ";
-    for (int n : arr)
-        cout << n << " ";
+    for (int i = left_start; i <= right_end; i++)
+        cout << arr[i] << " ";
     cout << endl;
 }
 
-// Merge sort implementation for integers with verbose output
+// Merge sort implementation for integers with buffer
+void merge_sort(vector<int> &arr, vector<int> &temp, int start, int end)
+{
+    if (start < end)
+    {
+        // Avoids overflow for large values of start and end, equal to (start + end) / 2
+        int middle = start + (end - start) / 2;
+
+        merge_sort(arr, temp, start, middle);
+        merge_sort(arr, temp, middle + 1, end);
+
+        merge(arr, temp, start, middle + 1, end);
+    }
+}
+
 void merge_sort(vector<int> &arr)
 {
-    if (arr.size() > 1)
-    {
-        int middle = arr.size() / 2;
-
-        vector<int> left_arr(arr.begin(), arr.begin() + middle);
-        vector<int> right_arr(arr.begin() + middle, arr.end());
-
-        cout << "Splitting: ";
-        for (int n : arr)
-            cout << n << " ";
-        cout << "-> Left: ";
-        for (int n : left_arr)
-            cout << n << " ";
-        cout << "| Right: ";
-        for (int n : right_arr)
-            cout << n << " ";
-        cout << endl;
-
-        merge_sort(left_arr);
-        merge_sort(right_arr);
-
-        merge(arr, left_arr, right_arr);
-    }
+    vector<int> temp(arr.size());
+    merge_sort(arr, temp, 0, arr.size() - 1);
 }
 
 // Function to merge two halves for pairs
-void merge_pairs(vector<pair<int, string>> &arr, vector<pair<int, string>> &left_arr, vector<pair<int, string>> &right_arr)
+void merge_pairs(vector<pair<int, string>> &arr, vector<pair<int, string>> &temp, int left_start, int right_start, int right_end)
 {
-    int index = 0, left = 0, right = 0;
-    int left_size = left_arr.size();
-    int right_size = right_arr.size();
+    int left = left_start;
+    int left_end = right_start - 1;
+    int index = left_start;
+    int right = right_start;
 
-    while (left < left_size && right < right_size)
+    while (left <= left_end && right <= right_end)
     {
-        if (left_arr[left].first <= right_arr[right].first)
+        if (arr[left].first <= arr[right].first)
         {
-            arr[index] = left_arr[left];
-            left++;
+            temp[index++] = arr[left++];
         }
         else
         {
-            arr[index] = right_arr[right];
-            right++;
+            temp[index++] = arr[right++];
         }
-        index++;
     }
 
-    while (left < left_size)
+    while (left <= left_end)
     {
-        arr[index] = left_arr[left];
-        left++;
-        index++;
+        temp[index++] = arr[left++];
     }
 
-    while (right < right_size)
+    while (right <= right_end)
     {
-        arr[index] = right_arr[right];
-        right++;
-        index++;
+        temp[index++] = arr[right++];
+    }
+
+    for (int i = left_start; i <= right_end; i++)
+    {
+        arr[i] = temp[i];
     }
 }
 
-// Merge sort implementation for pairs
+// Merge sort implementation for pairs with buffer
+void merge_sort_pairs(vector<pair<int, string>> &arr, vector<pair<int, string>> &temp, int start, int end)
+{
+    if (start < end)
+    {
+        int middle = (start + end) / 2;
+
+        merge_sort_pairs(arr, temp, start, middle);
+        merge_sort_pairs(arr, temp, middle + 1, end);
+
+        merge_pairs(arr, temp, start, middle + 1, end);
+    }
+}
+
 void merge_sort_pairs(vector<pair<int, string>> &arr)
 {
-    if (arr.size() > 1)
-    {
-        int middle = arr.size() / 2;
-
-        vector<pair<int, string>> left_arr(arr.begin(), arr.begin() + middle);
-        vector<pair<int, string>> right_arr(arr.begin() + middle, arr.end());
-
-        merge_sort_pairs(left_arr);
-        merge_sort_pairs(right_arr);
-
-        merge_pairs(arr, left_arr, right_arr);
-    }
+    vector<pair<int, string>> temp(arr.size());
+    merge_sort_pairs(arr, temp, 0, arr.size() - 1);
 }
 
 // Main function for integer merge sort
