@@ -137,8 +137,10 @@ void selectionSort(std::vector<int>& arr) {
                 min_index = j;
             }
         }
-        
-        std::swap(arr[min_index], arr[i]);
+
+	if(min_index != i) {
+            std::swap(arr[min_index], arr[i]);
+	}
     }
 }
 ```
