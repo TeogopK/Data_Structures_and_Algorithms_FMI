@@ -281,7 +281,8 @@ Merge sort гарантира енлог сложност дори в най-л�
 | ------------------------------ | ---------------------------------------- |
 | Time complexity (Worst case)   | $$\mathcal{O}(n^2)$$                     |
 | Time complexity (Average case) | $$\mathcal{O}(n*log(n))$$                |
-| Space complexity               | $$\mathcal{O}(log(n))$$                  |
+| Space complexity (Worst Case)  | $$\mathcal{O}(n)$$                  |
+| Space complexity (Average case)| $$\mathcal{O}(log(n))$$                  |
 | Number of comparisons          | $$\mathcal{O}(n*log(n))$$                |
 | Number of swaps                | $$\mathcal{O}(n*log(n))$$                |
 | Adaptive                       | Anti-Adaptive (more randomness = better) |
