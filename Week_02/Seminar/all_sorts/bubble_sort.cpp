@@ -97,6 +97,7 @@ void optimized_bubble_sort(vector<int> &arr, bool verbose = false)
         // Early exit if no elements were swapped
         if (!swapped)
         {
+            cout << "Early exit at iteration " << i + 1 << ".\n";
             break;
         }
     }
