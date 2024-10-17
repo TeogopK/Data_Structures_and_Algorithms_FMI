@@ -59,6 +59,8 @@ int partition(vector<int> &arr, int low, int high)
     return i;                                                             // Return the partitioning index
 }
 
+int global_level_counter = 0;
+
 // Function implementing quick sort
 void quick_sort(vector<int> &arr, int low, int high)
 {
@@ -67,7 +69,9 @@ void quick_sort(vector<int> &arr, int low, int high)
         int pi = partition(arr, low, high); // Partition the array
 
         // Recursively sort elements before and after partition
+        std::cout << "Going down after finishing level " << ++global_level_counter << endl;
         quick_sort(arr, low, pi - 1);
+        std::cout << "Going up after finishing level " << global_level_counter-- << endl;
         quick_sort(arr, pi + 1, high);
     }
 }
