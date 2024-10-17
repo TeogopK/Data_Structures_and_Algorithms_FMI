@@ -293,7 +293,7 @@ Merge sort гарантира енлог сложност дори в най-л�
 | Parallel                        | Yes                                      |
 | External                        | No                                       |
 
-- *О(logN)* сложност по [памет*](https://en.wikipedia.org/wiki/Quicksort#Space_complexity)!
+- *О(logN)* сложност по [памет в средния случай*](https://en.wikipedia.org/wiki/Quicksort#Space_complexity)!
 
 
 Идея: Избира се елемент от масива, по-който ще се извършва подредбата. Чрез последователни промени, всички по-малки от избрания остават в лявата част на масива, а по-големите - в дясната. Избраният елемент се сменя с първия по-голям от него, за да се позиционира между двете групи.
@@ -340,7 +340,7 @@ Quick sort е по-бърз от Merge sort за малки масиви. Има
 | ---------------------------- | ------------------------------ |
 | Time complexity (Worst case) | $$\mathcal{O}(n + k)$$         |
 | Time complexity (Best case)  | $$\mathcal{O}(n)$$             |
-| Space complexity             | $$\mathcal{O}(k)$$             |
+| Space complexity             | $$\mathcal{O}(n + k)$$         |
 | Adaptive                     | No                             |
 | Stable                       | Yes                            |
 | Local                        | No                             |
@@ -396,3 +396,5 @@ Counting sort, когато е възможно ползването му, по�
 
 - [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 - [Find the Difference](https://leetcode.com/problems/find-the-difference/)
+- [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
+- [Squares of a Sorted array](https://leetcode.com/problems/squares-of-a-sorted-array/)
