@@ -277,21 +277,21 @@ Merge sort гарантира енлог сложност дори в най-л�
 
 ## Quick sort (Бързо сортиране)
 
-| Quick sort                     | n = input size                           |
-| ------------------------------ | ---------------------------------------- |
-| Time complexity (Worst case)   | $$\mathcal{O}(n^2)$$                     |
-| Time complexity (Average case) | $$\mathcal{O}(n*log(n))$$                |
-| Space complexity (Worst Case)  | $$\mathcal{O}(n)$$                  |
-| Space complexity (Average case)| $$\mathcal{O}(log(n))$$                  |
-| Number of comparisons          | $$\mathcal{O}(n*log(n))$$                |
-| Number of swaps                | $$\mathcal{O}(n*log(n))$$                |
-| Adaptive                       | Anti-Adaptive (more randomness = better) |
-| Stable                         | No                                       |
-| Local                          | Yes                                      |
-| Online                         | No                                       |
-| In-place                       | Yes                                      |
-| Parallel                       | Yes                                      |
-| External                       | No                                       |
+| Quick sort                      | n = input size                           |
+| ------------------------------- | ---------------------------------------- |
+| Time complexity (Worst case)    | $$\mathcal{O}(n^2)$$                     |
+| Time complexity (Average case)  | $$\mathcal{O}(n*log(n))$$                |
+| Space complexity (Worst Case)   | $$\mathcal{O}(n)$$                       |
+| Space complexity (Average case) | $$\mathcal{O}(log(n))$$                  |
+| Number of comparisons           | $$\mathcal{O}(n*log(n))$$                |
+| Number of swaps                 | $$\mathcal{O}(n*log(n))$$                |
+| Adaptive                        | Anti-Adaptive (more randomness = better) |
+| Stable                          | No                                       |
+| Local                           | Yes                                      |
+| Online                          | No                                       |
+| In-place                        | Yes                                      |
+| Parallel                        | Yes                                      |
+| External                        | No                                       |
 
 - *О(logN)* сложност по [памет*](https://en.wikipedia.org/wiki/Quicksort#Space_complexity)!
 
@@ -384,13 +384,13 @@ Counting sort, когато е възможно ползването му, по�
 
 ### Обобщение на бързите алгоритми:
 
-|          | Merge sort | Quick sort         | Counting sort |
-| -------- | ---------- | ------------------ | ------------- |
-| Best case       | *O(NlogN)* | *O(NlogN)*         | *O(N + K)*    |
-| Average Case       | *O(NlogN)* | *O(NlogN)*         | *O(N + K)*    |
-| Worst Case       | *O(NlogN)* | *O(N<sup>2</sup>)* | *O(N + K)*    |
-| Памет    | *O(N)*     | *O(logN)*          | *O(N + K)*    |
-| Стабилен | да         | не                 | да            |
+|              | Merge sort | Quick sort         | Counting sort |
+| ------------ | ---------- | ------------------ | ------------- |
+| Best case    | *O(NlogN)* | *O(NlogN)*         | *O(N + K)*    |
+| Average Case | *O(NlogN)* | *O(NlogN)*         | *O(N + K)*    |
+| Worst Case   | *O(NlogN)* | *O(N<sup>2</sup>)* | *O(N + K)*    |
+| Памет        | *O(N)*     | *O(N)*             | *O(N + K)*    |
+| Стабилен     | да         | не                 | да            |
 
 ## Задачи за упражнение (в LeetCode)
 

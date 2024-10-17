@@ -6,7 +6,8 @@ Quick Sort Algorithm
    - Worst Case: O(N^2) when the array is sorted in reverse order or all elements are the same.
 
 2. Space Complexity:
-   - O(log N) auxiliary space for the call stack in the recursive implementation.
+   - O(N) in the worst case.
+   - The average case needs O(log N) auxiliary space for the call stack in the recursive implementation.
 
 3. Is it Stable?
    - No, quick sort is not a stable sorting algorithm. Equal elements may not maintain their relative positions after sorting.
