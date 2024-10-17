@@ -22,6 +22,15 @@ Merge Sort Algorithm
 
 using namespace std;
 
+void print(vector<int> &arr, const int start, const int end, bool add_new_line = true)
+{
+    for (int i = start; i <= end; i++)
+        cout << arr[i] << " ";
+
+    if (add_new_line)
+        cout << endl;
+}
+
 // Function to merge two halves for integers with verbose output
 void merge(vector<int> &arr, vector<int> &temp, int left_start, int right_start, int right_end)
 {
@@ -31,13 +40,12 @@ void merge(vector<int> &arr, vector<int> &temp, int left_start, int right_start,
     int right = right_start;
 
     cout << "Start of merging <- ";
+
     cout << "Left: ";
-    for (int i = left_start; i <= left_end; i++)
-        cout << arr[i] << " ";
+    print(arr, left_start, left_end, false);
+
     cout << "| Right: ";
-    for (int i = right_start; i <= right_end; i++)
-        cout << arr[i] << " ";
-    cout << endl;
+    print(arr, right_start, right_end);
 
     while (left <= left_end && right <= right_end)
     {
@@ -67,9 +75,7 @@ void merge(vector<int> &arr, vector<int> &temp, int left_start, int right_start,
     }
 
     cout << "End of merging: ";
-    for (int i = left_start; i <= right_end; i++)
-        cout << arr[i] << " ";
-    cout << endl;
+    print(arr, left_start, right_end);
 }
 
 // Merge sort implementation for integers with buffer
@@ -80,8 +86,13 @@ void merge_sort(vector<int> &arr, vector<int> &temp, int start, int end)
         // Avoids overflow for large values of start and end, equal to (start + end) / 2
         int middle = start + (end - start) / 2;
 
+        cout << "Going down left with i*: " << middle << "\n";
         merge_sort(arr, temp, start, middle);
+        cout << "Going up from left with i*: " << middle << "\n";
+
+        cout << "Going down right with i*: " << middle + 1 << "\n";
         merge_sort(arr, temp, middle + 1, end);
+        cout << "Going up from right with i*: " << middle + 1 << "\n";
 
         merge(arr, temp, start, middle + 1, end);
     }
@@ -154,14 +165,12 @@ void test_merge_sort_integers()
 {
     cout << "Merge Sort for Integers:\n";
     vector<int> arr = {9, 4, 3, 2, 6, 7, 1, 8, 5};
+
+    print(arr, 0, arr.size() - 1);
     merge_sort(arr);
 
     cout << "Sorted array: ";
-    for (int num : arr)
-    {
-        cout << num << " ";
-    }
-    cout << endl;
+    print(arr, 0, arr.size() - 1);
 }
 
 // Main function for pairs merge sort
