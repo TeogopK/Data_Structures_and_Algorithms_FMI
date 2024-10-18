@@ -7,7 +7,7 @@
 - Разглеждане на имплементациите на алгоритмите
 
 # Допълнителни примери и въпроси
-- Стабилност use cases - губим първоначалният ред. Пример със студенти и оценки.
+- Стабилност use cases - губим първоначалният ред на равни по стойност елементи. Пример със студенти и оценки.
 - Наивен Insertion
 - Наивен Merge
 - Защо сложността на merge sort е N*logN?
@@ -53,3 +53,6 @@ Merge Intervals - Medium - https://leetcode.com/problems/merge-intervals/
 # Бонус
 
 Ред в хаоса - https://www.hackerrank.com/contests/sda-test1-2022-2023/challenges/challenge-3676/problem
+
+Find all duplicated in an array - Medium - https://leetcode.com/problems/find-all-duplicates-in-an-array/description/
+   - Hint: Подобно на https://leetcode.com/problems/first-missing-positive/
