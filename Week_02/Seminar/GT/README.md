@@ -57,3 +57,6 @@ Merge Intervals - Medium - https://leetcode.com/problems/merge-intervals/
 
 Find all duplicated in an array - Medium - https://leetcode.com/problems/find-all-duplicates-in-an-array/description/
    - Hint: Подобно на https://leetcode.com/problems/first-missing-positive/
+
+Find the Kth Largest Integer in the Array - Medium - https://leetcode.com/problems/find-the-kth-largest-integer-in-the-array/submissions/
+   - Hint: Какво правехме в quick sort за да избегнем worst case?
