@@ -20,6 +20,7 @@
    - Адаптивен. Малките масиви са много често почти сортирани.
 
 # Допълнително
+- quick select
 - някои имплементации на std::sort - https://en.wikipedia.org/wiki/Introsort
 - Bucket sort
 - Radix sort
