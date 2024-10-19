@@ -300,6 +300,9 @@ Merge sort гарантира енлог сложност дори в най-л�
 
 ```c++
 int partition(std::vector<int>& arr, int low, int high) {
+    int initialPivotIndex = rand() % (high - low + 1) + low; // select random index in the range [low, high] for pivot
+    std::swap(nums[initialPivotIndex], nums[high]); // put the pivot at the end
+
     int pivot = arr[high];
     int i = low;
 
