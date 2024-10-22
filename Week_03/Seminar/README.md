@@ -80,8 +80,7 @@ int binarySearchRecursive(const vector<int> &arr, int l, int r, int x) {
 ### Upper bound
 
 ### Binary Search on answer - guess and check
-[Sqrt(x) - Easy](https://leetcode.com/problems/sqrtx/)
-
+Binary Search on Answer е техника за решаване на задачи, в които търсим оптимална стойност (най-малка или най-голяма), която отговаря на дадено условие. Тя се използва, когато можем да проверим дали дадена стойност е валидно решение и отговорът се намира в определен диапазон. В този случай, вместо да търсим конкретен елемент, търсим минимална или максимална граница на възможното решение.
 
 ## Ternary search (Тристранно търсене)
 
@@ -186,6 +185,7 @@ int exponentialSearch(const vector<int>& arr, int X) {
 ## Задачи за упражнение
 
 - Binary Search - Easy - https://leetcode.com/problems/binary-search/
+- [Sqrt(x) - Easy](https://leetcode.com/problems/sqrtx/)
 - [Search Insert Position](https://leetcode.com/problems/search-insert-position)
 - [First Bad Version](https://leetcode.com/problems/first-bad-version)
 - [Puncakes](https://www.hackerrank.com/contests/exam-2022-part2-sda/challenges/puncakes/problem)
