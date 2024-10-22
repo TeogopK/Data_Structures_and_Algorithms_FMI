@@ -73,6 +73,9 @@ int binarySearchRecursive(const vector<int> &arr, int l, int r, int x) {
 ```
 - *O(logN)* сложност по памет на рекурсивната имплементация
 
+### Lower bound
+
+### Upper bound
 
 ## Ternary search (Тристранно търсене)
 
@@ -182,3 +185,9 @@ int exponentialSearch(const vector<int>& arr, int X) {
 - [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix)
 
 - [Safe Sort](https://www.hackerrank.com/contests/si-practice-2/challenges/task-1-1-1)
+
+
+# Бонус материал
+- Eytzinger binary search - https://algorithmica.org/en/eytzinger
+    - Как може да бъде оптимизиран binary search при много заявки в големи масиви?
+- Branch predictor - https://en.wikipedia.org/wiki/Branch_predictor
