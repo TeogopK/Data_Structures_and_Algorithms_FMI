@@ -185,7 +185,7 @@ int exponentialSearch(const vector<int>& arr, int X) {
 
 ## Задачи за упражнение
 
-- Binary Search - Easy - https://leetcode.com/problems/binary-search/
+- [Binary Search - Easy](https://leetcode.com/problems/binary-search/)
 - [Sqrt(x) - Easy](https://leetcode.com/problems/sqrtx/)
 - [Search Insert Position](https://leetcode.com/problems/search-insert-position)
 - [First Bad Version](https://leetcode.com/problems/first-bad-version)
@@ -194,9 +194,11 @@ int exponentialSearch(const vector<int>& arr, int X) {
 - [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix)
     - 3 решения
 - [Safe Sort](https://www.hackerrank.com/contests/si-practice-2/challenges/task-1-1-1)
-- Find first and last position of element in sorted array - Medium - https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
-- Single Element in a Sorted array - Medium - https://leetcode.com/problems/single-element-in-a-sorted-array/
-- Search in Rotated Sorted Array - Medium - https://leetcode.com/problems/search-in-rotated-sorted-array/
+- [Find first and last position of element in sorted array - Medium](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+
+## Бонус задачи
+- [Single Element in a Sorted array - Medium](https://leetcode.com/problems/single-element-in-a-sorted-array/)
+- [Search in Rotated Sorted Array - Medium](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 
 
 
