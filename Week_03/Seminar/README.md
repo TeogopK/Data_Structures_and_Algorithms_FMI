@@ -182,7 +182,7 @@ int exponentialSearch(const vector<int>& arr, int X) {
 
 - [Search Insert Position](https://leetcode.com/problems/search-insert-position)
 - [First Bad Version](https://leetcode.com/problems/first-bad-version)
-- [Perfect Printer](https://www.hackerrank.com/contests/sda-homework-3/challenges/challenge-2674/problem)
+- [Puncakes](https://www.hackerrank.com/contests/exam-2022-part2-sda/challenges/puncakes/problem)
 - [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array)
 - [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix)
 
