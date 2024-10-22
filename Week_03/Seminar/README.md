@@ -39,18 +39,40 @@ int linear_search(const vector<int>& arr, int x) {
 Сравнява се средния елемент с търсения. Ако търсеният елемент е по-малък, разглежда се масива отляво на средния елемент. Ако търсеният е по-голям, разглежда се масива отдясно на средния. Стъпките се повтарят до намиране на елемента.
 
 ```c++
-int binarySearch(const vector<int> &arr, int l, int r, int x) {
+int binarySearch(vector<int>& nums, int target) {
+    int left = 0;
+    int right = nums.size() - 1;
+    while(left <= right) {
+        int mid = left + (right - left) / 2; // !!!
+        if(nums[mid] == target)
+            return mid;
+        else if(nums[mid] > target)
+            right = mid - 1;
+        else
+            left = mid + 1;
+    }
+
+    return -1;
+}
+```
+
+- При пресмятане на средния индекс трябва да се внимава за overflow, ако бъде пресмятан като **(left + right) / 2**.
+
+```c++
+int binarySearchRecursive(const vector<int> &arr, int l, int r, int x) {
     if (r >= l) {
         int mid = l + (r - l) / 2;
         if (arr[mid] == x)
             return mid;
         if (arr[mid] > x)
-            return binarySearch(arr, l, mid - 1, x);
-        return binarySearch(arr, mid + 1, r, x);
+            return binarySearchRecursive(arr, l, mid - 1, x);
+        return binarySearchRecursive(arr, mid + 1, r, x);
     }
     return -1;
 }
 ```
+- *O(logN)* сложност по памет на рекурсивната имплементация
+
 
 ## Ternary search (Тристранно търсене)
 
