@@ -6,6 +6,8 @@
 
 - Linear search
 - Binary search
+    - Lower bound
+    - Upper bound
 - Ternary search
 - Jump search
 - Exponential search
