@@ -116,9 +116,9 @@ int ternarySearch(const vector<int> &arr, int l, int r, int x) {
 
 
 <details>
-  <summary><b>Въпрос:</b> Кой алгоритъм е по-бърз в най-лошия случай BinarySearch или TernarySearch?</summary>
+  <summary><b>Въпрос:</b> Кой алгоритъм е по-оптимален в общия случай BinarySearch или TernarySearch?</summary>
 
-**Отговор:** BinarySearch
+**Отговор:** BinarySearch, понеже прави по-малко сравнения.
 
 https://www.geeksforgeeks.org/binary-search-preferred-ternary-search/
 </details>
