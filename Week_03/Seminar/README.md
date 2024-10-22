@@ -106,6 +106,15 @@ int ternarySearch(const vector<int> &arr, int l, int r, int x) {
 }
 ```
 
+
+<details>
+  <summary><b>Въпрос:</b> Кой алгоритъм е по-бърз в най-лошия случай BinarySearch или TernarySearch?</summary>
+
+**Отговор:** BinarySearch
+
+https://www.geeksforgeeks.org/binary-search-preferred-ternary-search/
+</details>
+
 ## Jump search (Търсене със скоци)
 
 - работи **само** за сортирани данни
