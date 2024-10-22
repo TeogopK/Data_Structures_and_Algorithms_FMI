@@ -79,6 +79,10 @@ int binarySearchRecursive(const vector<int> &arr, int l, int r, int x) {
 
 ### Upper bound
 
+### Binary Search on answer - guess and check
+[Sqrt(x) - Easy](https://leetcode.com/problems/sqrtx/)
+
+
 ## Ternary search (Тристранно търсене)
 
 - работи за сортирани и параболични данни
@@ -180,13 +184,18 @@ int exponentialSearch(const vector<int>& arr, int X) {
 
 ## Задачи за упражнение
 
+- Binary Search - Easy - https://leetcode.com/problems/binary-search/
 - [Search Insert Position](https://leetcode.com/problems/search-insert-position)
 - [First Bad Version](https://leetcode.com/problems/first-bad-version)
 - [Puncakes](https://www.hackerrank.com/contests/exam-2022-part2-sda/challenges/puncakes/problem)
 - [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array)
 - [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix)
-
+    - 3 решения
 - [Safe Sort](https://www.hackerrank.com/contests/si-practice-2/challenges/task-1-1-1)
+- Find first and last position of element in sorted array - Medium - https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
+- Single Element in a Sorted array - Medium - https://leetcode.com/problems/single-element-in-a-sorted-array/
+- Search in Rotated Sorted Array - Medium - https://leetcode.com/problems/search-in-rotated-sorted-array/
+
 
 
 # Бонус материал
