@@ -129,6 +129,7 @@ https://www.geeksforgeeks.org/binary-search-preferred-ternary-search/
 - [оптималният скок](https://www.wolframalpha.com/input?i=Argmin+of+f%28x%29+%3D+n%2Fx+%2B+x%2C+x+%3E+0%2C+n+%3E+0+for+x) е *sqrt(N)* (за минимален общ брой сравнения)
 - *O(sqrt(N))* сложност по време
 - [по-бавен](https://www.symbolab.com/solver/limit-calculator/%5Clim_%7Bx%5Cto%5Cinfty%7D%5Cleft(%5Cfrac%7Blnx%7D%7B%5Csqrt%7Bx%7D%7D%5Cright)?or=input) от Binary search ([*O(log(N))* < *O(sqrt(N))* < *O(N)*](https://www.wolframalpha.com/input?i=plot+log%28n%29%2C+sqrt%28n%29+from+1+to+1000))
+- подходящ когато стъпките назад в масив ни струват скъпо
 
 Търсеният елемент се сравнява последователно с елементи на позиции, кратни на стъпката (корен от N). Когато търсеният елемент стане по-малък от елемента на K-та стъпка, се извършва линейно търсене в интервала (K-1)-ва стъпка до K-та стъпка.
 
