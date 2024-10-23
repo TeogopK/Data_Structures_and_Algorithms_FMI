@@ -81,6 +81,20 @@ int binarySearchRecursive(const vector<int> &arr, int l, int r, int x) {
 ### Upper bound
 - връща първият елемент в масива, който е по-голям от x.
 
+Изпробвайте следния code snippet с target - 0, 5, 6, 11. (При 11 ви връща v.end())
+```c++
+int main() {
+	std::vector<int> v = {1, 2, 3, 4, 6, 7, 8, 9};
+	int target = 0;
+
+	std::cout << (*std::lower_bound(v.begin(), v.end(), target)) << std::endl;
+	std::cout << (*std::upper_bound(v.begin(), v.end(), target)) << std::endl;
+}
+```
+
+#### Задача
+Намерете броя срещания на едно число в сортиран масив
+
 ### Binary Search on answer - guess and check
 Binary Search on Answer е техника за решаване на задачи, в които търсим оптимална стойност (най-малка или най-голяма), която отговаря на дадено условие. Тя се използва, когато можем да проверим дали дадена стойност е валидно решение и отговорът се намира в определен диапазон. В този случай, вместо да търсим конкретен елемент, търсим минимална или максимална граница на възможното решение.
 
