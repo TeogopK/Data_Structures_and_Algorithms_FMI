@@ -1,6 +1,6 @@
 # Упражнение 4
 
-Решения от [домашно 2]([https://hackerrank.com/contests/sda-ad-hw-3-2023](https://www.hackerrank.com/contests/sda-24-25-2/challenges)) - [тук](Homeworks/hw_02).
+Решения от домашно 2- [тук](../../Homeworks/hw_02).
 
 ## Темата включва
 
