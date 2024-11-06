@@ -4,7 +4,7 @@
 template<typename T>
 class Stack {
 private:
-
+	// you can just use std::list behind the scenes as in the deque...
 	struct Node {
 		T data;
 		Node* next;
