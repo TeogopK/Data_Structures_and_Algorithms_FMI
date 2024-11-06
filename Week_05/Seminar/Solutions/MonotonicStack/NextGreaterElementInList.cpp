@@ -21,10 +21,14 @@ public:
     vector<int> nextLargerNodes(ListNode* head) {
         size_t sizeL = l(head);
         vector<int> result(sizeL, 0);
+        // msValue - monotonic stack with values in decreasing order
+        // msIndex - stack with indexes of the elements in the order stack
+        // msValue->top is the value of the element at position msIndex->top
         stack<int> msIndex, msValue;
         size_t counter = 0;
         while(head) {
             while(!msValue.empty() && msValue.top() < head->val) {
+                // write to its position the next greater element
                 result[msIndex.top()] = head->val;
                 msIndex.pop();
                 msValue.pop();
