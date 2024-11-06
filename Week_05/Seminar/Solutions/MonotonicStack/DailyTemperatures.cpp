@@ -4,7 +4,7 @@ public:
         vector<int> result(temperatures.size(), 0);
         
         // contains indexes of elements in decreasing order
-        stack<int> ms;
+        stack<int> ms; // ms - monotonic stack
         for(size_t i = 0; i < temperatures.size(); i++) {
             // pop all indexes of elements which are lower than the new temperature
             while(!ms.empty() && temperatures[ms.top()] < temperatures[i]) {
