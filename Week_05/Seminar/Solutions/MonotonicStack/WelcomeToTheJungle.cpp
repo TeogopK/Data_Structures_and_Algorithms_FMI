@@ -13,7 +13,8 @@ int main() {
     for(size_t i = 0; i < count; i++) {
         cin >> arr[i];
     }
-    
+
+    // decreasing monotonic stack which will hold the values of the elements
     stack<int> s;
     size_t maxSize = 0;
     size_t maxStartingIndex = 0;
