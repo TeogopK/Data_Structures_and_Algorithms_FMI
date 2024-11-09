@@ -1,3 +1,4 @@
+// Виж README.md за описание на решението.
 class Solution {
 public:
     int findUnsortedSubarray(vector<int>& nums) {
