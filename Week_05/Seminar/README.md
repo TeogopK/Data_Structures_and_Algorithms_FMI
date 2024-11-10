@@ -156,4 +156,5 @@ Sliding window е техника за оптимизация, използван
 - [Min stack](https://leetcode.com/problems/min-stack/) - Medium
   - 2*n памет
   - n памет
+- [Poisonous Plants](https://www.hackerrank.com/challenges/poisonous-plants/) - Hard
 
