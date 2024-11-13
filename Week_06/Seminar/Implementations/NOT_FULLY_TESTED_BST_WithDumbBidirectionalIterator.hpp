@@ -25,7 +25,8 @@ private:
 };
 
 // this class should go inside the BinarySearchTree class
-// Overcomplicated iterator, might not be working
+// Bidirectional iterator => ++, --
+// Still not fully tested, but it seems to be working
 // This iterator is here JUST FOR THE DEMO PURPOSES FOR UNDERSTANDING THE IDEA OF THE STACK BEHIND!
 // the iterator has hard dependency on the ordering of tree => not useful for other trees
 template<typename T>
