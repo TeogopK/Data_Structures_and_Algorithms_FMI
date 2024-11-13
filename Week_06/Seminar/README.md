@@ -350,5 +350,6 @@ void BinarySearchTree<T>::bfs() const {
 # Бонус
 - Имплементиране на итератор на дърво
   - **Hint** - Stack
+  - forward iter - https://www.geeksforgeeks.org/implement-binary-search-treebst-iterator/
 - [Trim BST](https://leetcode.com/problems/trim-a-binary-search-tree/) - Medium
 - [Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/) - Medium
