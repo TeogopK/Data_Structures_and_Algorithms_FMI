@@ -348,8 +348,8 @@ void BinarySearchTree<T>::bfs() const {
 - [Binary Tree Right side view](https://leetcode.com/problems/binary-tree-right-side-view/) - Easy
 
 # Бонус
+- [Trim BST](https://leetcode.com/problems/trim-a-binary-search-tree/) - Medium
+- [Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/) - Medium
 - Имплементиране на итератор на дърво
   - **Hint** - Stack
   - forward iter - https://www.geeksforgeeks.org/implement-binary-search-treebst-iterator/
-- [Trim BST](https://leetcode.com/problems/trim-a-binary-search-tree/) - Medium
-- [Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/) - Medium
