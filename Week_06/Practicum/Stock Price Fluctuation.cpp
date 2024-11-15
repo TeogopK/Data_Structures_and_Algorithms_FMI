@@ -16,8 +16,7 @@ public:
 
         auto timestampIter = timestamps.find(timestamp);
         if (timestampIter == timestamps.end()) {
-            timestampIter = timestamps.insert({ timestamp, priceIter 
-}).first;
+            timestampIter = timestamps.insert({ timestamp, priceIter }).first;
             return;
         }
         
