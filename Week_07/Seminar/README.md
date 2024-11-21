@@ -120,6 +120,7 @@ long long fibonacci(size_t n) {
 - [Longest Common Subsequence - Medium](https://leetcode.com/problems/longest-common-subsequence/)
 
 ### Допълнителни за упражнение (подобни на част от показваните)
+- [Climbing Stairs - Easy](https://leetcode.com/problems/climbing-stairs/)
 - [Tribonacci Number - Easy](https://leetcode.com/problems/n-th-tribonacci-number/)
 - [Jump Game - Medium](https://leetcode.com/problems/jump-game/)
 
