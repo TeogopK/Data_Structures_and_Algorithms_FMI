@@ -121,6 +121,7 @@ long long fibonacci(size_t n) {
 
 ### Допълнителни за упражнение (подобни на част от показваните)
 - [Climbing Stairs - Easy](https://leetcode.com/problems/climbing-stairs/)
+- [Min cost Climbing stairs - Easy](https://leetcode.com/problems/min-cost-climbing-stairs/)
 - [Tribonacci Number - Easy](https://leetcode.com/problems/n-th-tribonacci-number/)
 - [Jump Game - Medium](https://leetcode.com/problems/jump-game/)
 
