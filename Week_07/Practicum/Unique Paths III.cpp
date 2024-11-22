@@ -45,7 +45,7 @@ public:
         grid[row][col] = temp;
     }
 
-    int uniquePathsIII(vector<vector<int>>& grid) {
+    int uniquedfsIII(vector<vector<int>>& grid) {
         int startRow = 0, startCol = 0, empty = 0;
 
         // Find the starting position and count empty squares

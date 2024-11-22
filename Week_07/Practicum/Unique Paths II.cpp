@@ -30,3 +30,39 @@ public:
         return move(m - 1, n - 1, memo, obstacleGrid);
     }
 };
+
+// iterative bottom up
+class Solution {
+public:
+    int uniquePathsWithObstacles(vector<vector<int>>& grid) {
+        if (grid[0][0]) {
+            return 0;
+        }
+        
+        int m = grid.size();
+        int n = grid[0].size();
+
+        int paths[100][100] {};
+        paths[0][0] = 1;
+
+        int col = 1;
+        while (col < n && grid[0][col] == 0) {
+            paths[0][col++] = 1;
+        }
+
+        int row = 1;
+        while (row < m && grid[row][0] == 0) {
+            paths[row++][0] = 1;
+        }
+
+        for (row = 1; row < m; row++) {
+            for (col = 1; col < n; col++) {
+                if (grid[row][col] == 0) {
+                    paths[row][col] = paths[row][col - 1] + paths[row - 1][col];
+                }
+            }
+        }
+        
+        return paths[m - 1][n - 1];
+    }
+};
