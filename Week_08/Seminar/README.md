@@ -115,7 +115,6 @@ Aналогична на *set*-a, но се състои от ключове, к
 - [Volleyball Friends](https://www.hackerrank.com/contests/sda-hw-8/challenges/volleyball-friends)
 - [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii)
 - [Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs)
-- [MacBook Cafes](https://www.hackerrank.com/contests/si-practice-7/challenges/brand-new)
 
 - [K-diff Pairs in an Array](https://leetcode.com/problems/k-diff-pairs-in-an-array)
 - [Group Anagrams](https://leetcode.com/problems/group-anagrams)
