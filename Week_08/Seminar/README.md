@@ -116,6 +116,7 @@ Aналогична на *set*-a, но се състои от ключове, к
 - [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii)
 - [Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs)
 
+- [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 - [K-diff Pairs in an Array](https://leetcode.com/problems/k-diff-pairs-in-an-array)
 - [Group Anagrams](https://leetcode.com/problems/group-anagrams)
 - [Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences)
