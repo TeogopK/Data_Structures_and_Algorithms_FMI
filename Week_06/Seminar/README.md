@@ -93,7 +93,8 @@ public:
 ```c++
 [1,2,3,null,5,null,4]
 ```
-![image](https://github.com/user-attachments/assets/22c7d5d1-e0d5-4c89-a3ba-70e148e6481c)
+![image](https://github.com/user-attachments/assets/45da782c-8a8e-4144-8b00-040a67d69a47)
+
 
 ## Сложности на BST
 
