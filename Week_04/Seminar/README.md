@@ -20,7 +20,8 @@ List е абстрактна структура от данни. Никой не
 
 ## Какво е свързан списък
 Линейна структура от данни, чиито данни не са наредени последователно в паметта, а всеки елемент има указател към следващия.
-![image](https://github.com/user-attachments/assets/b8c06680-1cf8-4773-a2de-f1e777ebafa6)
+
+![image](https://github.com/user-attachments/assets/552c9370-4a1d-485d-8062-a9d27ff9d49b)
 
 Кога бихме го използвали и защо ни е Linked list:
 - Всичко изискващо Next/Prev функционалност
@@ -35,8 +36,8 @@ List е абстрактна структура от данни. Никой не
 - doubly
 
 ## Представяне в паметта
-![image](https://github.com/user-attachments/assets/bf8bff43-25f0-4070-8c3b-dec22678cfea)
-![image](https://github.com/user-attachments/assets/6d88f77f-6970-4c0c-9432-16954d95b14d)
+![image](https://github.com/user-attachments/assets/2815d6cf-1579-4c54-be62-fb500aee6afa)
+![image](https://github.com/user-attachments/assets/ddcfe7cc-25db-4237-a9d8-06e122ddada4)
 
 ## Преглед на имплементация на Singly linked list (Едносвързан списък)
 
