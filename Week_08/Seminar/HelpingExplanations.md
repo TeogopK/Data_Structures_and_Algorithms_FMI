@@ -5,13 +5,14 @@
 
 https://docs.google.com/presentation/d/1XmkBoGKyNagmE8YJnY47NOB0dYE-M6AkWnt7zg9NJfM/edit#slide=id.g49904bba26_1_40
 
-![image](https://github.com/user-attachments/assets/f1e1cc01-57c7-49bf-8912-f31cefc0f16a)
+![image](https://github.com/user-attachments/assets/5a182ed8-0b34-485c-961f-b72c36c98b1b)
 
-![image](https://github.com/user-attachments/assets/4173f2d1-5745-42bf-b2ee-f6022de33898)
+![image](https://github.com/user-attachments/assets/4f68cb45-ce8f-403f-a415-a745bc72293f)
 
-![image](https://github.com/user-attachments/assets/36b6bab2-66a6-4386-9f3e-be31db101f85)
+![image](https://github.com/user-attachments/assets/b8e6487a-25c6-45f0-9e58-f33d055817a5)
 
-![image](https://github.com/user-attachments/assets/3abe5f68-d2a7-456d-9081-33741a5f7be0)
+![image](https://github.com/user-attachments/assets/5cffe387-c0e7-4928-a41f-72ce55a0bc92)
+
 
 # Задачи
 - https://leetcode.com/problems/longest-consecutive-sequence/
