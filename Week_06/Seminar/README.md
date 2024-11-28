@@ -33,7 +33,8 @@
   
 Пример:
 
-![binary_tree_example](https://github.com/user-attachments/assets/d12d373f-5761-41c8-9f0b-99cd0d84a1f7)
+![image](https://github.com/user-attachments/assets/e0124a48-86d1-49d1-8f56-a4f7b8c2bb8f)
+
 
 ## Binary Search Tree (Двоично дърво за търсене)
 
@@ -46,7 +47,8 @@
 
 Примерно двоично дърво за търсене:
 
-![binary_search_tree](https://github.com/user-attachments/assets/55282c42-4819-4fef-9d0a-75e900fc06c8)
+![image](https://github.com/user-attachments/assets/589b8b94-17e4-46a0-8e5f-4d3bb51f99e2)
+
 
 ## Представяне
 
