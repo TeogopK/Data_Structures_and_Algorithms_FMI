@@ -98,6 +98,13 @@ Aналогична на *set*-a, но се състои от ключове, к
 ## Сравнение на сложностите и необходими функции
 ![image](https://github.com/user-attachments/assets/9a0fdb1c-ee7e-44e3-93f7-78c06715abaf)
 
+## Мултимножества
+В курса няма конкретно да разглеждаме следните структури, но е хубаво да знаете за съществуването на следните структури:
+- [std::multimap<KEY,VALUE>)](https://en.cppreference.com/w/cpp/container/multimap)
+- [std::multiset<KEY>](https://en.cppreference.com/w/cpp/container/multiset)
+- [std::unordered_multimap<KEY,VALUE>)](https://en.cppreference.com/w/cpp/container/unordered_multimap)
+- [std::unordered_multiset<KEY>)](https://en.cppreference.com/w/cpp/container/unordered_multiset)
+
 ## Задачи за упражнение
 
 - [Volleyball Friends](https://www.hackerrank.com/contests/sda-hw-8/challenges/volleyball-friends)
