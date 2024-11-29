@@ -18,10 +18,10 @@ struct MyStruct {
 //};
 
 int main() {
-  //v1 
+  //v1 with op<
 	std::map<MyStruct, int> s;
   
-  // v2
+  // v2 with comparator and without op<
 	//std::map<MyStruct, int, MyStructComparator> s;
 	MyStruct m1 = { 1, 2 };
 	MyStruct m2 = { 2, 3 };
