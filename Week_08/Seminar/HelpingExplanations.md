@@ -11,5 +11,8 @@ https://docs.google.com/presentation/d/1XmkBoGKyNagmE8YJnY47NOB0dYE-M6AkWnt7zg9N
 ![image](https://github.com/user-attachments/assets/4f68cb45-ce8f-403f-a415-a745bc72293f)
 
 
-### Получаване на колизия
+### Справяне с колизии с Separate chaining
 ![image](https://github.com/user-attachments/assets/5cffe387-c0e7-4928-a41f-72ce55a0bc92)
+
+### Справяне с колизии с Linear probing
+![image](https://github.com/user-attachments/assets/47b5b0b7-bc5c-4122-a5a4-6d4b751481b0)
