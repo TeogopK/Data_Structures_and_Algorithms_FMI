@@ -45,7 +45,7 @@
 Няма вградено балансирано двоично дърво за търсене в Python.
 Структурите *set* и *dict* използват *Hash table*. Може да разгледате външата библиотека [Python Sorted Containers](https://grantjenks.com/docs/sortedcontainers/), която обаче не използва BST.
 
-Аналогът на *set* и *dict* в C++ са *unordered_set* и *unordered_map*. Те също използват Хеш таблица. В C++ съществуват *ordered* варианти на горните колекции, които подреждат елементите/ ключовете по-големина. Така е нужно *inorder* обхождане, което е присъщо на балансираните дървета.
+В C++ съществуват *ordered* варианти на горните колекции, които подреждат елементите/ ключовете по-големина. Така е нужно *inorder* обхождане, което е присъщо на балансираните дървета.
 
 Примерна имплементация [AVL Tree in Python](https://github.com/TheAlgorithms/Python/blob/master/data_structures/binary_tree/avl_tree.py) и [Red-Black Tree in Python](https://github.com/TheAlgorithms/Python/blob/master/data_structures/binary_tree/red_black_tree.py).
 
