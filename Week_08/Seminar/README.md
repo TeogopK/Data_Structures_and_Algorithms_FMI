@@ -14,7 +14,7 @@
 
 ![AVL tree operations GIF](https://upload.wikimedia.org/wikipedia/commons/f/fd/AVL_Tree_Example.gif)
 
-#### Различни ситуации, в които може да се стигне до загуба на баланса
+#### Различни ситуации, в които се стига до загуба на баланса
 ![image](https://github.com/user-attachments/assets/b8e6487a-25c6-45f0-9e58-f33d055817a5)
 
 ### Red-Black tree (Червено-черно дърво)
