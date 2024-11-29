@@ -99,11 +99,11 @@ Aналогична на *set*-a, но се състои от ключове, к
 ![image](https://github.com/user-attachments/assets/9a0fdb1c-ee7e-44e3-93f7-78c06715abaf)
 
 ## Мултимножества
-В курса няма конкретно да разглеждаме следните структури, но е хубаво да знаете за съществуването на следните структури:
-- [std::multimap<KEY,VALUE>)](https://en.cppreference.com/w/cpp/container/multimap)
-- [std::multiset<KEY>](https://en.cppreference.com/w/cpp/container/multiset)
-- [std::unordered_multimap<KEY,VALUE>)](https://en.cppreference.com/w/cpp/container/unordered_multimap)
-- [std::unordered_multiset<KEY>)](https://en.cppreference.com/w/cpp/container/unordered_multiset)
+В курса няма конкретно да разглеждаме следните структури, но е хубаво да знаете за съществуването на следните структури, понеже могат да бъдат полезни в някои задачи. Накратко, тези структури допускат повторения на ключовете. Повече може да прочетете на съответните линкове:
+- [std::multimap](https://en.cppreference.com/w/cpp/container/multimap)
+- [std::multiset](https://en.cppreference.com/w/cpp/container/multiset)
+- [std::unordered_multimap](https://en.cppreference.com/w/cpp/container/unordered_multimap)
+- [std::unordered_multiset](https://en.cppreference.com/w/cpp/container/unordered_multiset)
 
 ## Задачи за упражнение
 
