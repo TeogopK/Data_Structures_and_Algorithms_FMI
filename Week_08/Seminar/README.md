@@ -54,7 +54,7 @@ Note: В [допълнителното readme](./HelpingExplanations.md) ще н
 
 - Да бъдат бързи за изчисление.
 - Да създават минимален брой колизии. Справянето с колизиите увеличава средното време за изпълнение на заявка.
-    - добре е да разпределят данните равномерно в целия интервал (по-този начин ще се избегне cluster-изацията в по-късно в hashmap)
+    - добре е да разпределят данните равномерно в целия интервал (по-този начин ще се избегне cluster-изацията по-късно в hashmap)
 - Когато хешират един и същи обект, винаги да връщат една и съща стойност - да няма елемент на случайност или някакво състояние, което да повлияе на резултата от функцията (*stateless*).
 - x == y => hash(x) == hash(y), но от hash(x) == hash(y) не следва задължително x == y
 - Получава елемент от произволно голяма множество (дори безкрайно) и връща стойност от някакво фиксирано крайно множество.
@@ -73,6 +73,9 @@ Note: В [допълнителното readme](./HelpingExplanations.md) ще н
 - Ако обект се хешира до дадено цяло число *x*, но то вече е заето, то тогава ще бъде попълнено първото число по-голямо от *x*, което е свободно. 
 - Ако например обект се хешира до числото 5 и то е заето, то тогава се започва търсене в 6, 7 и т.н.
 - Не толкова предпочитан метод, поради наличието на *clustering*.
+
+**Clustering** в обхвата на HashMap - явление, при което множество хеш стойности попадат в близки позиции, създавайки групи, които влошават ефективността на таблицата.
+Пример, ако се замислите в автобус 94 винаги има най-много хора около вратите на автобуса, докато в средата е по-празно. Тогава казваме, че има клъстър при всяка от вратите.
 
 #### Double Hashing
 - Използва 2 хеширащи функции, през които да прекарва даден обект.
@@ -108,6 +111,15 @@ Aналогична на *set*-a, но се състои от ключове, к
 - [std::unordered_multimap](https://en.cppreference.com/w/cpp/container/unordered_multimap)
 - [std::unordered_multiset](https://en.cppreference.com/w/cpp/container/unordered_multiset)
 
+## Техника за решаване на задачи: Rolling hash
+TODO:...
+
+- [Rolling hash](https://en.wikipedia.org/wiki/Rolling_hash)
+- [Rabin-Karp string search algorithm](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm)
+
+Задача, която можем да решим с тази техника:
+- [Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences)
+
 ## Задачи за упражнение
 
 - [Volleyball Friends](https://www.hackerrank.com/contests/sda-hw-8/challenges/volleyball-friends)
@@ -122,8 +134,6 @@ Aналогична на *set*-a, но се състои от ключове, к
 - [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k)
 - [0-1 Subarray](https://www.hackerrank.com/contests/sda-homework-9/challenges/0-1-1)
   - [leetcode аналог](https://leetcode.com/problems/contiguous-array/)
-
-
 
 ## Бонус: Red-Black tree (Червено-черно дърво)
 
