@@ -116,8 +116,6 @@ Aналогична на *set*-a, но се състои от ключове, к
 - [Rabin-Karp string search algorithm](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm)
 - Нагледно с код - https://www.francofernando.com/blog/algorithms/2021-05-16-rolling-hash/
 
-![image](https://github.com/user-attachments/assets/4ebab24a-0d38-4b35-b249-ff75b91a71b9)
-
 **Note:** Не е постижимо с всяка hash функция
 
 Задача, която можем да решим с тази техника:
