@@ -18,10 +18,12 @@ struct MyStruct {
 //};
 
 int main() {
-  //v1 with op<
+	// everything is similar for set
+	
+	//v1 with op<
 	std::map<MyStruct, int> s;
   
-  // v2 with comparator and without op<
+	// v2 with comparator and without op<
 	//std::map<MyStruct, int, MyStructComparator> s;
 	MyStruct m1 = { 1, 2 };
 	MyStruct m2 = { 2, 3 };
