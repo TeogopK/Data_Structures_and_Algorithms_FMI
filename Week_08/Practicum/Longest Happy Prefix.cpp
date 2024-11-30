@@ -16,8 +16,7 @@ class Solution {
     }
 
     // hash(x.w) = x.base^|w| + hash(w) % mod
-    long long suffixHash(long long hash, int length, int x, long long 
-*pow, long long mod) {
+    long long suffixHash(long long hash, int length, int x, long long *pow, long long mod) {
         return (((x * pow[length]) % mod) + hash) % mod;
     }
 
@@ -34,8 +33,7 @@ public:
                 prefIdx = i;
             }
             pref = prefixHash(pref, s[i] - 'a', base, mod);
-            suff = suffixHash(suff, i, s[s.size() - 1 - i] - 'a', pow, 
-mod);
+            suff = suffixHash(suff, i, s[s.size() - 1 - i] - 'a', pow, mod);
         }
 
         return s.substr(0, prefIdx);
