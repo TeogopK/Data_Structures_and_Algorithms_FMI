@@ -33,7 +33,8 @@
   
 Пример:
 
-![binary_tree_example](https://github.com/user-attachments/assets/d12d373f-5761-41c8-9f0b-99cd0d84a1f7)
+![image](https://github.com/user-attachments/assets/e0124a48-86d1-49d1-8f56-a4f7b8c2bb8f)
+
 
 ## Binary Search Tree (Двоично дърво за търсене)
 
@@ -46,7 +47,8 @@
 
 Примерно двоично дърво за търсене:
 
-![binary_search_tree](https://github.com/user-attachments/assets/55282c42-4819-4fef-9d0a-75e900fc06c8)
+![image](https://github.com/user-attachments/assets/589b8b94-17e4-46a0-8e5f-4d3bb51f99e2)
+
 
 ## Представяне
 
@@ -91,7 +93,8 @@ public:
 ```c++
 [1,2,3,null,5,null,4]
 ```
-![image](https://github.com/user-attachments/assets/22c7d5d1-e0d5-4c89-a3ba-70e148e6481c)
+![image](https://github.com/user-attachments/assets/45da782c-8a8e-4144-8b00-040a67d69a47)
+
 
 ## Сложности на BST
 

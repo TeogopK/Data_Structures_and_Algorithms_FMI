@@ -1,7 +1,7 @@
-
 # Упражнение 8
 
 # Балансирани дървета, Хештаблици
+**Note:** В [допълнителното readme](./HelpingExplanations.md) ще намерите няколко "драсканици", които могат да ви бъдат полезни за разбирането на част от нещата
 
 ## Балансирани дървета
 
@@ -14,22 +14,8 @@
 
 ![AVL tree operations GIF](https://upload.wikimedia.org/wikipedia/commons/f/fd/AVL_Tree_Example.gif)
 
-### Red-Black tree (Червено-черно дърво)
-
-- Отново гарантира *O(logN)* сложност в най-лошия случай при търсене, добавяне и триене на елемент.
-- Операциите добавяне и триене на елемент не изискват толкова често балансиране, поради по-малката строгост в поддържането на баланс спрямо AVL дърво.
-
-Свойства:
-- Коренът е винаги черен.
-- Всяко листо е черно (NIL leaf).
-- Децата на червен възел са винаги черни.
-- Всеки директен път от корен на поддърво до всяко листо в поддървото (NIL leaf) минава през равен брой черни възли.
-
-Следствие:
-- Родителят на червен възел е винаги черен.
-- Връх с един наследник е винаги червен.
-
-![Example of Red-Black tree](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Red-black_tree_example_with_NIL.svg/1920px-Red-black_tree_example_with_NIL.svg.png)
+#### Различни ситуации, в които се стига до загуба на баланса
+![image](https://github.com/user-attachments/assets/b8e6487a-25c6-45f0-9e58-f33d055817a5)
 
 ### Сравнение на структурите спрямо сложност по време
 
@@ -45,7 +31,7 @@
 Няма вградено балансирано двоично дърво за търсене в Python.
 Структурите *set* и *dict* използват *Hash table*. Може да разгледате външата библиотека [Python Sorted Containers](https://grantjenks.com/docs/sortedcontainers/), която обаче не използва BST.
 
-Аналогът на *set* и *dict* в C++ са *unordered_set* и *unordered_map*. Те също използват Хеш таблица. В C++ съществуват *ordered* варианти на горните колекции, които подреждат елементите/ ключовете по-големина. Така е нужно *inorder* обхождане, което е присъщо на балансираните дървета.
+В C++ съществуват *ordered* варианти на горните колекции, които подреждат елементите/ ключовете по-големина. Така е нужно *inorder* обхождане, което е присъщо на балансираните дървета.
 
 Примерна имплементация [AVL Tree in Python](https://github.com/TheAlgorithms/Python/blob/master/data_structures/binary_tree/avl_tree.py) и [Red-Black Tree in Python](https://github.com/TheAlgorithms/Python/blob/master/data_structures/binary_tree/red_black_tree.py).
 
@@ -68,7 +54,10 @@
 
 - Да бъдат бързи за изчисление.
 - Да създават минимален брой колизии. Справянето с колизиите увеличава средното време за изпълнение на заявка.
+    - добре е да разпределят данните равномерно в целия интервал (по-този начин ще се избегне cluster-изацията по-късно в hashmap)
 - Когато хешират един и същи обект, винаги да връщат една и съща стойност - да няма елемент на случайност или някакво състояние, което да повлияе на резултата от функцията (*stateless*).
+- x == y => hash(x) == hash(y), но от hash(x) == hash(y) не следва задължително x == y
+- Получава елемент от произволно голяма множество (дори безкрайно) и връща стойност от някакво фиксирано крайно множество.
 
 ### Справяне с колизии
 Колизиите са неизбежна част от хеширането. Това са случаите, когато два **различни** обекта имат **една и съща** хеш стойност, след като биват прекарани през хеш функцията.
@@ -84,6 +73,9 @@
 - Ако обект се хешира до дадено цяло число *x*, но то вече е заето, то тогава ще бъде попълнено първото число по-голямо от *x*, което е свободно. 
 - Ако например обект се хешира до числото 5 и то е заето, то тогава се започва търсене в 6, 7 и т.н.
 - Не толкова предпочитан метод, поради наличието на *clustering*.
+
+**Clustering** в обхвата на HashMap - явление, при което множество хеш стойности попадат в близки позиции, създавайки групи, които влошават ефективността на таблицата.
+Пример, ако се замислите, в автобус 94 винаги има най-много хора около вратите на автобуса, докато в средата е по-празно. Тогава казваме, че има клъстър при всяка от вратите.
 
 #### Double Hashing
 - Използва 2 хеширащи функции, през които да прекарва даден обект.
@@ -109,17 +101,58 @@ Aналогична на *set*-a, но се състои от ключове, к
 - Ключовете биват хеширани - отговарят на горепосочените характеристики на *set*-a.
 - Не предоставя възможност за константа проверка дали дадена стойност съществува - единствено ключ.
 
+## Сравнение на сложностите и необходими функции
+![image](https://github.com/user-attachments/assets/9a0fdb1c-ee7e-44e3-93f7-78c06715abaf)
+
+## Мултимножества
+В курса няма конкретно да разглеждаме следните структури, но е хубаво да знаете за съществуването им, понеже могат да бъдат полезни в някои задачи. Накратко, multimap структурите допускат повторения на ключовете, a multiset на стойностите. Повече може да прочетете на съответните линкове:
+- [std::multimap](https://en.cppreference.com/w/cpp/container/multimap)
+- [std::multiset](https://en.cppreference.com/w/cpp/container/multiset)
+- [std::unordered_multimap](https://en.cppreference.com/w/cpp/container/unordered_multimap)
+- [std::unordered_multiset](https://en.cppreference.com/w/cpp/container/unordered_multiset)
+
+## Техника за решаване на задачи: Rolling hash
+- [Rolling hash](https://en.wikipedia.org/wiki/Rolling_hash)
+- [Rabin-Karp string search algorithm](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm)
+- Нагледно с код - https://www.francofernando.com/blog/algorithms/2021-05-16-rolling-hash/
+
+**Note:** Не е постижимо с всяка hash функция
+
+Задача, която можем да решим с тази техника:
+- [Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences)
 
 ## Задачи за упражнение
 
 - [Volleyball Friends](https://www.hackerrank.com/contests/sda-hw-8/challenges/volleyball-friends)
 - [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii)
 - [Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs)
-
 - [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 - [K-diff Pairs in an Array](https://leetcode.com/problems/k-diff-pairs-in-an-array)
 - [Group Anagrams](https://leetcode.com/problems/group-anagrams)
 - [Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences)
 - [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence)
+  - set vs unordered set
 - [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k)
 - [0-1 Subarray](https://www.hackerrank.com/contests/sda-homework-9/challenges/0-1-1)
+  - [leetcode аналог](https://leetcode.com/problems/contiguous-array/)
+
+## Бонус
+- [LRU Cache - Medium](https://leetcode.com/problems/lru-cache/)
+
+## Бонус: Red-Black tree (Червено-черно дърво)
+
+- Отново гарантира *O(logN)* сложност в най-лошия случай при търсене, добавяне и триене на елемент.
+- Операциите добавяне и триене на елемент не изискват толкова често балансиране, поради по-малката строгост в поддържането на баланс спрямо AVL дърво.
+- [wiki](https://en.wikipedia.org/wiki/Red%E2%80%93black_tree)
+
+Свойства:
+- Коренът е винаги черен.
+- Всяко листо е черно (NIL leaf).
+- Децата на червен възел са винаги черни.
+- Всеки директен път от корен на поддърво до всяко листо в поддървото (NIL leaf) минава през равен брой черни възли.
+
+Следствие:
+- Родителят на червен възел е винаги черен.
+- Връх с един наследник е винаги червен.
+
+![Example of Red-Black tree](https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Red-black_tree_example_with_NIL.svg/1920px-Red-black_tree_example_with_NIL.svg.png)
