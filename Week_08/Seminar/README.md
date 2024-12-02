@@ -136,6 +136,9 @@ Aналогична на *set*-a, но се състои от ключове, к
 - [0-1 Subarray](https://www.hackerrank.com/contests/sda-homework-9/challenges/0-1-1)
   - [leetcode аналог](https://leetcode.com/problems/contiguous-array/)
 
+## Бонус
+- [LRU Cache - Medium](https://leetcode.com/problems/lru-cache/)
+
 ## Бонус: Red-Black tree (Червено-черно дърво)
 
 - Отново гарантира *O(logN)* сложност в най-лошия случай при търсене, добавяне и триене на елемент.
