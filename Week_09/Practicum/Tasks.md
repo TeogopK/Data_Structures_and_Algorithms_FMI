@@ -7,4 +7,3 @@
 - [Магазин за Баници](https://www.hackerrank.com/contests/sda-hw-8-2021/challenges/fullstack-developer) - Medium
 - [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/description/) - Medium/Hard
 - [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/description/) - Hard
-- [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/description/) - Medium
