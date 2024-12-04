@@ -34,6 +34,9 @@
 Пример:
 
 ![image](https://github.com/user-attachments/assets/e0124a48-86d1-49d1-8f56-a4f7b8c2bb8f)
+
+Видове двоични дървета:
+
 ![image](https://github.com/user-attachments/assets/f9e7b30b-f94e-4a24-bd62-1257fcae67d6)
 
 
