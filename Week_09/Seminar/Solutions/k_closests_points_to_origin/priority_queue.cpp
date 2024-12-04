@@ -6,11 +6,7 @@ struct Comparator {
 class Solution {
 public:
     vector<vector<int>> kClosest(vector<vector<int>>& points, int k) {
-        priority_queue<vector<int>, vector<vector<int>>, Comparator> pq;
-        
-        for(auto& point: points) {
-            pq.push(point);
-        }
+        priority_queue<vector<int>, vector<vector<int>>, Comparator> pq(points.begin(), points.end());
         
         vector<vector<int>> result;
         for(int _ = 0; _ < k; _++) {
