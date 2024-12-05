@@ -260,7 +260,3 @@ Medium/Hard:
     - [Hackerrank аналог](https://www.hackerrank.com/challenges/find-the-running-median/problem)
 - [Merge k Sorted Lists - Hard](https://leetcode.com/problems/merge-k-sorted-lists/)
     - може и без pq
-  
-## Бонус
-- [Рожден ден - Medium](https://www.hackerrank.com/contests/sda-exam-20222023-part-2/challenges/two-pqs/problem)
-    - 2x pq, отчасти като задачата за интервалите (Фитнес зала)
