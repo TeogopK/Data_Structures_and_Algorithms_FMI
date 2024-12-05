@@ -5,6 +5,9 @@
 #include <unordered_map>
 using namespace std;
 
+// add number - O(logN)
+// find max - O(logN)
+
 void streamSolution() {
 	// key -> frequency
 	// value -> ordered set of numbers with that frequency in ascending order
