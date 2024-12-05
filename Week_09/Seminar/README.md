@@ -147,6 +147,8 @@ maxHeap.pop(); // pops top element
 priority_queue<int, vector<int>, greater<int>> minHeap;
 ```
 
+**Note:** преди C++14 вместо std::lest и std::greater се е ползвало op< и op>
+
 В случай, че нашия тип няма operator< или operator>, или тези функции не правят това, което ни трябва за да получим нужната подредба в приоритетната опашка, трябва да подадем наша compare функция(или тип на обект, който се държи като функция :)).
 
 ```c++
