@@ -15,7 +15,6 @@ States are:
 
 #include <iostream>
 #include <unordered_set>
-#include <stack>
 #include <unordered_map>
 
 // This is global, we must clean it after each calling of the solve method
