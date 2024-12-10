@@ -346,6 +346,8 @@ vector<int> topological_sort(unordered_map<int, unordered_set<int>> &graph)
 
 ## Особености при решаване на задачи със C++
 
+Задачите свързани с графи имат значително по-голям вход от данни, затова може да преговорите и прилагате триковете от [тук](https://github.com/TeogopK/Data_Structures_and_Algorithms_FMI/tree/main/HackerrankHacks). Основните две неща, които ще са ви полезни, са забързването на входа и използването на статична памет.
+
 ## Съвети при решаване на задачи с Python
 
 ### *Recursion depth limit*
