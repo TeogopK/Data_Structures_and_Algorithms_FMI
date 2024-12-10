@@ -247,16 +247,35 @@ def dfs(current, visited, graph):
 ```
 
 ```c++
-void dfs(int current, unordered_set<int> &visited, unordered_map<int, unordered_set<int>> &graph)
-{
+void dfs(int current, unordered_set<int> &visited, unordered_map<int, unordered_set<int>> &graph) {
     cout << current << " "; // 0 3 5 6 4 1 2
     visited.insert(current);
 
-    for (int neighbor : graph[current])
-    {
-        if (!visited.count(neighbor))
-        {
+    for (int neighbor : graph[current]) {
+        if (!visited.count(neighbor)) {
             dfs(neighbor, visited, graph);
+        }
+    }
+}
+
+void dfsIterative(int start, unordered_map<int, unordered_set<int>>& graph) {
+    unordered_set<int>& visited;
+    stack<int> s;
+    s.push(start);
+
+    while (!s.empty()) {
+        int current = s.top();
+        s.pop();
+
+        if (!visited.count(current)) {
+            cout << current << " ";
+            visited.insert(current);
+
+            for (int neighbor : graph[current]) {
+                if (!visited.count(neighbor)) {
+                    s.push(neighbor);
+                }
+            }
         }
     }
 }
@@ -301,30 +320,24 @@ topological_sort(graph_topological) # [1, 4, 2, 3, 5, 6]
 ```
 
 ```c++
-void topological_dfs(int current, unordered_set<int> &visited, vector<int> &stack, unordered_map<int, unordered_set<int>> &graph)
-{
+void topological_dfs(int current, unordered_set<int> &visited, vector<int> &stack, unordered_map<int, unordered_set<int>> &graph) {
     visited.insert(current);
 
-    for (int neighbor : graph[current])
-    {
-        if (!visited.count(neighbor))
-        {
+    for (int neighbor : graph[current]) {
+        if (!visited.count(neighbor)) {
             topological_dfs(neighbor, visited, stack, graph);
         }
     }
     stack.push_back(current);
 }
 
-vector<int> topological_sort(unordered_map<int, unordered_set<int>> &graph)
-{
+vector<int> topological_sort(unordered_map<int, unordered_set<int>> &graph) {
     vector<int> stack;
     unordered_set<int> visited;
 
-    for (auto iter = graph.begin(); iter != graph.end(); ++iter)
-    {
+    for (auto iter = graph.begin(); iter != graph.end(); ++iter) {
         int vertex = iter->first;
-        if (!visited.count(vertex))
-        {
+        if (!visited.count(vertex)) {
             topological_dfs(vertex, visited, stack, graph);
         }
     }
