@@ -401,8 +401,8 @@ sys.setrecursionlimit(100_000)
 
 - [Find the town judge - Easy](https://leetcode.com/problems/find-the-town-judge/)
 - [Breadth First Search: Shortest Reach](https://www.hackerrank.com/challenges/bfsshortreach/problem)
-- [Count of areas](https://www.hackerrank.com/contests/sda-2021-2022-test-6-christmas/challenges/challenge-2351)
-- [Cyclic graph](https://www.hackerrank.com/contests/sda-homework-10/challenges/-1-12)
+- [Count of areas - Medium](https://www.hackerrank.com/contests/sda-2021-2022-test-6-christmas/challenges/challenge-2351)
+- [Cyclic graph - Medium](https://www.hackerrank.com/contests/sda-homework-10/challenges/-1-12)
 - [Course Schedule II](https://leetcode.com/problems/course-schedule-ii)
 
 BFS и DFS на граф надграждат съответните имплементации за дървета, разгледани в [тема 7](/Week_06/Seminar/README.md).
