@@ -150,6 +150,9 @@ unordered_map<int, unordered_set<int>> graph = {
 - Стои в основата на по-сложни алгоритми като Алгоритъм на Дийкстра.
 - *O(V + E)* сложност по време.
 
+<details>
+  <summary>Python code</summary>
+  
 ```python
 from collections import deque
 
@@ -176,6 +179,11 @@ def bfs(starting_vertex, graph):
 bfs(0, graph)
 ```
 
+</details>
+
+<details>
+  <summary>C++ code</summary>
+  
 ```c++
 void bfs(int starting_vertex, unordered_map<int, unordered_set<int>>& graph) {
     queue<int> q;
@@ -205,6 +213,8 @@ void bfs(int starting_vertex, unordered_map<int, unordered_set<int>>& graph) {
     }
 }
 ```
+
+</details>
 
 Пример за следния граф:
 
@@ -238,6 +248,9 @@ At distance 3:
 - Удобен за намиране на компоненти на свързаност, проверка за цикъл в граф и топологична сортировка. (*Забележка: Възможно е и използването на BFS за решаване на горните проблеми.)
 - *O(V + E)* сложност по време.
 
+<details>
+  <summary>Python code</summary>
+
 ```python
 def dfs(current, visited, graph):
     print(current) # 0 1 2 4 5 3 6 
@@ -248,6 +261,11 @@ def dfs(current, visited, graph):
             dfs(neighbor, visited, graph)
 ```
 
+</details>
+
+<details>
+  <summary>C++ code</summary>
+  
 ```c++
 void dfs(int current, unordered_set<int> &visited, unordered_map<int, unordered_set<int>> &graph) {
     cout << current << " "; // 0 3 5 6 4 1 2
@@ -282,6 +300,8 @@ void dfsIterative(int start, unordered_map<int, unordered_set<int>>& graph) {
     }
 }
 ```
+
+</details>
 
 ## Сравнение на обхожданията
 ![image](https://github.com/user-attachments/assets/cbc13689-8a32-4d81-8f4a-283f2b645704)
