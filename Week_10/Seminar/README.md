@@ -1,6 +1,8 @@
 # Упражнение 10
 
-**Note:** Playground за графи и техните представяния [тук](https://visualgo.net/en/graphds)
+**Note:** Playground за графи и техните представяния:
+- https://visualgo.net/en/graphds
+- https://csacademy.com/app/graph_editor/
 
 # Oбхождане на граф
 
