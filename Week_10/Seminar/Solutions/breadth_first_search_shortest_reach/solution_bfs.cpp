@@ -1,85 +1,90 @@
 #include <iostream>
-#include <unordered_set>
 #include <unordered_map>
+#include <unordered_set>
 #include <queue>
 
-// This is global, we must clean it after each calling of the solve method
-std::unordered_map<int, std::unordered_set<int>> graph;
-
-void bfs(int starting_vertex, std::unordered_set<int> &visited, std::unordered_map<int, std::unordered_set<int>> &graph)
+void printResults(const size_t start, const std::vector<int> &results)
 {
-    std::queue<int> q;
-    q.push(starting_vertex);
-    visited.insert(starting_vertex);
+    int multiplier = 6;
+    int distance;
 
-    while (!q.empty())
+    for (size_t v = 1; v < results.size(); v++)
     {
-        // No need for levels
-        int current = q.front();
-        q.pop();
-
-        for (int neighbor : graph[current])
-        {
-            if (!visited.count(neighbor))
-            {
-                visited.insert(neighbor);
-                q.push(neighbor);
-            }
-        }
-    }
-}
-
-int solve()
-{
-    int V, E;
-    std::cin >> V >> E;
-
-    // Create all vertexes in the graph
-    for (int v = 0; v < V; v++)
-    {
-        graph[v];
-    }
-
-    // Connect some of the vertexes in the graph from the edges list
-    int v, w;
-    for (int e = 0; e < E; e++)
-    {
-        std::cin >> v >> w;
-        graph[v].insert(w);
-        graph[w].insert(v);
-    }
-
-    std::unordered_set<int> visited;
-    int count = 0;
-
-    for (auto it = graph.cbegin(); it != graph.cend(); it++)
-    {
-        if (visited.count(it->first) != 0)
+        if (v == start)
         {
             continue;
         }
-        bfs(it->first, visited, graph);
-        count++;
+        distance = results[v] ? results[v] * multiplier : -1;
+        std::cout << distance << " ";
     }
+    std::cout << "\n";
+}
 
-    graph.clear();
+void bfs(const int start, std::vector<int> &results, std::unordered_map<int, std::unordered_set<int>> &graph)
+{
+    std::queue<int> q;
+    q.push(start);
 
-    return count;
+    std::unordered_set<int> visited;
+    visited.insert(start);
+
+    int level = 0;
+    while (!q.empty())
+    {
+        int levelSize = q.size();
+
+        for (int i = 0; i < levelSize; i++)
+        {
+            int current = q.front();
+            q.pop();
+
+            results[current] = level;
+
+            const auto children = graph[current];
+            for (auto it = children.cbegin(); it != children.cend(); it++)
+            {
+                if (!visited.count(*it))
+                {
+                    q.push(*it);
+                    visited.insert(*it);
+                }
+            }
+        }
+
+        level++;
+    }
 }
 
 int main()
 {
-    // Enough to speed up the input so the last test passes
-    std::cin.tie(NULL);
-    std::ios_base::sync_with_stdio(false);
-
     int Q;
     std::cin >> Q;
 
-    for (int q = 0; q < Q; q++)
+    while (Q--)
     {
-        int answer = solve();
-        std::cout << answer << " ";
+        std::unordered_map<int, std::unordered_set<int>> graph;
+
+        int V, E, start, v, w;
+        std::cin >> V >> E;
+
+        for (int i = 1; i <= V; i++)
+        {
+            graph[i];
+        }
+
+        for (int i = 0; i < E; i++)
+        {
+            std::cin >> v >> w;
+            graph[v].insert(w);
+            graph[w].insert(v);
+        }
+        std::cin >> start;
+
+        // vertex 0 does not exist, so we will ignore the first position
+        std::vector<int> results(V + 1);
+
+        bfs(start, results, graph);
+        printResults(start, results);
     }
 
     return 0;

@@ -308,6 +308,7 @@ void dfs(int current, unordered_set<int> &visited, unordered_map<int, unordered_
         }
     }
 }
+```
 
 ```c++
 void dfsIterative(int start, unordered_map<int, unordered_set<int>>& graph) {
@@ -424,7 +425,7 @@ vector<int> topological_sort(unordered_map<int, unordered_set<int>> &graph) {
 
 Задачите свързани с графи имат значително по-голям вход от данни, затова може да преговорите и прилагате триковете от [тук](https://github.com/TeogopK/Data_Structures_and_Algorithms_FMI/tree/main/HackerrankHacks). Основните две неща, които ще са ви полезни, са забързването на входа и използването на статична памет.
 
-Практичен пример как се забързва входа - разгледайте [решението](./Solutions/breadth_first_search_shortest_reach/solution_dfs.cpp).
+Практичен пример как се забързва входа - разгледайте [решението](./Solutions/count_of_areas/solution_dfs.cpp).
 
 ## Съвети при решаване на задачи с Python
 
