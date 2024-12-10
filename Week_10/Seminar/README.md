@@ -69,6 +69,7 @@
 ### Списък на ребрата
 - Представяме графа като списък от наредени двойки
 - Често се използва като input за построяване на графа
+- Не е полезен в повечето задачи
 
 ![image](https://github.com/user-attachments/assets/598bc59a-e2dc-4e8d-a194-ef42fb06b0c5)
 
@@ -133,8 +134,6 @@ unordered_map<int, unordered_set<int>> graph = {
 ### Сравнение
 
 ![image](https://github.com/user-attachments/assets/2cbd9307-1c09-40b4-8d0b-0bf55c120436)
-
-
 
 ## Breadth First Search
 
