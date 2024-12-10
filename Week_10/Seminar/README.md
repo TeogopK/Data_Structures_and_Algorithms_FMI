@@ -60,6 +60,15 @@ graph = [
 ]
 ```
 
+```c++
+vector<vector<int>> graph = {
+    {0, 1, 1, 1},
+    {1, 0, 1, 0},
+    {1, 1, 0, 0},
+    {1, 0, 0, 0}
+};
+```
+
 ### Списък на съседство (Adjacency list)
 
 - Всеки връх съдържа списък с върховете, до които има непосредствени ребра (съседите).
@@ -76,6 +85,15 @@ graph = {
     '2': set([0, 1]),
     '3': set([0])
 }
+```
+
+```c++
+unordered_map<int, unordered_set<int>> graph = {
+    {0, {1, 2, 3}},
+    {1, {0, 2}},
+    {2, {0, 1}},
+    {3, {0}}
+};
 ```
 
 ## Breadth First Search
@@ -115,6 +133,36 @@ def bfs(starting_vertex, graph):
         distance += 1
 
 bfs(0, graph)
+```
+
+```c++
+void bfs(int starting_vertex, unordered_map<int, unordered_set<int>>& graph) {
+    queue<int> q;
+    unordered_set<int> visited;
+    q.push(starting_vertex);
+    visited.insert(starting_vertex);
+
+    int distance = 0;
+
+    while (!q.empty()) {
+        int level_size = q.size();
+        cout << "At distance " << distance << ":\n";
+
+        for (int i = 0; i < level_size; ++i) {
+            int current = q.front();
+            q.pop();
+            cout << current << "\n";
+
+            for (int neighbor : graph[current]) {
+                if (!visited.count(neighbor)) {
+                    visited.insert(neighbor);
+                    q.push(neighbor);
+                }
+            }
+        }
+        distance++;
+    }
+}
 ```
 
 Пример за следния граф:
@@ -159,6 +207,22 @@ def dfs(current, visited, graph):
             dfs(neighbor, visited, graph)
 ```
 
+```c++
+void dfs(int current, unordered_set<int> &visited, unordered_map<int, unordered_set<int>> &graph)
+{
+    cout << current << " "; // 0 3 5 6 4 1 2
+    visited.insert(current);
+
+    for (int neighbor : graph[current])
+    {
+        if (!visited.count(neighbor))
+        {
+            dfs(neighbor, visited, graph);
+        }
+    }
+}
+```
+
 ## Топологична сортировка
 
 - Подрежда върховете, така че всеки възел се намира преди наследниците си, към които има ребра.
@@ -194,7 +258,48 @@ def topological_sort(graph):
 topological_sort(graph_topological) # [1, 4, 2, 3, 5, 6]
 ```
 
-Имплементация на топологична сортировка с BFS, итеративно DFS и разглеждане на основни проблеми за графи в [playground-а](playground_12.ipynb).
+```c++
+void topological_dfs(int current, unordered_set<int> &visited, vector<int> &stack, unordered_map<int, unordered_set<int>> &graph)
+{
+    visited.insert(current);
+
+    for (int neighbor : graph[current])
+    {
+        if (!visited.count(neighbor))
+        {
+            topological_dfs(neighbor, visited, stack, graph);
+        }
+    }
+    stack.push_back(current);
+}
+
+vector<int> topological_sort(unordered_map<int, unordered_set<int>> &graph)
+{
+    vector<int> stack;
+    unordered_set<int> visited;
+
+    for (auto iter = graph.begin(); iter != graph.end(); ++iter)
+    {
+        int vertex = iter->first;
+        if (!visited.count(vertex))
+        {
+            topological_dfs(vertex, visited, stack, graph);
+        }
+    }
+
+    std::reverse(stack.begin(), stack.end());
+
+    return stack; // 1 4 2 3 5 6
+}
+```
+
+Друго възможно решение е: [1, 4, 5, 6, 2, 3].
+
+## Допълнителни проблеми и решения на задачите
+
+Примерни програми с разгледаните алгоритми в [Примерите](Examples/)
+
+Имплементация на топологична сортировка с BFS, итеративно DFS и разглеждане на основни проблеми за графи в [playground-а](Examples/python_playground.ipynb). Имплементациите са на *Python*, но обясненията важат за който и да е език!
 
 ## Особености при решаване на задачи със C++
 
