@@ -315,6 +315,9 @@ void dfsIterative(int start, unordered_map<int, unordered_set<int>>& graph) {
 
 ![Topological Sorting of graph - example](https://assets.leetcode.com/users/images/63bd7ad6-403c-42f1-b8bb-2ea41e42af9a_1613794080.8115625.png)
 
+<details>
+  <summary>Python code</summary>
+
 ```python
 def topological_dfs(current, stack, visited, graph):
     visited.add(current)
@@ -340,6 +343,10 @@ def topological_sort(graph):
 
 topological_sort(graph_topological) # [1, 4, 2, 3, 5, 6]
 ```
+</details>
+
+<details>
+  <summary>C++ code</summary>
 
 ```c++
 void topological_dfs(int current, unordered_set<int> &visited, vector<int> &stack, unordered_map<int, unordered_set<int>> &graph) {
@@ -369,6 +376,8 @@ vector<int> topological_sort(unordered_map<int, unordered_set<int>> &graph) {
     return stack; // 1 4 2 3 5 6
 }
 ```
+
+</details>
 
 Друго възможно решение е: [1, 4, 5, 6, 2, 3].
 
