@@ -476,3 +476,7 @@ sys.setrecursionlimit(100_000)
 
 BFS и DFS на граф надграждат съответните имплементации за дървета, разгледани в [тема 7](/Week_06/Seminar/README.md).
 
+## Бонус
+- [Possible Bipartition - Medium](https://leetcode.com/problems/possible-bipartition/)
+  - проверка дали граф е двуделен
+
