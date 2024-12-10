@@ -156,6 +156,10 @@ std::vector<std::pair<int, int>> graph = {
 
 ![image](https://github.com/user-attachments/assets/2cbd9307-1c09-40b4-8d0b-0bf55c120436)
 
+
+## Обхождания
+**Note:** BFS и DFS на граф надграждат съответните имплементации за дървета, разгледани в [тема 7](/Week_06/Seminar/README.md).
+
 ## Breadth First Search
 
 Алгоритъм:
@@ -474,9 +478,7 @@ sys.setrecursionlimit(100_000)
 - [Clone graph - Medium](https://leetcode.com/problems/clone-graph/)
 - [All paths from Source to Target - Medium](https://leetcode.com/problems/all-paths-from-source-to-target/)
 
-BFS и DFS на граф надграждат съответните имплементации за дървета, разгледани в [тема 7](/Week_06/Seminar/README.md).
-
 ## Бонус
 - [Possible Bipartition - Medium](https://leetcode.com/problems/possible-bipartition/)
-  - проверка дали граф е двуделен
+  - проверка дали граф е [двуделен](https://en.wikipedia.org/wiki/Bipartite_graph)
 
