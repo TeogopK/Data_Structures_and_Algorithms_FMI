@@ -259,7 +259,7 @@ void dfs(int current, unordered_set<int> &visited, unordered_map<int, unordered_
 }
 
 void dfsIterative(int start, unordered_map<int, unordered_set<int>>& graph) {
-    unordered_set<int>& visited;
+    unordered_set<int> visited;
     stack<int> s;
     s.push(start);
 
