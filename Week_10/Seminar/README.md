@@ -467,6 +467,7 @@ sys.setrecursionlimit(100_000)
 - [Cyclic graph - Medium](https://www.hackerrank.com/contests/sda-homework-10/challenges/-1-12)
 - [Course Schedule II - Medium](https://leetcode.com/problems/course-schedule-ii)
 - [Clone graph - Medium](https://leetcode.com/problems/clone-graph/)
+- [All paths from Source to Target - Medium](https://leetcode.com/problems/all-paths-from-source-to-target/)
 
 BFS и DFS на граф надграждат съответните имплементации за дървета, разгледани в [тема 7](/Week_06/Seminar/README.md).
 
