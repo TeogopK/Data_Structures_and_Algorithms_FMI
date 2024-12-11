@@ -481,4 +481,5 @@ sys.setrecursionlimit(100_000)
 ## Бонус
 - [Possible Bipartition - Medium](https://leetcode.com/problems/possible-bipartition/)
   - проверка дали граф е [двуделен](https://en.wikipedia.org/wiki/Bipartite_graph)
+- [Find the celebrity - Medium](https://leetcode.com/problems/find-the-celebrity/)
 
