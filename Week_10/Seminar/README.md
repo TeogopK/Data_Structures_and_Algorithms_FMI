@@ -482,4 +482,5 @@ sys.setrecursionlimit(100_000)
 - [Possible Bipartition - Medium](https://leetcode.com/problems/possible-bipartition/)
   - проверка дали граф е [двуделен](https://en.wikipedia.org/wiki/Bipartite_graph)
 - [Find the celebrity - Medium](https://leetcode.com/problems/find-the-celebrity/)
+- [Alternating Colors - Medium](https://leetcode.com/problems/shortest-path-with-alternating-colors/)
 
