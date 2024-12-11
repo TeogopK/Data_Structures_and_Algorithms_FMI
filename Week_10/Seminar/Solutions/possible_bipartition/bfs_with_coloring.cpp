@@ -1,5 +1,6 @@
 class Solution {
-    // mark every node with color => red and blue
+    // mark every node with color
+    // we can use only two colors for separation => red and blue => boolean true/false
     bool dfs(int current, unordered_map<int, unordered_set<int>>& graph, unordered_map<int, bool>& colors, bool currentColor = true) {
         auto iter = colors.find(current);
         if(iter != colors.end()) {
