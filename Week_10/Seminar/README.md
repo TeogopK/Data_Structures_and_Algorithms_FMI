@@ -477,6 +477,7 @@ sys.setrecursionlimit(100_000)
 ## Задачи за упражнение
 
 - [Find the town judge - Easy](https://leetcode.com/problems/find-the-town-judge/)
+  - бонус въпрос: може ли да има двама съдии едновременно?
 - [Breadth First Search: Shortest Reach](https://www.hackerrank.com/challenges/bfsshortreach/problem)
 - [Count of areas - Medium](https://www.hackerrank.com/contests/sda-2021-2022-test-6-christmas/challenges/challenge-2351)
 - [Cyclic graph - Medium](https://www.hackerrank.com/contests/sda-homework-10/challenges/-1-12)
