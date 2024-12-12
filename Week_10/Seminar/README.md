@@ -160,7 +160,7 @@ std::vector<std::pair<int, int>> graph = {
 ## Обхождания
 **Note:** BFS и DFS на граф надграждат съответните имплементации за дървета, разгледани в [тема 7](/Week_06/Seminar/README.md).
 
-## Breadth First Search
+### Breadth First Search
 
 Алгоритъм:
 1. Разделя възлите на посетени и непосетени.
@@ -259,7 +259,7 @@ At distance 3:
 
 ```
 
-## Depth First Search
+### Depth First Search
 
 Алгоритъм:
 1. Разделя възлите на посетени и непосетени.
@@ -342,10 +342,10 @@ void dfsIterative(int start, unordered_map<int, unordered_set<int>>& graph) {
 
 </details>
 
-## Сравнение на обхожданията
+### Сравнение на обхожданията
 ![image](https://github.com/user-attachments/assets/cbc13689-8a32-4d81-8f4a-283f2b645704)
 
-## Топологична сортировка
+### Топологична сортировка
 
 - Подрежда върховете, така че всеки възел се намира преди наследниците си, към които има ребра.
 - Работи за [DAG](https://en.wikipedia.org/wiki/Directed_acyclic_graph) (Directed Acyclic Graph).
@@ -421,7 +421,13 @@ vector<int> topological_sort(unordered_map<int, unordered_set<int>> &graph) {
 
 Друго възможно решение е: [1, 4, 5, 6, 2, 3].
 
-## Допълнителни проблеми и решения на задачите
+Написаният алгоритъм в snippet-а работи само ако сме сигурни, че графът е DAG. В противен случай трябва да използваме някой от следните алгоритми:
+- Алгоритъм на Кан
+- DFS с маркиране
+
+Може да ги видите като псевдокод [тук](https://en.wikipedia.org/wiki/Topological_sorting)
+
+### Допълнителни проблеми и решения на задачите
 
 Примерни програми с разгледаните алгоритми в [Примерите](Examples/)
 
@@ -431,7 +437,7 @@ vector<int> topological_sort(unordered_map<int, unordered_set<int>> &graph) {
 
 Задачите свързани с графи имат значително по-голям вход от данни, затова може да преговорите и прилагате триковете от [тук](https://github.com/TeogopK/Data_Structures_and_Algorithms_FMI/tree/main/HackerrankHacks). Основните две неща, които ще са ви полезни, са забързването на входа и използването на статична памет.
 
-Практичен пример как се забързва входа - разгледайте [решението](./Solutions/count_of_areas/solution_dfs.cpp).
+Практичен пример как влияе забързването на входа - разгледайте [решението](./Solutions/count_of_areas/solution_dfs_recursive.cpp).
 
 ## Съвети при решаване на задачи с Python
 
@@ -471,14 +477,17 @@ sys.setrecursionlimit(100_000)
 ## Задачи за упражнение
 
 - [Find the town judge - Easy](https://leetcode.com/problems/find-the-town-judge/)
+  - бонус въпрос: може ли да има двама съдии едновременно?
 - [Breadth First Search: Shortest Reach](https://www.hackerrank.com/challenges/bfsshortreach/problem)
 - [Count of areas - Medium](https://www.hackerrank.com/contests/sda-2021-2022-test-6-christmas/challenges/challenge-2351)
 - [Cyclic graph - Medium](https://www.hackerrank.com/contests/sda-homework-10/challenges/-1-12)
 - [Course Schedule II - Medium](https://leetcode.com/problems/course-schedule-ii)
 - [Clone graph - Medium](https://leetcode.com/problems/clone-graph/)
 - [All paths from Source to Target - Medium](https://leetcode.com/problems/all-paths-from-source-to-target/)
+- [Премахване на ребра](https://www.hackerrank.com/contests/sda-test5-2022-2023-43wdst52/challenges/challenge-1761/problem)
 
 ## Бонус
 - [Possible Bipartition - Medium](https://leetcode.com/problems/possible-bipartition/)
   - проверка дали граф е [двуделен](https://en.wikipedia.org/wiki/Bipartite_graph)
+- [Find the celebrity - Medium](https://leetcode.com/problems/find-the-celebrity/)
 
