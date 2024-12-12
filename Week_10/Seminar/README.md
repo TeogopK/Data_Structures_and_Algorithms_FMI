@@ -160,7 +160,7 @@ std::vector<std::pair<int, int>> graph = {
 ## Обхождания
 **Note:** BFS и DFS на граф надграждат съответните имплементации за дървета, разгледани в [тема 7](/Week_06/Seminar/README.md).
 
-## Breadth First Search
+### Breadth First Search
 
 Алгоритъм:
 1. Разделя възлите на посетени и непосетени.
@@ -259,7 +259,7 @@ At distance 3:
 
 ```
 
-## Depth First Search
+### Depth First Search
 
 Алгоритъм:
 1. Разделя възлите на посетени и непосетени.
@@ -342,10 +342,10 @@ void dfsIterative(int start, unordered_map<int, unordered_set<int>>& graph) {
 
 </details>
 
-## Сравнение на обхожданията
+### Сравнение на обхожданията
 ![image](https://github.com/user-attachments/assets/cbc13689-8a32-4d81-8f4a-283f2b645704)
 
-## Топологична сортировка
+### Топологична сортировка
 
 - Подрежда върховете, така че всеки възел се намира преди наследниците си, към които има ребра.
 - Работи за [DAG](https://en.wikipedia.org/wiki/Directed_acyclic_graph) (Directed Acyclic Graph).
@@ -427,7 +427,7 @@ vector<int> topological_sort(unordered_map<int, unordered_set<int>> &graph) {
 
 Може да ги видите като псевдокод [тук](https://en.wikipedia.org/wiki/Topological_sorting)
 
-## Допълнителни проблеми и решения на задачите
+### Допълнителни проблеми и решения на задачите
 
 Примерни програми с разгледаните алгоритми в [Примерите](Examples/)
 
