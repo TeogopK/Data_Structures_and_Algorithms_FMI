@@ -342,6 +342,11 @@ void dfsIterative(int start, unordered_map<int, unordered_set<int>>& graph) {
 
 </details>
 
+Анимиран пример с друг граф за дфс:
+
+![dfs-example](https://github.com/user-attachments/assets/69a70c3e-eec0-42d4-8765-6d57976faa7b)
+
+
 ### Сравнение на обхожданията
 ![image](https://github.com/user-attachments/assets/cbc13689-8a32-4d81-8f4a-283f2b645704)
 
