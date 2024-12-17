@@ -177,7 +177,8 @@ def bellman_ford(start, V, graph):
     
     for _ in range(V - 1):
         for x, y, w in graph: # O(E)
-            distances[y] = min(distances[y], distances[x] + w)
+            if distances[y] != INF
+                distances[y] = min(distances[y], distances[x] + w)
 
     for x, y, w in graph: 
         if distances[x] + w < distances[y]:
