@@ -228,6 +228,10 @@ std::vector<int> bellman_ford(int start, int nodesCount, const std::vector<Edge>
 
 ## Най-кратък път в DAG - използвайки топологична сортировка
 
+
+<details>
+  <summary>C++ code</summary>
+
 ```c++
 
 struct Edge {
@@ -281,6 +285,8 @@ std::vector<int> dagShortedPath(int start, int V, const std::unordered_map<int, 
 }
 
 ```
+
+</details>
 
 ## Задачи за упражнение
 
