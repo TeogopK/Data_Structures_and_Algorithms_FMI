@@ -8,6 +8,7 @@
 - Алгоритъм на Дейкстра (Dijkstra)
 - Алгоритъм на Белман-Форд (Bellman-Ford)
 - Най-кратък път в DAG
+- Бонус
 
 ## Непретеглен граф
 
@@ -39,6 +40,10 @@ undirected_graph = {
 - Сложността по време зависи от използваната структура.
 - При използването на *Binary Heap* сложността е *O(E\*logV)*.
 - Алгоритъмът не работи правилно при наличие на ребро с отрицателна тежест.
+
+
+<details>
+  <summary>Python code</summary>
 
 ```python
 from heapq import heappop, heappush
@@ -74,6 +79,16 @@ def dijkstra(start, V, graph):
 
 dijkstra(0, 5, undirected_graph) # [0, 1, 6, 8, 3]
 ```
+
+
+</details>
+
+
+<details>
+  <summary>C++ code</summary>
+
+  
+</details>
 
 Алгоритъм:
 1. Отбелязваме всички върхове като недостижми (дистанцията до тях е безкрайност).
