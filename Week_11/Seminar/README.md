@@ -185,6 +185,33 @@ def bellman_ford(start, V, graph):
 bellman_ford(0, 4, graph_list_of_edges) # [0, -3, 7, -2]
 ```
 
+```c++
+struct Edge {
+    int from, to, weight;
+};
+
+std::vector<int> bellman_ford(int start, int nodesCount, const std::vector<Edge>& edges) {
+    std::vector<int> distances(nodesCount, INT_MAX);
+    distances[start] = 0;
+
+    for (int i = 0; i < nodesCount - 1; ++i) {
+        for (const auto& edge : edges) {
+            if (distances[edge.from] != INT_MAX && distances[edge.from] + edge.weight < distances[edge.to]) {
+                distances[edge.to] = distances[edge.from] + edge.weight;
+            }
+        }
+    }
+
+    for (const auto& edge : edges) {
+        if (distances[edge.from] != INT_MAX && distances[edge.from] + edge.weight < distances[edge.to]) {
+            throw std::logic_error("Oh, no negative cycle...");
+        }
+    }
+
+    return distances;
+}
+```
+
 Интуиция: Алгоритъмът последователно намира най-кратките пътища от началния връх до всички останали с дължина 1, след това 2 и т.н. до дължина V - 1. Пътят с най-много ребра без цикъл (*V - 1*) може да е най-кратък.
 
 ## Задачи за упражнение
