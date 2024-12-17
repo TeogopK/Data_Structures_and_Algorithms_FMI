@@ -130,3 +130,6 @@ bellman_ford(0, 4, graph_list_of_edges) # [0, -3, 7, -2]
 - [Network Delay Time](https://leetcode.com/problems/network-delay-time)
 - [Long Long](https://www.hackerrank.com/contests/sda-hw-11/challenges/long-long)
 - [Path with Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability)
+
+## Бонус
+Друг алгоритъм за намиране на най-кратък път между всички възможни двойки от върхове - [Floyd-Warshall](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)
