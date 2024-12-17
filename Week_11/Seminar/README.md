@@ -87,6 +87,48 @@ dijkstra(0, 5, undirected_graph) # [0, 1, 6, 8, 3]
 <details>
   <summary>C++ code</summary>
 
+```c++
+struct Edge {
+    int to, weight;
+};
+
+struct Node {
+	int index, distance;
+
+	bool operator<(const Node& other) const {
+		return distance > other.distance;
+	}
+};
+
+std::vector<int> dijkstra(int start, int V, std::unordered_map<int, std::vector<Edge>>& graph) {
+    std::vector<int> distances(V, INT_MAX);
+    distances[start] = 0;
+
+    std::unordered_set<int> visited;
+    std::priority_queue<Node> nextToProcess;
+    nextToProcess.push({ start, 0 });
+
+    while (!nextToProcess.empty()) {
+        auto currentNode = nextToProcess.top();
+        nextToProcess.pop();
+
+        if (visited.count(currentNode.index)) continue;
+        visited.insert(currentNode.index);
+
+        for (const auto& edge : graph[currentNode.index]) {
+            if (visited.count(edge.to)) continue;
+
+            int newWeight = currentNode.distance + edge.weight;
+            if (newWeight < distances[edge.to]) {
+                distances[edge.to] = newWeight;
+                nextToProcess.push({ edge.to, newWeight });
+            }
+        }
+    }
+
+    return distances;
+}
+```
   
 </details>
 
