@@ -189,10 +189,10 @@ bellman_ford(0, 4, graph_list_of_edges) # [0, -3, 7, -2]
 
 ## Задачи за упражнение
 
-- [Dijkstra: Shortest Reach 2](https://www.hackerrank.com/challenges/dijkstrashortreach/problem)
-- [Network Delay Time](https://leetcode.com/problems/network-delay-time)
-- [Long Long](https://www.hackerrank.com/contests/sda-hw-11/challenges/long-long)
-- [Path with Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability)
+- [Dijkstra: Shortest Reach 2 - Medium](https://www.hackerrank.com/challenges/dijkstrashortreach/problem)
+- [Network Delay Time - Medium](https://leetcode.com/problems/network-delay-time)
+- [Long Long - Medium](https://www.hackerrank.com/contests/sda-hw-11/challenges/long-long)
+- [Path with Maximum Probability - Medium](https://leetcode.com/problems/path-with-maximum-probability)
 
 ## Бонус
 - Защо O(logV)~O(logE) (не мултиграф)
