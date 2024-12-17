@@ -226,6 +226,62 @@ std::vector<int> bellman_ford(int start, int nodesCount, const std::vector<Edge>
 
 Интуиция: Алгоритъмът последователно намира най-кратките пътища от началния връх до всички останали с дължина 1, след това 2 и т.н. до дължина V - 1. Най-краткият път с най-много ребра без цикъл може да бъде с най-много (*V - 1*) ребра.
 
+## Най-кратък път в DAG - използвайки топологична сортировка
+
+```c++
+
+struct Edge {
+    int to, weight;
+};
+
+void topologicalSort(
+    int current,
+    const std::unordered_map<int, std::vector<Edge>>& graph,
+    std::vector<bool>& visited,
+    std::stack<int>& topologicalSortStack
+) {
+    visited[current] = true;
+    if (graph.find(current) != graph.end()) {
+        for (const auto& edge : graph.at(current)) {
+            if (!visited[edge.to]) {
+                topologicalSort(edge.to, graph, visited, topologicalSortStack);
+            }
+        }
+    }
+    topologicalSortStack.push(current);
+}
+
+std::vector<int> dagShortedPath(int start, int V, const std::unordered_map<int, std::vector<Edge>>& graph) {
+    std::vector<int> distances(V, INT_MAX);
+    distances[start] = 0;
+
+    std::stack<int> topologicalSortStack;
+    std::vector<bool> visited(V, false);
+
+    for (int i = 0; i < V; i++) {
+        if (!visited[i]) {
+            topologicalSort(i, graph, visited, topologicalSortStack);
+        }
+    }
+
+    while (!topologicalSortStack.empty()) {
+        int u = topologicalSortStack.top();
+        topologicalSortStack.pop();
+
+        if (distances[u] != INT_MAX && graph.find(u) != graph.end()) {
+            for (const auto& edge : graph.at(u)) {
+                if (distances[u] + edge.weight < distances[edge.to]) {
+                    distances[edge.to] = distances[u] + edge.weight;
+                }
+            }
+        }
+    }
+
+    return distances;
+}
+
+```
+
 ## Задачи за упражнение
 
 - [Dijkstra: Shortest Reach 2 - Medium](https://www.hackerrank.com/challenges/dijkstrashortreach/problem)
