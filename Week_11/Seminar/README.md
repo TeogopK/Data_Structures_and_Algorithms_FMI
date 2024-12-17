@@ -165,6 +165,9 @@ graph_list_of_edges = [
 
 Въпрос: Какво щеше да стане ако реброто от 0 към 1 беше насочено от 1 към 0? 
 
+<details>
+  <summary>Python code</summary>
+
 ```python
 INF = float('infinity')
 
@@ -184,6 +187,12 @@ def bellman_ford(start, V, graph):
 
 bellman_ford(0, 4, graph_list_of_edges) # [0, -3, 7, -2]
 ```
+
+</details>
+
+
+<details>
+  <summary>C++ code</summary>
 
 ```c++
 struct Edge {
@@ -211,6 +220,9 @@ std::vector<int> bellman_ford(int start, int nodesCount, const std::vector<Edge>
     return distances;
 }
 ```
+
+
+</details>
 
 Интуиция: Алгоритъмът последователно намира най-кратките пътища от началния връх до всички останали с дължина 1, след това 2 и т.н. до дължина V - 1. Пътят с най-много ребра без цикъл (*V - 1*) може да е най-кратък.
 
