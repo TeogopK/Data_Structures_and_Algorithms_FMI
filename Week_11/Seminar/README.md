@@ -163,6 +163,8 @@ graph_list_of_edges = [
 
 ![Dijkstra negative edge graph example](media/dijkstra_negative_edge_graph.png)
 
+Въпрос: Какво щеше да стане ако реброто от 0 към 1 беше насочено от 1 към 0? 
+
 ```python
 INF = float('infinity')
 
