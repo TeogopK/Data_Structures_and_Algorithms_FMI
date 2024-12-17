@@ -148,6 +148,7 @@ bellman_ford(0, 4, graph_list_of_edges) # [0, -3, 7, -2]
 - [Path with Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability)
 
 ## Бонус
-. Друг алгоритъм за намиране на най-кратък път между всички възможни двойки от върхове - [Floyd-Warshall](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)
+- Защо O(logV)~O(logE) (не мултиграф)
+- Друг алгоритъм за намиране на най-кратък път между всички възможни двойки от върхове - [Floyd-Warshall](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)
 - [0-1 BFS (Shortest Path in a Binary Weight Graph)](https://www.geeksforgeeks.org/0-1-bfs-shortest-path-binary-graph/)
 
