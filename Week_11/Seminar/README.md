@@ -96,18 +96,17 @@ struct Edge {
 };
 
 struct Node {
-	int index, distance;
+    int index, distance;
 
-	bool operator<(const Node& other) const {
-		return distance > other.distance;
-	}
+    bool operator<(const Node& other) const {
+        return distance > other.distance;
+    }
 };
 
 std::vector<int> dijkstra(int start, int V, std::unordered_map<int, std::vector<Edge>>& graph) {
     std::vector<int> distances(V, INT_MAX);
     distances[start] = 0;
 
-    std::unordered_set<int> visited;
     std::priority_queue<Node> nextToProcess;
     nextToProcess.push({ start, 0 });
 
@@ -115,12 +114,11 @@ std::vector<int> dijkstra(int start, int V, std::unordered_map<int, std::vector<
         auto currentNode = nextToProcess.top();
         nextToProcess.pop();
 
-        if (visited.count(currentNode.index)) continue;
-        visited.insert(currentNode.index);
+        if (currentNode.distance > distances[currentNode.index]) {
+            continue;
+        }
 
         for (const auto& edge : graph[currentNode.index]) {
-            if (visited.count(edge.to)) continue;
-
             int newWeight = currentNode.distance + edge.weight;
             if (newWeight < distances[edge.to]) {
                 distances[edge.to] = newWeight;
@@ -131,6 +129,7 @@ std::vector<int> dijkstra(int start, int V, std::unordered_map<int, std::vector<
 
     return distances;
 }
+ 
 ```
   
 </details>
