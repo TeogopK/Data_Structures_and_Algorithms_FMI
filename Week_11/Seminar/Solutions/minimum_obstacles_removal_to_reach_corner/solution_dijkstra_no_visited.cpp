@@ -27,6 +27,7 @@ public:
             if(minObstacles[current.x][current.y] < current.removedObstacles) {
                 continue;
             }
+            // early exit
             if(current.x == m - 1 && current.y == n - 1) {
                 return current.removedObstacles;
             }
