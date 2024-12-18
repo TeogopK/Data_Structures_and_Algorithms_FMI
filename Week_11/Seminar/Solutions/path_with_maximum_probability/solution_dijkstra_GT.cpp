@@ -25,18 +25,16 @@ public:
         probs[start_node] = 1;
         priority_queue<Node> nextToProcess;
         nextToProcess.push({start_node, 1});
-        unordered_set<int> visited;
+        
         while(!nextToProcess.empty()) {
             Node toProcess = nextToProcess.top();
             nextToProcess.pop();
-            if(visited.count(toProcess.index)) continue;
-            // early exit
+            if(toProcess.prob > probs[toProcess.index]) continue;
             if(toProcess.index == end_node) {
                 return probs[end_node];
             }
-            visited.insert(toProcess.index);
+
             for(auto& adj: graph[toProcess.index]) {
-                if(visited.count(adj.target)) continue;
                 double possibleProb = probs[toProcess.index] * adj.prob;
                 if(probs[adj.target] < possibleProb) {
                     probs[adj.target] = possibleProb;
