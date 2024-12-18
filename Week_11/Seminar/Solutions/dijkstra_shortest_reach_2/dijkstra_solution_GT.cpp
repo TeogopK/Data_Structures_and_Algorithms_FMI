@@ -22,18 +22,14 @@ vector<int> shortestReach(int n, vector<vector<int>> edges, int s) {
     vector<int> distances(n, INT_MAX);
     distances[s - 1] = 0;
     priority_queue<Node> nextToProcess;
-    unordered_set<int> visited;
     nextToProcess.push({s, 0});
     while(!nextToProcess.empty()) {
         auto next = nextToProcess.top();
         nextToProcess.pop();
         
-        if(visited.count(next.index)) continue;
-        visited.insert(next.index);
+        if(next.distance > distances[next.index - 1]) continue;
         
         for(auto& adj: graph[next.index]) {
-            if(visited.count(adj.to)) continue;
-            
             int newDistance = next.distance + adj.weight;
             if(newDistance < distances[adj.to - 1]) {
                 distances[adj.to - 1] = newDistance;
