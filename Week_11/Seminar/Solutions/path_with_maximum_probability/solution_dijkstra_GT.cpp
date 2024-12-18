@@ -30,6 +30,7 @@ public:
             Node toProcess = nextToProcess.top();
             nextToProcess.pop();
             if(visited.count(toProcess.index)) continue;
+            // early exit
             if(toProcess.index == end_node) {
                 return probs[end_node];
             }
