@@ -299,6 +299,7 @@ std::vector<int> dagShortedPath(int start, int V, const std::unordered_map<int, 
 ## Задачи за упражнение
 
 - [Dijkstra: Shortest Reach 2 - Medium](https://www.hackerrank.com/challenges/dijkstrashortreach/problem)
+  - за изпробване на дийкстра
 - [Network Delay Time - Medium](https://leetcode.com/problems/network-delay-time)
 - [Long Long - Medium](https://www.hackerrank.com/contests/sda-hw-11/challenges/long-long)
 - [Path with Maximum Probability - Medium](https://leetcode.com/problems/path-with-maximum-probability)
