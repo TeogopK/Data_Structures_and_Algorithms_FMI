@@ -105,6 +105,9 @@ std::vector<Edge> prim(int n, int start, std::unordered_map<int, std::vector<Edg
         visited.insert(current.to);
         mstEdges.push_back(current);
         for (auto& adj : graph[current.to]) {
+            if(visited.count(adj.to)) {
+                continue;
+            }
             pq.push(adj);
         }
     }
@@ -147,6 +150,9 @@ int prim2(int n, int start, std::unordered_map<int, std::vector<Edge>>& graph) {
         visited.insert(current.to);
         totalWeight += current.weight;
         for (auto& adj : graph[current.to]) {
+            if(visited.count(adj.to)) {
+                continue;
+            }
             pq.push(adj);
         }
     }
