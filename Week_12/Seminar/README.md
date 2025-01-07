@@ -88,7 +88,6 @@ struct Edge {
     }
 };
 // we assume that the graph is represented as an adjacency list
-// and also that the graph is connected
 std::vector<Edge> prim(int n, int start, std::unordered_map<int, std::vector<Edge>>& graph) {
     std::priority_queue<Edge> pq;
     std::unordered_set<int> visited;
@@ -111,6 +110,22 @@ std::vector<Edge> prim(int n, int start, std::unordered_map<int, std::vector<Edg
     }
 
     return mstEdges;
+}
+
+// if we are not if the graph is connected
+void test() {
+        auto mstEdges = prim(n, 1, graph);
+        // if the graph is not connected we will have less than n - 1 edges
+        // mstEdges.size() - 1 because of the extra edge
+        if(mstEdges.size() - 1 < n - 1 ) {
+            return -1;
+        }
+
+        int result = 0;
+        for(size_t i = 1 ; i < mstEdges.size(); i++) {
+            result += mstEdges[i].weight;
+        }
+        return result;
 }
 ```
 
