@@ -230,15 +230,16 @@ kruskal(5 , graph_list_of_edges) # 13
 
 </details>
 
-
 <details>
   <summary>C++ code</summary>
 
+```c++
 struct Edge {
     int from;
     int to;
     int weight;
 };
+
 // we use the interface
 class UnionFind {
 public:
@@ -268,6 +269,7 @@ std::vector<Edge> kruskal(int n, std::vector<Edge>& edges) {
 
     return mstEdges;
 }
+```
 
 </details>
 
