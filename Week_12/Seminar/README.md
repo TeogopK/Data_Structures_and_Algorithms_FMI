@@ -95,7 +95,7 @@ std::vector<Edge> prim(int n, int start, std::unordered_map<int, std::vector<Edg
 
     std::vector<Edge> mstEdges;
 
-    while (!pq.empty() && visited.size() < n) {
+    while (!pq.empty() && visited.size() < n) { // visited.size() < n to stop earlier if the mst is ready
         auto current = pq.top();
         pq.pop();
         if (visited.count(current.to)) {
@@ -137,7 +137,7 @@ int prim2(int n, int start, std::unordered_map<int, std::vector<Edge>>& graph) {
 
     int totalWeight = 0;
 
-    while (!pq.empty() && visited.size() < n) {
+    while (!pq.empty() && visited.size() < n) {  // visited.size() < n to stop earlier if the mst is ready
         auto current = pq.top();
         pq.pop();
         if (visited.count(current.to)) {
@@ -160,6 +160,8 @@ int prim2(int n, int start, std::unordered_map<int, std::vector<Edge>>& graph) {
 Пример при започване от *връх 5*:
 
 ![Prim's algorithm creating a MST of a graph, step by step example.](media/prims_algorithm_example.png)
+
+Имплементацията наподобява тази на алгоритъма на Дийкстра с разликата, че приоритетната опашка държи ребра, а не двойка връх и изминат път от началото до него.
 
 ## Алгоритъм на Крускал (Kruskal's algorithm)
 
