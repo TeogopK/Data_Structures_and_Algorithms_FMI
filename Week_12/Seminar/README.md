@@ -280,5 +280,3 @@ std::vector<Edge> kruskal(int n, std::vector<Edge>& edges) {
 
 - [Prim's (MST) : Special Subtree](https://www.hackerrank.com/challenges/primsmstsub/problem)
 - [Kruskal (MST): Really Special Subtree](https://www.hackerrank.com/challenges/kruskalmstrsub/problem)
-
-Решения на задачите: [тук](/Tasks/tasks_14)
