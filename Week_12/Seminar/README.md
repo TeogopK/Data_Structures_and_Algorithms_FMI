@@ -280,3 +280,5 @@ std::vector<Edge> kruskal(int n, std::vector<Edge>& edges) {
 
 - [Prim's (MST) : Special Subtree](https://www.hackerrank.com/challenges/primsmstsub/problem)
 - [Kruskal (MST): Really Special Subtree](https://www.hackerrank.com/challenges/kruskalmstrsub/problem)
+- [Min cost to connect all points - Medium](https://leetcode.com/problems/min-cost-to-connect-all-points/description/)
+- [Find critical and pseudo critical edges in MST](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/description/)
