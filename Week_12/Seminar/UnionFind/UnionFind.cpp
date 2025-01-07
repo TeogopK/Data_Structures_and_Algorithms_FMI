@@ -12,11 +12,11 @@ bool UnionFind::areInOneSet(size_t first, size_t second) {
 }
 
 size_t UnionFind::getParent(size_t vertex) {
-    if(parentsContainer[vertex] != vertex) {
-        parentsContainer[vertex] = getParent(parentsContainer[vertex]);
+    if (parentsContainer[vertex] == vertex) {
+        return vertex;
     }
-    
-    return parentsContainer[vertex];
+
+    return parentsContainer[vertex] = getParent(parentsContainer[vertex]);
 }
 
 void UnionFind::unionVertices(size_t first, size_t second) {
