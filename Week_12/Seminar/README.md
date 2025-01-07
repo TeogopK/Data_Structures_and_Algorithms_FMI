@@ -72,6 +72,47 @@ prim(5, 5, graph) # 13
 <details>
   <summary>C++ code</summary>
 
+```c++
+#include <vector>
+#include <unordered_map>
+#include <unordered_set>
+#include <queue>
+
+struct Edge {
+    int from;
+    int to;
+    int weight;
+
+    bool operator<(const Edge& other) const {
+        return weight > other.weight;
+    }
+};
+// we assume that the graph is represented as an adjacency list
+// and also that the graph is connected
+std::vector<Edge> prim(int n, int start, std::unordered_map<int, std::vector<Edge>>& graph) {
+    std::priority_queue<Edge> pq;
+    std::unordered_set<int> visited;
+    pq.push({ start, start, 0 });
+
+    std::vector<Edge> mstEdges;
+
+    while (!pq.empty() && visited.size() < n) {
+        auto current = pq.top();
+        pq.pop();
+        if (visited.count(current.to)) {
+            continue;
+        }
+
+        visited.insert(current.to);
+        mstEdges.push_back(current);
+        for (auto& adj : graph[current.to]) {
+            pq.push(adj);
+        }
+    }
+
+    return mstEdges;
+}
+```
 
 </details>
 
