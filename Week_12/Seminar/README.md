@@ -68,6 +68,13 @@ prim(5, 5, graph) # 13
 
 </details>
 
+
+<details>
+  <summary>C++ code</summary>
+
+
+</details>
+
 Пример при започване от *връх 5*:
 
 ![Prim's algorithm creating a MST of a graph, step by step example.](media/prims_algorithm_example.png)
@@ -120,6 +127,13 @@ def kruskal(V, edges):
 
 kruskal(5 , graph_list_of_edges) # 13
 ```
+
+</details>
+
+
+<details>
+  <summary>C++ code</summary>
+
 
 </details>
 
