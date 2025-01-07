@@ -6,8 +6,8 @@
 
 - Минимално покриващо дърво (Minimum spanning tree)
 - Алгоритъм на Прим (Prim)
-- Алгоритъм на Крускал (Kruskal)
 - Disjoint-set
+- Алгоритъм на Крускал (Kruskal)
   
 ## Покриващо дърво (Spanning tree) на граф
 
