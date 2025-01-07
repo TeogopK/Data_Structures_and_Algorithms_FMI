@@ -234,6 +234,40 @@ kruskal(5 , graph_list_of_edges) # 13
 <details>
   <summary>C++ code</summary>
 
+struct Edge {
+    int from;
+    int to;
+    int weight;
+};
+// we use the interface
+class UnionFind {
+public:
+    UnionFind(size_t vertices);
+
+    bool areInOneSet(size_t first, size_t second);
+    void unionVertices(size_t first, size_t second);
+};
+
+std::vector<Edge> kruskal(int n, std::vector<Edge>& edges) {
+    std::sort(edges.begin(), edges.end(), [](const Edge& a, const Edge& b) {
+        return a.weight < b.weight;
+    });
+    UnionFind uf(n);
+    std::vector<Edge> mstEdges;
+    for (size_t i = 0; i < edges.size(); i++) {
+        if (uf.areInOneSet(edges[i].from, edges[i].to)) {
+            continue;
+        }
+
+        uf.unionVertices(edges[i].from, edges[i].to);
+        mstEdges.push_back(edges[i]);
+        if (mstEdges.size() == n - 1) {
+            break;
+        }
+    }
+
+    return mstEdges;
+}
 
 </details>
 
