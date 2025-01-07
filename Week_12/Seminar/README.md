@@ -127,6 +127,32 @@ void test() {
         }
         return result;
 }
+
+
+// if we are sure that the graph is connected, we can directly do the calculations inside the algorithm
+int prim2(int n, int start, std::unordered_map<int, std::vector<Edge>>& graph) {
+    std::priority_queue<Edge> pq;
+    std::unordered_set<int> visited;
+    pq.push({ start, start, 0 }); // fake edge to start the algorithm
+
+    int totalWeight = 0;
+
+    while (!pq.empty() && visited.size() < n) {
+        auto current = pq.top();
+        pq.pop();
+        if (visited.count(current.to)) {
+            continue;
+        }
+
+        visited.insert(current.to);
+        totalWeight += current.weight;
+        for (auto& adj : graph[current.to]) {
+            pq.push(adj);
+        }
+    }
+
+    return totalWeight;
+}
 ```
 
 </details>
