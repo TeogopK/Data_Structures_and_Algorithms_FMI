@@ -179,6 +179,8 @@ int prim2(int n, int start, std::unordered_map<int, std::vector<Edge>>& graph) {
 
 Сложността за обединяване на N елемента е О(N*α(N)), където α е обратната функцията на Акерман.
 
+Подробно описание как работи Disjoint-set (Union-find) структурата в [playground-а](playground_14.ipynb).
+
 ## Алгоритъм на Крускал (Kruskal's algorithm)
 
 - Намира минимално покриващо дърво на граф.
@@ -275,7 +277,7 @@ std::vector<Edge> kruskal(int n, std::vector<Edge>& edges) {
 
 ![Kruskal's algorithm creating a MST of a graph, step by step example.](media/kruskals_algorithm_example.png)
 
-Подробно описание как работи Disjoint-set (Union-find) структурата в [playground-а](playground_14.ipynb).
+Крускал поддържа гора от покриващи дървета в показаната имплементация с леки промени може да постигне.
 
 ## Задачи за упражнение
 
