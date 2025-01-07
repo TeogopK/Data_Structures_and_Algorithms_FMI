@@ -35,6 +35,9 @@
 - Сложността по време зависи от структурата за извличане на реброто с най-малка тежест.
 - При използването на *Binary Heap* сложността е *O(E\*logV)*.
 
+<details>
+  <summary>Python code</summary>
+
 ```python
 from heapq import heappush, heappop
 
@@ -63,6 +66,8 @@ def prim(start, V, graph):
 prim(5, 5, graph) # 13
 ```
 
+</details>
+
 Пример при започване от *връх 5*:
 
 ![Prim's algorithm creating a MST of a graph, step by step example.](media/prims_algorithm_example.png)
@@ -74,6 +79,9 @@ prim(5, 5, graph) # 13
 - Използва структурата *Disjoint set* за оптимална проверка за цикличност.
 - Сложност по време *O(E\*logE)* заради сортирането на всички ребра.
 - При *dense* граф, когато *Е = V<sup>2</sup>*, *O(ElogE) = O(ElogV<sup>2</sup>) = O(2ElogV) = O(ElogV)*
+
+<details>
+  <summary>Python code</summary>
 
 ```python
 def find(x, parents):
@@ -112,6 +120,8 @@ def kruskal(V, edges):
 
 kruskal(5 , graph_list_of_edges) # 13
 ```
+
+</details>
 
 ![Kruskal's algorithm creating a MST of a graph, step by step example.](media/kruskals_algorithm_example.png)
 
