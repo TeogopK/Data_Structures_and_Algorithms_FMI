@@ -18,8 +18,7 @@ public:
             pq.push({0, 0, 0});
         }
 
-        int visitedCount = 0;
-        while(!pq.empty() && visitedCount < points.size()) {
+        while(!pq.empty() && visitedIndeces.size() < points.size()) {
             auto current = pq.top();
             pq.pop();
             if(visitedIndeces.count(current.to)) {
@@ -27,7 +26,6 @@ public:
             }
             visitedIndeces.insert(current.to);
             result += current.length;
-            visitedCount++;
             for(int i = 0; i < points.size(); i++) {
                 if(!visitedIndeces.count(i)) {
                     int l = abs(points[i][0] - points[current.to][0]);
