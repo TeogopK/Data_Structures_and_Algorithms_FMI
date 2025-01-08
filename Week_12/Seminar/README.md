@@ -33,7 +33,7 @@
 - Намира минимално покриващо дърво на граф.
 - Започва от даден връх и добавя реброто с най-малка тежест до съседен връх, който все още не е част от дървото.
 - Сложността по време зависи от структурата за извличане на реброто с най-малка тежест.
-- При използването на *Binary Heap* сложността е *O(E\*logV)*.
+- При използването на *Binary Heap* сложността е *O(E\*logE)*. (При използване на друг вид heap може да достигне до *O(E\*logV)*)
 
 <details>
   <summary>Python code</summary>
@@ -183,6 +183,8 @@ int prim2(int n, int start, std::unordered_map<int, std::vector<Edge>>& graph) {
 
 Подробно описание как работи Disjoint-set (Union-find) структурата в [playground-а](playground_14.ipynb). (Имплементацията в playground-а е на Python)
 Аналогична C++ имплементация има в съответната папка.
+
+На следния линк можете да разцъкате как се променя масив с родители на база кои оптимизации са включени и изключени [Disjoint-set visualization](https://www.cs.usfca.edu/~galles/visualization/DisjointSets.html)
 
 ## Алгоритъм на Крускал (Kruskal's algorithm)
 
