@@ -294,3 +294,6 @@ std::vector<Edge> kruskal(int n, std::vector<Edge>& edges) {
 - [Find critical and pseudo critical edges in MST - Hard](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/description/)
 - [Number of provinces - Medium](https://leetcode.com/problems/number-of-provinces/description/)
   - задачата може да се реши и с материала от предишните седмици
+
+## Бонус
+[Prim vs Kruskal for sparse and dense graphs](https://medium.com/@dilkyliyanage/implementation-efficiency-comparison-of-mst-algorithms-9993953b1307)
