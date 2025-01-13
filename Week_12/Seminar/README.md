@@ -181,7 +181,7 @@ int prim2(int n, int start, std::unordered_map<int, std::vector<Edge>>& graph) {
 
 Структурата е удобна за използване в алгоритъм на Крускал. Сложността за обединяване на N елемента е О(N*α(N)), където α е обратната функцията на Акерман.
 
-Подробно описание как работи Disjoint-set (Union-find) структурата в [playground-а](playground_14.ipynb). (Имплементацията в playground-а е на Python)
+Подробно описание как работи Disjoint-set (Union-find) структурата в [playground-а](playground_12.ipynb). (Имплементацията в playground-а е на Python)
 Аналогична C++ имплементация има в съответната папка.
 
 На следния линк можете да разцъкате как се променя масив с родители на база кои оптимизации са включени и изключени [Disjoint-set visualization](https://www.cs.usfca.edu/~galles/visualization/DisjointSets.html)
