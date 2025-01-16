@@ -91,3 +91,12 @@
 - [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary)
   - подобна [Valid Arrangement of Pairs](https://leetcode.com/problems/valid-arrangement-of-pairs/)
 
+## Бонус: Trie
+
+TODO: ....
+
+### Trie задачи
+- [Implement prefix trie](https://leetcode.com/problems/implement-trie-prefix-tree/description/)
+  - follow up:
+    - ако искам бройка? брой думи равни на търсената? брой думи започващи с даден prefix?
+- [Design Add and Search words data structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
