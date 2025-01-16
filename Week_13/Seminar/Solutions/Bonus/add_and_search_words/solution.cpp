@@ -25,7 +25,7 @@ public:
         for(size_t i = 0; i < word.length(); i++) {
             if(word[i] == '.') {
                 for(auto& kvp: iter->children) {
-                    if(searchUtil(word.substr(i + 1), kvp.second)) {
+                    if(searchUtil(word.substr(i + 1), kvp.second)) { // try using stringview to skip the substr
                         return true;
                     }
                 }
