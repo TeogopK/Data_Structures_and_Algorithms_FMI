@@ -99,4 +99,5 @@ TODO: ....
 - [Implement prefix trie](https://leetcode.com/problems/implement-trie-prefix-tree/description/)
   - follow up:
     - ако искам бройка? брой думи равни на търсената? брой думи започващи с даден prefix?
+    - как ще се грижим за паметта?
 - [Design Add and Search words data structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
