@@ -16,4 +16,4 @@
 |  10   | [Обхождане на граф.](Week_10/Seminar)               | [задачи](Week_10/Seminar/Solutions) | [практикум](Week_10/Practicum) | [домашно](https://www.hackerrank.com/contests/sda-hw-9-2024)  |
 |  11   | [Най-кратък път в граф.](Week_11/Seminar)           | [задачи](Week_11/Seminar/Solutions) | [практикум](Week_11/Practicum) | [домашно](https://www.hackerrank.com/contests/sda-hw-10-2024) |
 |  12   | [Минимално покриващо дърво.](Week_12/Seminar)       | [задачи](Week_12/Seminar/Solutions) | [практикум](Week_12/Practicum) | [домашно](https://www.hackerrank.com/contests/sda-hw-11-2024) |
-|  13   | [Ойлеров и Хамилтонов път в граф.](Week_13/Seminar) | [задачи](Week_13/Seminar/Solutions) | [практикум](Week_13/Practicum) | [домашно](https://www.hackerrank.com/contests/sda-hw-12-2024) |
+|  13   | [Ойлеров и Хамилтонов път в граф.](Week_13/Seminar) | [задачи](Week_13/Seminar/Solutions) | [практикум](Week_13/Practicum) |                               -                               |
