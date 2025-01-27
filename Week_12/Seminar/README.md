@@ -282,7 +282,7 @@ std::vector<Edge> kruskal(int n, std::vector<Edge>& edges) {
 
 ![Kruskal's algorithm creating a MST of a graph, step by step example.](media/kruskals_algorithm_example.png)
 
-Крускал поддържа гора от покриващи дървета в показаната имплементация с леки промени може да постигне.
+Крускал поддържа гора от покриващи дървета с леки промени в имплементацията.
 
 ## Задачи за упражнение
 
