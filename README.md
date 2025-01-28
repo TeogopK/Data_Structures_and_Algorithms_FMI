@@ -3,9 +3,9 @@
 
 |   #   | Семинар                                             |               Задачи                |           Практикум            |                            Домашно                            |
 | :---: | :-------------------------------------------------- | :---------------------------------: | :----------------------------: | :-----------------------------------------------------------: |
-|  00   | [Въведение](Week_00/Seminar)                        | [задачи](Week_00/Seminar/Solutions) | [практикум](Week_00/Practicum) |                               -                               |
-|  01   | [Сложност на алгоритми.](Week_01/Seminar)           | [задачи](Week_01/Seminar/Solutions) | [практикум](Week_01/Practicum) |                               -                               |
-|  02   | [Алгоритми за сортиране.](Week_02/Seminar)          | [задачи](Week_02/Seminar/Solutions) | [практикум](Week_02/Practicum) | [домашно](https://www.hackerrank.com/contests/sda-hw-1-2024)  |
+|  00   | [Въведение](Week_00/Seminar)                        |      [задачи](Week_00/Seminar)      | [практикум](Week_00/Practicum) |                               -                               |
+|  01   | [Сложност на алгоритми.](Week_01/Seminar)           |      [задачи](Week_01/Seminar)      | [практикум](Week_01/Practicum) |                               -                               |
+|  02   | [Алгоритми за сортиране.](Week_02/Seminar)          |      [задачи](Week_02/Seminar)      | [практикум](Week_02/Practicum) | [домашно](https://www.hackerrank.com/contests/sda-hw-1-2024)  |
 |  03   | [Алгоритми за търсене.](Week_03/Seminar)            | [задачи](Week_03/Seminar/Solutions) | [практикум](Week_03/Practicum) | [домашно](https://www.hackerrank.com/contests/sda-hw-2-2024)  |
 |  04   | [Свързан списък.](Week_04/Seminar)                  | [задачи](Week_04/Seminar/Solutions) | [практикум](Week_04/Practicum) | [домашно](https://www.hackerrank.com/contests/sda-hw-3-2024)  |
 |  05   | [Стек и опашка.](Week_05/Seminar)                   | [задачи](Week_05/Seminar/Solutions) | [практикум](Week_05/Practicum) | [домашно](https://www.hackerrank.com/contests/sda-hw-4-2024)  |
