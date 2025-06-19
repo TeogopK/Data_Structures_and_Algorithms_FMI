@@ -22,7 +22,7 @@
 - Dynamic array (Circular)
 
 ### Сравнение на имплементациите
-| Stack with       | Dynamic Array                      | Linked list      |
+| Queue with       | Dynamic Array                      | Linked list      |
 | ---------------- | ---------------------------------- | ---------------- |
 | push()/enqueue() | Amortized $\mathcal{O}(1)$         | $\mathcal{O}(1)$ |
 | pop()/dequeue()  | Amortized $\mathcal{O}(1)$         | $\mathcal{O}(1)$ |
