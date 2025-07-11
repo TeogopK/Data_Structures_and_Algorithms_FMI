@@ -1,6 +1,7 @@
 #include <iostream>
 #include <queue>
 #include <stack>
+#include <vector>
 
 // this class should go inside the BinarySearchTree class
 // can't fix it at the moment
@@ -11,18 +12,10 @@ struct Node {
 	Node* right = nullptr;
 
 	Node(const T& value, Node* left = nullptr, Node* right = nullptr)
-		: value(value), left(left), right(right) { }
+		: value(value), left(left), right(right) {
+	}
 	Node(const Node<T>& other) = delete;
 	Node& operator=(const Node<T>& other) = delete;
-	~Node() {
-		free();
-	}
-private:
-	void free() {
-		delete left;
-		delete right;
-		left = right = nullptr;
-	}
 };
 
 template <typename T>
@@ -36,25 +29,61 @@ private:
 	void _dfs(const Node<T>* current) const;
 public:
 	BinarySearchTree() = default;
-	BinarySearchTree(const BinarySearchTree<T>& other) = delete;
-	BinarySearchTree<T>& operator=(const BinarySearchTree<T>& other) = delete;
-	~BinarySearchTree() { free(); }
+	BinarySearchTree(const BinarySearchTree<T>& other);
+	BinarySearchTree<T>& operator=(const BinarySearchTree<T>& other);
+	~BinarySearchTree();
 
 	bool contains(const T&) const;
 	void insert(const T&);
 	void remove(const T&);
 
-	// might not need these
+	// Not needed for the state exam implementation
 	void dfs() const;
 	void iterativeDfs() const;
 	void bfs() const;
 private:
-	void free();
+	void free(Node<T>* curr);
+	static Node<T>* deepCopy(const Node<T>* curr);
 };
 
 template <typename T>
-void BinarySearchTree<T>::free() {
-	delete root;
+BinarySearchTree<T>::BinarySearchTree(const BinarySearchTree<T>& other) {
+	root = deepCopy(other.root);
+}
+
+template <typename T>
+BinarySearchTree<T>& BinarySearchTree<T>::operator=(const BinarySearchTree<T>& other) {
+	if (this != &other) {
+		free(root);
+		root = deepCopy(other.root);
+	}
+
+	return *this;
+}
+
+template <typename T>
+BinarySearchTree<T>::~BinarySearchTree() {
+	free(root);
+}
+
+template <typename T>
+Node<T>* BinarySearchTree<T>::deepCopy(const Node<T>* curr) {
+	if (!curr) {
+		return nullptr;
+	}
+
+	return new Node<T>(curr->value, deepCopy(curr->left), deepCopy(curr->right));
+}
+
+template <typename T>
+void BinarySearchTree<T>::free(Node<T>* curr) {
+	if (!curr) {
+		return;
+	}
+
+	free(curr->left);
+	free(curr->right);
+	delete curr;
 }
 
 template <typename T>
@@ -83,7 +112,7 @@ bool BinarySearchTree<T>::_contains(const Node<T>* current, const T& value) cons
 		return true;
 	}
 
-	return current->value > value ? contains(current->left, value) : contains(current->right, value);
+	return current->value > value ? _contains(current->left, value) : _contains(current->right, value);
 }
 
 template <typename T>
@@ -105,13 +134,11 @@ Node<T>* BinarySearchTree<T>::_remove(Node<T>* current, const T& value) {
 		}
 		if (!current->left) {
 			auto temp = current->right;
-			current->right = nullptr;
 			delete current;
 			return temp;
 		}
 		if (!current->right) {
 			auto temp = current->left;
-			current->left = nullptr;
 			delete current;
 			return temp;
 		}
@@ -201,7 +228,6 @@ void BinarySearchTree<T>::bfs() const {
 }
 
 int main() {
-	std::vector<int> v;
 	BinarySearchTree<int> bst;
 	bst.insert(7);
 	bst.insert(4);
@@ -211,6 +237,16 @@ int main() {
 	bst.insert(8);
 	bst.insert(3);
 	bst.insert(1);
+
+	std::cout << "BFS (level-by-level):" << std::endl;
 	bst.bfs();
-    bst.dfs();
+	std::cout << std::endl;
+
+	std::cout << "DFS (in-order):" << std::endl;
+	bst.dfs();
+	std::cout << std::endl;
+
+	std::cout << "Iterative DFS (in-order):" << std::endl;
+	bst.iterativeDfs();
+	std::cout << std::endl;
 }
