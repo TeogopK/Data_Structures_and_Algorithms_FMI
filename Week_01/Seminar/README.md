@@ -119,7 +119,8 @@
 
 >*1 < logN < sqrtN < N < NlogN < N<sup>2</sup> < N<sup>3</sup> < 2<sup>N</sup> < 3<sup>N</sup> < N! < N<sup>N</sup>*
 
-<img width="1201" height="794" alt="image" src="https://github.com/user-attachments/assets/ab2a4d85-317f-4966-a6e3-e05939b643d0" />
+<img width="1201" height="794" alt="image" src="https://github.com/user-attachments/assets/282344ab-b0fc-438a-a463-052450b71b8a" />
+
 
 ### Правила за смятане на Big O изрази:
 
