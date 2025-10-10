@@ -84,10 +84,10 @@
 
 ### Базово запознаване със структури от stl
 - std::string
-  - Бонус: Как е оптимизиран std::string за малки низове? (small string optimization)
+  - **Бонус:** Как е оптимизиран std::string за малки низове? (small string optimization)
 - std::vector
-  - Бонус: Каква е имплементацията на темплейтна специализация на vector<bool>? (bitset)
-  - Бонус: Защо ако ползвам std::vector с дефиниран от мен клас, който няма default constructor, това не пречи на std::vector
+  - **Бонус:** Каква е имплементацията на темплейтна специализация на vector<bool>? (bitset)
+  - **Бонус:** Защо ако ползвам std::vector с дефиниран от мен клас, който няма default constructor, това не пречи на std::vector
 - std::pair
 - iterators
 - range-based for loop (also known as for-each)
