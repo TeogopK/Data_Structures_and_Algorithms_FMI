@@ -70,6 +70,11 @@
 
 Формулите са: от -2<sup>n-1</sup> до 2<sup>n-1</sup> - 1 за *signed* типовете, и от 0 до 2<sup>n</sup> - 1 за *unsigned* типовете, където n е броят битове.
 
+Често срещани грешки:
+- overflow при събиране на int-ове
+- сравняване на double-и с ==
+  - **Бонус:** Как работят float и double - [тук](https://fabiensanglard.net/floating_point_visually_explained/?fbclid=IwAR1lwXOIifhzJmXkx49eniqaHE1iI7-MB6ofwR5mHgFOOO_NJWn-WxXbQBk)
+
 ### Масиви и матрици
 - A[] vs A*[]
 - A[][] vs A**
