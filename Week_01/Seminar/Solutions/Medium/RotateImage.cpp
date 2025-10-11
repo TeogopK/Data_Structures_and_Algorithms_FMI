@@ -20,6 +20,7 @@ class Solution {
         }
     }
 public:
+    // O(n * m) time | O(1) space
     void rotate(vector<vector<int>>& matrix) {
         transpose(matrix);
         revertRows(matrix);
