@@ -1,4 +1,4 @@
-class Solution {
+class Solution1 {
     void customReverse(vector<int>& nums, int startIndex, int endIndex) {
         if(startIndex >= endIndex) {
             return;
@@ -17,7 +17,7 @@ public:
     }
 };
 
-class Solution {
+class Solution2 {
 public:
     // O(n) time | O(1) space
     void rotate(vector<int>& nums, int k) {
