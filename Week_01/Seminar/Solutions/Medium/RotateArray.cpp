@@ -1,24 +1,29 @@
-class Solution
-{
-
-    void reverse(vector<int> &nums, int startIndex, int endIndex)
-    {
-        if (startIndex >= endIndex)
-        {
+class Solution {
+    void customReverse(vector<int>& nums, int startIndex, int endIndex) {
+        if(startIndex >= endIndex) {
             return;
         }
-        for (int i = 0; i <= (endIndex - startIndex) / 2; i++)
-        {
+        for(int i = 0; i <= (endIndex - startIndex) / 2; i++) {
             std::swap(nums[startIndex + i], nums[endIndex - i]);
         }
     }
-
 public:
-    void rotate(vector<int> &nums, int k)
-    {
+    // O(n) time | O(1) space
+    void rotate(vector<int>& nums, int k) {
         k %= nums.size();
-        reverse(nums, nums.size() - k, nums.size() - 1);
-        reverse(nums, 0, nums.size() - k - 1);
-        reverse(nums, 0, nums.size() - 1);
+        customReverse(nums, nums.size() - k, nums.size() - 1);
+        customReverse(nums, 0, nums.size() - k - 1);
+        customReverse(nums, 0, nums.size() - 1);
+    }
+};
+
+class Solution {
+public:
+    // O(n) time | O(1) space
+    void rotate(vector<int>& nums, int k) {
+        k %= nums.size();
+        std::reverse(nums.end() - k, nums.end());
+        std::reverse(nums.begin(), nums.end() - k);
+        std::reverse(nums.begin(), nums.end());
     }
 };
