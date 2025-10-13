@@ -493,6 +493,8 @@ def brothers(N, M):
 
 ### Easy
 - [Solve Me First](https://www.hackerrank.com/challenges/solve-me-first/problem)
+- [Simple Array Sum](https://www.hackerrank.com/challenges/simple-array-sum/problem)
+- [Roommates](https://www.hackerrank.com/contests/sda-hw-1-2022/challenges/1-410)
 - [Single Number 1](https://leetcode.com/problems/single-number/)
 	- Може ли да се реши с O(1) допълнителна памет и O(n) време?
 - [Move zeroes](https://leetcode.com/problems/move-zeroes/)
