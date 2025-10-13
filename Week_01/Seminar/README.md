@@ -97,9 +97,17 @@
 </details>
 <details>
   <summary>Python</summary>
-  TODO
+
+### Основни концепции
+
+- За преговор на основни принципи в Python, разгледайте тетрадката към този семинар: [тук](./playground_01.ipynb)
+  - Като за начало може да клонирате това репо, линк към [ръководство](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository), или изтеглите ръчно тетрадката посочена в линка.
+  - Как да работите с Jyputer тетрадкa във VScode, прочетете [тук](https://code.visualstudio.com/docs/datascience/jupyter-notebooks)! (Силно препоръчително умение за Data Analyst!)
+- Как да четем входа от Hackerrank погледнете различните решения на тези две задачи: [решения на задача 1]() и [решения на задача 2]()
+  
+
 </details>
-    
+
 ## Сложности
 - Какво е сложност? Как сравняваме сложности?
 - Сложност по време - Best, Worst, Average, Amortized 
@@ -389,30 +397,125 @@ void brothers(int N, int M) {
 
 <details>
   <summary>Python</summary>
-  TODO
+  
+*O(1)* - връщането на константа:
+  
+```python
+def get_Pi():
+    return 3.14
+```
+
+*O(1)* - връщането на елемент от масив:
+  
+```python
+def get_5th_element(arr):
+    return arr[5]
+```
+
+Защо това е така:
+- https://stackoverflow.com/questions/37350450/why-is-a-list-access-o1-in-python
+- https://softwareengineering.stackexchange.com/questions/252407/why-is-the-complexity-of-fetching-a-value-from-an-array-be-o1 
+
+---
+
+*O(N)* - еднократно обхождане на масив с големина *N*.
+
+```python
+for el in arr:
+    print(el)
+```
+
+*O(N<sup>2</sup>)* - обхождане на масив с големина *N* *N* пъти (чрез вложен цикъл). Обхождане на матрица с размер *NxN*.
+
+```python
+for i in range(N):
+    for j in range(N):
+        print(i, j)
+```
+
+---
+
+*O(2<sup>N</sup>)* - Намиране на *N*-тото число от редицата на Фибоначи. Всяко извикване на функцията, създава 2 нови деца, всяко от които 2 свои деца и т.н.
+
+```python
+def fibonacci(N):
+    if N <= 1:
+        return N
+    return fibonacci(N-1) + fibonacci(N-2)
+```
+
+
+*O(logN)* - Намиране на колко двойки се съдържат в числото *N*. На всяко рекурсивно извикване, числото намаля 2 пъти.
+
+```python
+def count_deuces(N, count = 0):
+    if N <= 1:
+        return count
+    
+    count += 1
+    return count_deuces(N // 2, count)
+```
+
+Как можем да променим функцията, така че да не използва аргумент `count`?
+
+<details>
+  <summary>Отговор</summary>
+
+```python
+def count_deuces(N):
+    if N <= 1:
+        return 0
+    
+    return count_deuces(N // 2) + 1
+```
+
 </details>
+
+---
+
+*O(N + M)* - обхождане на масив с големина *N* и масив с големина *M*.
+
+```python
+def brothers(N, M):
+    for i in range(N):
+        print(i)
+
+    for j in range(M):
+        print(j)
+```
+
+Изпробвайте функциите с различни параметри в [playground-a](./playground_01.ipynb)
+
+</details>
+
 
 ## Задачи
 
 ### Easy
 - [Solve Me First](https://www.hackerrank.com/challenges/solve-me-first/problem)
 - [Single Number 1](https://leetcode.com/problems/single-number/)
-	- Може ли да се реши с O(1) допълнителна памет и O(n) време
+	- Може ли да се реши с O(1) допълнителна памет и O(n) време?
 - [Move zeroes](https://leetcode.com/problems/move-zeroes/)
 - [Plus one](https://leetcode.com/problems/plus-one/)
+  
 ### Medium
 - [Two sum](https://leetcode.com/problems/two-sum/)
-	- какво се променя ако сортираме масива
-	- two-pointer technique
+	- Какво се променя ако сортираме масива?
+	- Two-pointer technique
 - [Number of Islands](https://leetcode.com/problems/number-of-islands/)
 - [Rotate Array](https://leetcode.com/problems/rotate-array/)
 - [Rotate image](https://leetcode.com/problems/rotate-image/)
 - [Container with most water](https://leetcode.com/problems/container-with-most-water/)
+
 ### Hard
 - [First missing positive](https://leetcode.com/problems/first-missing-positive/)
-    - First try to solve it with O(N) time and O(N) space
+  - Първо се опитайте да го решите с O(N) време и O(N) памет.
+
+Решения на задачите на C++ и Python може да намерите в папката [Solutions](./Solutions).
+
 
 ## Quiz
+
 
 ## Бонус Задачи
 
