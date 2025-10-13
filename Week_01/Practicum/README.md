@@ -9,6 +9,7 @@
 - [**Permutation Difference between Two Strings**](https://leetcode.com/problems/permutation-difference-between-two-strings/description/)
 - [**Game of Thrones - I**](https://www.hackerrank.com/challenges/game-of-thrones/problem)
 - [**Maximum Average Subarray I**](https://leetcode.com/problems/maximum-average-subarray-i/description/)
+- [**Convert an Array into a 2D Array With Conditions**](https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/description/)
 
 ### Medium
 
