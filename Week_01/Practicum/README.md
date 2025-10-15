@@ -3,7 +3,8 @@
 ## Задачи в час
 
 ### Easy
-
+- [**Two Sum**](https://leetcode.com/problems/two-sum/)
+- [**Best Time to Buy and Sell Stock**](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 - [**Find The Least Frequent Digit**](https://leetcode.com/problems/find-the-least-frequent-digit/)
 - [**Valid Anagram**](https://leetcode.com/problems/valid-anagram/)
 - [**Permutation Difference between Two Strings**](https://leetcode.com/problems/permutation-difference-between-two-strings/description/)
@@ -15,6 +16,12 @@
 
 - [**Permutation in String**](https://leetcode.com/problems/permutation-in-string/description/)
 - [**Grumpy Bookstore Owner**](https://leetcode.com/problems/grumpy-bookstore-owner/description/)
+- [**Longest Substring Without Repeating Characters**](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+
+### Hard
+
+- [**Trapping Rain Water**](https://leetcode.com/problems/trapping-rain-water/)
+
 
 ## Допълнителни задачи
 
