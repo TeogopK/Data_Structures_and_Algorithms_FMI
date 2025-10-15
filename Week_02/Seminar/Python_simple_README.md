@@ -263,3 +263,4 @@ Counting sort, когато е възможно ползването му, по�
 - [Find the Difference](https://leetcode.com/problems/find-the-difference/)
 - [Squares of a Sorted array](https://leetcode.com/problems/squares-of-a-sorted-array/)
 - [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
+- [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
