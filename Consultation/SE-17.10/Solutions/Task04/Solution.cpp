@@ -3,6 +3,8 @@ bool cmp(const vector<int>& a, const vector<int>& b) {
 }
 class Solution {
 public:
+    // Complexity depends on the implementation of std::sort
+    // C++: Time - O(N * logN) | Space - O(logN)
     int twoCitySchedCost(vector<vector<int>>& costs) {
         std::sort(costs.begin(), costs.end(), [](const vector<int>& a, const vector<int>& b){
             return a[0] - a[1] < b[0] - b[1];
