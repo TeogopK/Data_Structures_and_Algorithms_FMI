@@ -6,11 +6,11 @@
 
 ## Задача 3
 
-https://leetcode.com/problems/subsets/description/
+[Subsets](https://leetcode.com/problems/subsets/description/)
 
 ## Задача 4
 
-https://leetcode.com/problems/two-city-scheduling/
+[Two City Scheduling](https://leetcode.com/problems/two-city-scheduling/)
 
 ## Задача 5
 
