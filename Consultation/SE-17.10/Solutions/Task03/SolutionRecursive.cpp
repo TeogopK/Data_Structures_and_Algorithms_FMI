@@ -1,6 +1,8 @@
 class Solution {
     vector<vector<int>> result;
 
+    // Time: O(2^N) | Space: O(N)
+    // Note: We can say that time complexity is O(N * 2^N) because of the push_back to the result
     void backtrack(vector<int>& nums, size_t index, vector<int>& subset) {
         if(nums.size() == index) {
             result.push_back(subset);
