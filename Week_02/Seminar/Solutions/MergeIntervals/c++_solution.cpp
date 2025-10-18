@@ -1,6 +1,6 @@
 class Solution {
 public:
-    // O(n * log n) time | O(1) space
+    // O(n * log n) time | O(log n) space
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
         sort(intervals.begin(), intervals.end());
         
