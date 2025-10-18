@@ -527,6 +527,7 @@ Counting sort, когато е възможно ползването му, по�
 - [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
 - [Sort characters by frequency](https://leetcode.com/problems/sort-characters-by-frequency/)
 - [Sort the students by their kth score](https://leetcode.com/problems/sort-the-students-by-their-kth-score/description/)
+- [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
 
 ### Hard
 ...
