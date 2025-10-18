@@ -1,6 +1,7 @@
 class Solution {
 public:
     // you can reuse the idea from https://leetcode.com/problems/single-number/
+    // O(n) time | O(1) space
     char findTheDifference(string s, string t) {
         char ch = 0;
 
