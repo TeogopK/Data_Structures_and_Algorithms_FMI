@@ -517,8 +517,6 @@ Counting sort, когато е възможно ползването му, по�
 - [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 - [Find the Difference](https://leetcode.com/problems/find-the-difference/)
 - [Squares of a Sorted array](https://leetcode.com/problems/squares-of-a-sorted-array/)
-   - решение O(n*log n) time и O(1) space
-   - решение O(n) time и O(n) space
 - [Intersection of two arrays 2](https://leetcode.com/problems/intersection-of-two-arrays-ii/)
 
 ### Medium
