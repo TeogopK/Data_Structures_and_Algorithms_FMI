@@ -7,8 +7,10 @@
   
 #### Medium
 - [**Hand-written Sort O(n*logN)**](https://leetcode.com/problems/sort-an-array/)
+  - Merge sort
   
 #### Hard
 - [**Merge K sorted linked lists**](https://leetcode.com/problems/merge-k-sorted-lists/)
     - N * K - Naive
-    - N * log(K) - Merge lists
+    - (N + K) * log(K) - Warning solution: Merge with copying vectors on recursion steps (The steps are log(K))
+    - N * log(K) - Merge lists with indexes
