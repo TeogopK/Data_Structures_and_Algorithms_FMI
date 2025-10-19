@@ -1,5 +1,5 @@
 # Консултация по СДА #01
-## Задачи 1 и 2 (Credit: [Пламена Илиева](https://github.com/plamena-ilieva/))
+## Задачи 1 и 2
 ### Задача 1:
 Имаме сграда с N на брой стаи. 
 
@@ -27,7 +27,7 @@
 Да се напише функция, която по даден лабиринт, връща дали може да се стигне от една точка до друга.
 
 
-## Задачи 3 и 4 (Credit: [Георги Терзиев](https://github.com/georgiterziev02))
+## Задачи 3 и 4
 ### [Задача 3 - Subsets](https://leetcode.com/problems/subsets/description/)
 
 ### [Задача 4 - Two City Scheduling](https://leetcode.com/problems/two-city-scheduling/description/)
