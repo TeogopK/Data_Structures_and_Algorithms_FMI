@@ -532,7 +532,7 @@ Counting sort, когато е възможно ползването му, по�
 
 ## Бонус
 
-- някои имплементации на std::sort - https://en.wikipedia.org/wiki/Introsort
+- някои имплементации на std::sort - [wikipedia](https://en.wikipedia.org/wiki/Introsort) & [medium article](https://11dhanushs.medium.com/intro-sort-a-brief-introduction-f06b419674de)
 - Bucket sort
 - Radix sort
 - Задача:
