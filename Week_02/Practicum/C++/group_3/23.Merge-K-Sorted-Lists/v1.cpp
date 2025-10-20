@@ -1,3 +1,6 @@
+//O((N+K)*logK)-time
+//O(KlogK)-memory
+
 //N is the sum of all elements count
 //K is the count of sorted linked lists
 
