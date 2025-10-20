@@ -8,6 +8,8 @@
 - [**Valid Anagram**](https://leetcode.com/problems/valid-anagram/)
 - [**Squares of a Sorted Array**](https://leetcode.com/problems/squares-of-a-sorted-array/)
 - [**Sort Array By Parity**](https://leetcode.com/problems/sort-array-by-parity/)
+- [**Netflix**](https://www.hackerrank.com/contests/test-1697304732/challenges/1-6-6/problem)
+- [**Повтарящи се числа 1**](https://www.hackerrank.com/contests/sda-2020-2021-test1/challenges/1-257/problem)
 
 ### Medium
 
