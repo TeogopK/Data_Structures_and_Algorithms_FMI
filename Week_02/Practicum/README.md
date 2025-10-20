@@ -12,6 +12,7 @@
 ### Medium
 
 - [**Merge Intervals**](https://leetcode.com/problems/merge-intervals/description/)
+- [**K Closest Points to Origin**](https://leetcode.com/problems/k-closest-points-to-origin/description/)
 
 ### Hard
 
