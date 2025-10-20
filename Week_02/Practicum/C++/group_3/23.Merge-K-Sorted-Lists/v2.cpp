@@ -1,3 +1,6 @@
+// naive-O(N*K)-time
+// O(N)-memory
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {
