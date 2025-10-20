@@ -1,12 +1,18 @@
-###### (13.10.2025)
-## Задачи, решени в час:
+###### (20.10.2025)
+## Задачи:
 
-### Dificulty:
-#### Medium
-
-- [**Longest Substring**](https://leetcode.com/problems/longest-substring-without-repeating-characters)
-- [**Minimum Time Difference**](https://leetcode.com/problems/minimum-time-difference/)
-    - 2 решения:
-      - Със сортиране ползвайки custom компаратор (За примера)
-      - Оптимално
+#### Easy
+- [**Merge sorted arrrays**](https://leetcode.com/problems/merge-sorted-array)
+- [**Move zeroes**](https://leetcode.com/problems/move-zeroes)
   
+#### Medium
+- [**Hand-written Sort O(n*logN)**](https://leetcode.com/problems/sort-an-array/)
+  - Merge sort
+  
+#### Hard
+- [**Merge K sorted linked lists**](https://leetcode.com/problems/merge-k-sorted-lists/)
+  - N is the sum of all elements
+  - K is the count of linked lists in input
+      - N * K (Time complexity) - Naive with memory complexity O(N) <-> O(N) in heap and O(N) from recursion stack
+      - (N + K) * log(K) - Warning solution: Merge with copying vectors on recursion steps (The steps are log(K), but the memory complexity: O(K*logK)
+      - N * log(K) - Merge lists with indexes <-> memory complexity O(logK)
