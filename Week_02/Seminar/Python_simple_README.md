@@ -257,6 +257,27 @@ Counting sort, когато е възможно ползването му, по�
 | Памет    | *O(N)*     | *O(logN)*          | *O(N + K)*    |
 | Стабилен | да         | не                 | да            |
 
+
+### Важен синтаксис
+
+- Сортиране с lambda функция
+
+  ```python
+  nums = [5, 2, 9, 1]
+  nums.sort(key=lambda x: -x)
+  print(nums)  # [9, 5, 2, 1]
+  ```
+
+- Сортиране с custom comparator
+
+  ```python
+  from functools import cmp_to_key
+  
+  nums = [5, 2, 9, 1]
+  nums.sort(key=cmp_to_key(lambda a, b: a - b))
+  print(nums)  # [1, 2, 5, 9]
+  ```
+
 ## Задачи за упражнение (в LeetCode)
 
 - [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)

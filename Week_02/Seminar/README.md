@@ -4,6 +4,8 @@
 
 - Тест среда да изпробвате някои алгоритми - [hackerrank contest](https://www.hackerrank.com/contests/algorithms-implementation-test-environment/challenges)
 - Сайт с визуализация на алгоритмите - [visualalgo](https://visualgo.net/en/sorting)
+- Опростена версия на README-то за Python: [линк](./Python_simple_README.md)
+
 
 ## Locality
   - Дефиниране
@@ -132,7 +134,19 @@ void optimizedBubbleSort(std::vector<int>& arr) {
 
 <details>
   <summary>Python</summary>
-  TODO:...
+
+```python
+arr = [9, 4, 3, 2, 6, 7, 1, 8, 5]
+N = len(arr)
+
+for i in range(N - 1):
+    for j in range(0, N - 1 - i):
+        if arr[j] > arr[j + 1]:
+            arr[j], arr[j + 1] = arr[j + 1], arr[j]
+
+print(arr) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
 </details>
 
 ## Selection sort (Метод на пряката селекция)
@@ -182,7 +196,23 @@ void selectionSort(std::vector<int>& arr) {
 
 <details>
   <summary>Python</summary>
-  TODO:...
+
+```python
+arr = [9, 4, 3, 2, 6, 7, 1, 8, 5]
+N = len(arr)
+
+for i in range(N - 1):
+    min_index = i
+
+    for j in range(i + 1, N):
+        if arr[j] < arr[min_index]:
+            min_index = j
+
+    arr[min_index], arr[i] = arr[i], arr[min_index]
+
+print(arr) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
 </details>
 
 Предпочитан пред Bubble sort поради по-малкото на брой размени, но за сметка на това не е стабилен. 
@@ -234,7 +264,24 @@ void insertionSort(std::vector<int>& arr) {
 
 <details>
   <summary>Python</summary>
-  TODO:...
+
+  ```python
+arr = [9, 4, 3, 2, 6, 7, 1, 8, 5]
+N = len(arr)
+
+for i in range(1, N):
+    key = arr[i]
+
+    j = i - 1
+    while j >= 0 and key < arr[j]:
+        arr[j + 1] = arr[j]
+        j -= 1
+
+    arr[j + 1] = key
+
+print(arr) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
 </details>
 
 **Note:** използваме отмествания, които са по-евтина операция от swap
@@ -341,7 +388,54 @@ void _merge(std::vector<int>& arr, size_t left, size_t mid, size_t right, std::v
 
 <details>
   <summary>Python</summary>
-  TODO:...
+  
+```python
+def merge_sort(arr):
+    if len(arr) > 1:
+        middle = len(arr) // 2
+
+        left_arr = arr[:middle]
+        right_arr = arr[middle:]
+
+        merge_sort(left_arr)
+        merge_sort(right_arr)
+
+        merge(arr, left_arr, right_arr)
+```
+
+```python
+def merge(arr, left_arr, right_arr):
+    index = left = right = 0
+    left_size = len(left_arr)
+    right_size = len(right_arr)
+
+    while left < left_size and right < right_size:
+        if left_arr[left] <= right_arr[right]:
+            arr[index] = left_arr[left] 
+            left += 1
+        else:
+            arr[index] = right_arr[right] 
+            right += 1
+        index += 1
+
+    while left < left_size:
+        arr[index] = left_arr[left]
+        index += 1
+        left += 1
+
+    while right < right_size:
+        arr[index] = right_arr[right]
+        index += 1
+        right += 1
+```
+
+```python
+arr = [9, 4, 3, 2, 6, 7, 1, 8, 5]
+
+merge_sort(arr)
+print(arr) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
 </details>
 
 
@@ -414,7 +508,39 @@ quickSort(arr, 0, arr.size() - 1);
 
 <details>
   <summary>Python</summary>
-  TODO:...
+  
+```python
+def partition(arr, low, high):
+    pivot = arr[high] # The last element is chosen as the pivot.
+    i = low
+
+    for j in range(low, high):
+        if arr[j] <= pivot:
+            arr[i], arr[j] = arr[j], arr[i]
+            i += 1
+
+    arr[i], arr[high] = arr[high], arr[i]
+    
+    return i
+```
+
+```python
+def quick_sort(arr, low, high):
+    if low < high:
+        pi = partition(arr, low, high)
+
+        quick_sort(arr, low, pi - 1)
+        quick_sort(arr, pi + 1, high)
+```
+
+```python
+arr = [9, 4, 3, 2, 6, 7, 1, 8, 5]
+N = len(arr)
+
+quick_sort(arr, 0, N - 1)
+print(arr) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
 </details>
 
 Quick sort е по-бърз от Merge sort за малки масиви. Има по-малка константа и изисква по-малко допълнителна памет.
@@ -476,21 +602,45 @@ void countingSort(std::vector<int>& arr) {
 
 <details>
   <summary>Python</summary>
-  TODO:...
+
+  ```python
+arr = [9, 4, 3, 2, 6, 7, 1, 8, 5]
+
+N = len(arr)
+K = max(arr) + 1
+
+output = [0] * N
+count = [0] * K
+
+for i in range(N):
+    count[arr[i]] += 1
+
+for i in range(1, K):
+    count[i] += count[i - 1]
+
+for i in reversed(range(N)):
+    output[count[arr[i]] - 1] = arr[i]
+    count[arr[i]] -= 1
+
+for i in range(N):
+    arr[i] = output[i]
+
+print(arr)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+  ```
 </details>
 
 Counting sort, когато е възможно ползването му, позволява сортиране с линейна сложност.
 
 ### Обобщение на бързите алгоритми:
 
-|              | Merge sort | Quick sort         | Counting sort |
-| ------------ | ---------- | ------------------ | ------------- |
-| Best case    | *O(NlogN)* | *O(NlogN)*         | *O(N + K)*    |
-| Average Case | *O(NlogN)* | *O(NlogN)*         | *O(N + K)*    |
-| Worst Case   | *O(NlogN)* | *O(N<sup>2</sup>)* | *O(N + K)*    |
-| Памет (Average Case)        | *O(N)*     | *O(logN)*             | *O(N + K)*    |
-| Памет (Worst Case)       | *O(N)*     | *O(N)*             | *O(N + K)*    |
-| Стабилен     | да         | не                 | да            |
+|                      | Merge sort | Quick sort         | Counting sort |
+| -------------------- | ---------- | ------------------ | ------------- |
+| Best case            | *O(NlogN)* | *O(NlogN)*         | *O(N + K)*    |
+| Average Case         | *O(NlogN)* | *O(NlogN)*         | *O(N + K)*    |
+| Worst Case           | *O(NlogN)* | *O(N<sup>2</sup>)* | *O(N + K)*    |
+| Памет (Average Case) | *O(N)*     | *O(logN)*          | *O(N + K)*    |
+| Памет (Worst Case)   | *O(N)*     | *O(N)*             | *O(N + K)*    |
+| Стабилен             | да         | не                 | да            |
 
 
 ## Функции от стандартните библиотеки
@@ -505,7 +655,25 @@ Counting sort, когато е възможно ползването му, по�
 
 <details>
   <summary>Python</summary>
-	
+
+- Сортиране с lambda функция
+
+  ```python
+  nums = [5, 2, 9, 1]
+  nums.sort(key=lambda x: -x)
+  print(nums)  # [9, 5, 2, 1]
+  ```
+
+- Сортиране с custom comparator
+
+  ```python
+  from functools import cmp_to_key
+  
+  nums = [5, 2, 9, 1]
+  nums.sort(key=cmp_to_key(lambda a, b: a - b))
+  print(nums)  # [1, 2, 5, 9]
+  ```
+
 </details>
 
 ## Задачи
