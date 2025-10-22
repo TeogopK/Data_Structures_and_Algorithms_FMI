@@ -1,3 +1,6 @@
+"""The function can either check here similar to FirstBadVersion"""
+
+
 def check(seconds_passed, total_papers, printers_times):
     ready_papers = [seconds_passed // time_for_one for time_for_one in printers_times]
 
