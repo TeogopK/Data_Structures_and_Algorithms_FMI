@@ -285,3 +285,26 @@ Counting sort, когато е възможно ползването му, по�
 - [Squares of a Sorted array](https://leetcode.com/problems/squares-of-a-sorted-array/)
 - [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 - [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+
+
+## Бонус
+
+
+### Tim sort
+
+- хибриден алгоритъм - комбинира Merge sort и Insertion sort
+- *O(NlogN)* сложност по време
+- *О(N)* сложност по време в най-добрия случай
+- *О(N)* сложност по памет
+- стабилен сортиращ алгоритъм
+
+Масивът се разделя на парчета. Всяко парче се сортира с Insertion sort. След това парчетата се съединяват чрез Merge операцията от Merge sort.
+
+[Примерна](https://github.com/TheAlgorithms/Python/blob/master/sorts/tim_sort.py) имплементация:
+
+```python
+def timsort(arr):
+    return sorted(arr)
+```
+
+Реалната имплементация използва по-сложни [техники](https://en.wikipedia.org/wiki/Timsort).
