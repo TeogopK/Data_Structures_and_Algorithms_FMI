@@ -563,7 +563,6 @@ Jump Search е **най-ефикасен при скок m = √n** и има с
 - [Puncakes](https://www.hackerrank.com/contests/exam-2022-part2-sda/challenges/puncakes/problem)
 - [Perfect Printer](https://www.hackerrank.com/contests/sda-homework-3/challenges/challenge-2674)
 - [Peak Index in a Mountain Array](https://leetcode.com/problems/peak-index-in-a-mountain-array)
-    - 2 решения - ternary и binary
 - [Search a 2D Matrix](https://leetcode.com/problems/search-a-2d-matrix)
     - 3 решения
 - [Find Minimum in rotated sorted array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/)
