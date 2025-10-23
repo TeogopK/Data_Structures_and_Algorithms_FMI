@@ -557,7 +557,6 @@ Jump Search е **най-ефикасен при скок m = √n** и има с
 - [Binary Search](https://leetcode.com/problems/binary-search/)
 - [Sqrt(x)](https://leetcode.com/problems/sqrtx/)
 - [First Bad Version](https://leetcode.com/problems/first-bad-version)
-- [Max count of positive and negative integers](https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/description/?envType=daily-question&envId=2025-03-12)
 - [Search Insert Position](https://leetcode.com/problems/search-insert-position/)
 
 ### Medium
