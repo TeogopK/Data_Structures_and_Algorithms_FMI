@@ -24,11 +24,11 @@
 
 ### Medium
 
-- [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
+- [**Koko Eating Bananas**](https://leetcode.com/problems/koko-eating-bananas/)
 
 ### Hard
 
 - [**Super Egg Drop**](https://leetcode.com/problems/super-egg-drop/)
-- [Smaller Number After Self](https://leetcode.com/problems/smaller-number-after-self/)
-- [Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/)
+- [**Smaller Number After Self**](https://leetcode.com/problems/smaller-number-after-self/)
+- [**Split Array Largest Sum**](https://leetcode.com/problems/split-array-largest-sum/)
 - [**Median of Two Sorted Arrays**](https://leetcode.com/problems/median-of-two-sorted-arrays/)
