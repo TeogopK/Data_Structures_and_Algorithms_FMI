@@ -17,13 +17,14 @@ public:
             return min;
         }
         int banPerHour = (r-l)/2 + l;
-        long totalNeededToEatAll = 0;
+        long long totalNeededToEatAll = 0;
         for(int i = 0; i < piles.size(); ++i) {
             totalNeededToEatAll += piles[i] / banPerHour + !!(piles[i] % banPerHour);
-            if (totalNeededToEatAll > h) {
-                return minBanana(piles, h, banPerHour + 1, r, min);
-            }
         }
-        return minBanana(piles, h, l, banPerHour - 1, banPerHour);
+        if (totalNeededToEatAll > h) {
+            return minBanana(piles, h, banPerHour + 1, r, min);
+        } else {
+            return minBanana(piles, h, l, banPerHour - 1, banPerHour);
+        }
     }
 };
