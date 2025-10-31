@@ -38,11 +38,11 @@
 
 |Array|LinkedList|
 |------------------------------------|------------------------------------|
-| <img width="1059" height="478" alt="image" src="https://github.com/user-attachments/assets/1c6f82d3-d50e-4ef0-b127-71206c9b99cc" /> | <img width="1048" height="485" alt="image" src="https://github.com/user-attachments/assets/d59950ce-5408-4697-85d6-353c90e21438" /> |
+| <img width="1317" height="594" alt="image" src="https://github.com/user-attachments/assets/c082c17e-8440-48fa-b245-8526f7fc46b1" /> | <img width="1304" height="601" alt="image" src="https://github.com/user-attachments/assets/3eab1fd6-23ea-4f22-965f-8077e2f9b0a6" /> |
 
 |Inserting a node|Removing a node|
 |------------------------------------|------------------------------------|
-| <img width="1026" height="273" alt="image" src="https://github.com/user-attachments/assets/a07ca68a-7ca8-4ced-8e04-6d62b4ebe084" /> | <img width="1027" height="465" alt="image" src="https://github.com/user-attachments/assets/b7f02376-6c73-40eb-947f-d4925f6e4a9d" /> |
+| <img width="1280" height="336" alt="image" src="https://github.com/user-attachments/assets/4bdff99d-5da8-4850-bfb1-f7f2774189f4" /> | <img width="1278" height="574" alt="image" src="https://github.com/user-attachments/assets/5bc0a503-bed9-46d1-a386-395eab39ac2f" /> |
 
 ### Преглед на имплементация на Singly linked list (Едносвързан списък)
 
