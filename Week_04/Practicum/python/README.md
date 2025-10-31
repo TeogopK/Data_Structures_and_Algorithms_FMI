@@ -11,5 +11,6 @@
 - [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/)
 - [Flatten a Multilevel Doubly Linked List](https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/description/)
 - [Hackerrank5](https://www.hackerrank.com/challenges/insert-a-node-into-a-sorted-doubly-linked-list/problem?isFullScreen=true)
+- [Quiz](https://wayground.com/admin/quiz/67215e2ab68e7679b55ccbe0)
 
 
