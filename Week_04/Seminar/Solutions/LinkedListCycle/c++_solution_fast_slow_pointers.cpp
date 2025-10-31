@@ -1,27 +1,24 @@
 /**
  * Definition for singly-linked list.
- * function ListNode(val) {
- *     this.val = val;
- *     this.next = null;
- * }
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
  */
-
-/**
- * @param {ListNode} head
- * @return {boolean}
- */
-var hasCycle = function(head) {
-    let slow = head;
-    let fast = head;
-
-    while(fast && fast.next) {
-        slow = slow.next;
-        fast = fast.next.next;
-
-        if(slow == fast) {
-            return true;
+class Solution {
+public:
+    bool hasCycle(ListNode *head) {
+        auto slow = head;
+        auto fast = head;
+        while(slow && fast && fast->next) {
+            slow = slow->next;
+            fast = fast->next->next;
+            if(slow == fast) {
+                return true;
+            }
         }
+        
+        return false;
     }
-
-    return false;
 };
