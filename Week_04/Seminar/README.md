@@ -439,9 +439,12 @@ https://www.geeksforgeeks.org/dsa/doubly-linked-list-using-sentinel-nodes/
 - [Odd and Event Linked list](https://leetcode.com/problems/odd-even-linked-list/)
 
 ### Hard
-- [ZUMA - Hard](https://www.hackerrank.com/contests/sda-hw-4-2022/challenges/zuma-1)
+...
 
 # Бонус
+
+## Бонус задача
+- [ZUMA - Hard](https://www.hackerrank.com/contests/sda-hw-4-2022/challenges/zuma-1)
 
 ## XOR Linked List
 Това е Doubly Linked list, който заема толкова памет колкото един singly linked list. Всеки Node пази като стойност XOR стойността на адреса на предходния елемент и на следващия. (Припомнете си как работеше XOR и по-конкретно пробвайте тази задача https://leetcode.com/problems/single-number/).
