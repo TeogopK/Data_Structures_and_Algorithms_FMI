@@ -409,6 +409,8 @@ https://www.geeksforgeeks.org/dsa/doubly-linked-list-using-sentinel-nodes/
 
 ## Задачи
 
+- [Design LinkedList](https://leetcode.com/problems/design-linked-list/) - тук може да изпробвате да имплементирате LinkedList
+
 ### Подходи и съвети за задачи
 - техника Two pointers - fast and slow
 - В случай, че ни трябва директен достъп - да пазим масив с всички ListNode* - ListNode*[10000000]
