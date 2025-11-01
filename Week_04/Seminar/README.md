@@ -10,7 +10,9 @@
 
 ## Свързан списък
 
-**Note:** В папка LinkedLists може да намерите имплементации на структурите
+**Note:** В папка LinkedLists може да намерите имплементации на структурите.
+
+За Python версии може да разгледате github-a [TheAlgorithms](https://github.com/TheAlgorithms/Python) и техния подраздел [LinkedLists](https://github.com/TheAlgorithms/Python/tree/master/data_structures/linked_list). За по-примитивни версии в playground-а от семинара.
 
 ### Какво е абстрактна структура от данни
 Абстрактният тип данни дава определена дефиниция (абстракция) на конкретната структура т.е. определя допустимите опера­ции и свойства, без да се интересува от конкретната реализация. Това позволява един тип абстрактни данни да има различни реализации и респективно различна ефективност.
@@ -36,12 +38,12 @@
 
 ### Представяне в паметта
 
-|Array|LinkedList|
-|------------------------------------|------------------------------------|
+| Array                                                                                                                               | LinkedList                                                                                                                          |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | <img width="1317" height="594" alt="image" src="https://github.com/user-attachments/assets/c082c17e-8440-48fa-b245-8526f7fc46b1" /> | <img width="1304" height="601" alt="image" src="https://github.com/user-attachments/assets/3eab1fd6-23ea-4f22-965f-8077e2f9b0a6" /> |
 
-|Inserting a node|Removing a node|
-|------------------------------------|------------------------------------|
+| Inserting a node                                                                                                                    | Removing a node                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | <img width="1280" height="336" alt="image" src="https://github.com/user-attachments/assets/4bdff99d-5da8-4850-bfb1-f7f2774189f4" /> | <img width="1278" height="574" alt="image" src="https://github.com/user-attachments/assets/5bc0a503-bed9-46d1-a386-395eab39ac2f" /> |
 
 ### Преглед на имплементация на Singly linked list (Едносвързан списък)
@@ -68,9 +70,17 @@ struct Node {
 
 <details>
   <summary>Python</summary>
-	TODO:
+
+```python
+class Node:
+    def __init__(self, data=0, next_=None):
+        self.data = data
+        self.next_ = next_ 
+```
+
 </details>
 
+---
 
 Тази структура може да се обвие в клас, който да представлява свързан списък. Свързаният списък държи указател към първият node, за оптимизация и по-бързо добавяне в края ще пазим и последния.
 
@@ -101,7 +111,15 @@ public:
 
 <details>
   <summary>Python</summary>
-	TODO:
+
+
+```python
+class LinkedList:
+    def __init__(self, head=None, tail=None):
+        self.head = head 
+        self.tail = tail
+```
+
 </details>
 
 ---
@@ -130,7 +148,20 @@ void SinglyLinkedList<T>::push_back(const T& value) {
 
 <details>
   <summary>Python</summary>
-	TODO:
+
+```python
+class LinkedList:
+    # ...
+    def push_back(self, data):
+        new_node = Node(data)
+
+        if not self.head:
+            self.head = self.tail = new_node
+        else:
+            self.tail.next_ = new_node
+            self.tail = new_node
+```
+
 </details>
 
 ---
@@ -160,7 +191,20 @@ void SinglyLinkedList<T>::push_front(const T& value) {
 
 <details>
   <summary>Python</summary>
-	TODO:
+
+```python
+class LinkedList:
+    # ...
+    def push_front(self, data):
+        new_node = Node(data)
+
+        if not self.head:
+            self.head = self.tail = new_node
+        else:
+            new_node.next_ = self.head
+            self.head = new_node
+```
+
 </details>
 
 ---
@@ -189,7 +233,19 @@ void SinglyLinkedList<T>::print() const {
 
 <details>
   <summary>Python</summary>
-	TODO:
+
+
+```python
+class LinkedList:
+    # ...
+    def print(self):
+        current = self.head
+
+        while current:
+            print(current.data)
+            current = current.next_
+```
+
 </details>
 
 ---
@@ -221,7 +277,17 @@ void SinglyLinkedList<T>::pop_front() {
 
 <details>
   <summary>Python</summary>
-	TODO:
+
+```python
+class LinkedList:
+    # ...
+    def pop_front(self):
+        if self.head == self.tail:
+            self.head = self.tail = None
+        else:
+            self.head = self.head.next_ 
+```
+
 </details>
 
 ---
@@ -261,7 +327,22 @@ void SinglyLinkedList<T>::pop_back() {
 
 <details>
   <summary>Python</summary>
-	TODO:
+
+```python
+class LinkedList:
+    # ...
+    def pop_back(self):
+        if self.head == self.tail:
+            self.head = self.tail = None
+        else:
+            current = self.head
+            while current.next_ != self.tail:
+                current = current.next_
+
+            current.next_ = None 
+            self.tail = current
+```
+
 </details>
 
 ## Двойносвързан списък
@@ -295,8 +376,23 @@ public:
 
 <details>
   <summary>Python</summary>
-	TODO:
+
+
+
+```python
+class Node:
+    def __init__(self, data, next_=None, prev=None):
+        self.data = data
+        self.next_ = next_
+        self.prev = prev
+
+class DoublyLinkedList:
+    def __init__(self, head=None, tail=None):
+        self.head = head 
+        self.tail = tail
+```
 </details>
+</br>
 
 Имплементациите не се различава особено от тази на SinglyLinkedList освен с това, че трябва правилно да нагласяме prev и next на всеки елемент.
 Важно е да споменем, че в този случай премахване на елемент в края на списъка може да бъде постигнато за константно време:
@@ -333,8 +429,20 @@ void DoublyLinkedList<T>::pop_back() {
 
 <details>
   <summary>Python</summary>
-	TODO:
+
+```python
+class DoublyLinkedList:
+    # ...
+    def pop_back(self):
+        if self.head == self.tail:
+            self.head = self.tail = None
+        else:
+            self.tail = self.tail.prev
+            self.tail.next_ = None
+```
+
 </details>
+</br>
 
 Получаваме предимството да премахнем последния елемент за константно време, но увеличаваме паметта, нужна за съхранението на структурата.
 
@@ -384,20 +492,20 @@ https://www.geeksforgeeks.org/dsa/doubly-linked-list-using-sentinel-nodes/
 
 ## Complexity comparison
 
-| Operation / Data structure | Array            | Singly linked list without tail | Singly linked list with tail | Doubly linked list without tail | Doubly linked list with tail |
-| -------------------------- | ---------------- | ------------------------------- | ---------------------------- | ------------------------------- | ---------------------------- |
-| push_front                 | $\mathcal{O}(n)$ | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             |
-| pop_front                  | $\mathcal{O}(n)$ | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             |
-| get_front                  | $\mathcal{O}(1)$ | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             |
+| Operation / Data structure | Array             | Singly linked list without tail | Singly linked list with tail | Doubly linked list without tail | Doubly linked list with tail |
+| -------------------------- | ----------------- | ------------------------------- | ---------------------------- | ------------------------------- | ---------------------------- |
+| push_front                 | $\mathcal{O}(n)$  | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             |
+| pop_front                  | $\mathcal{O}(n)$  | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             |
+| get_front                  | $\mathcal{O}(1)$  | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             |
 | push_back                  | $\mathcal{O}(1*)$ | $\mathcal{O}(n)$                | $\mathcal{O}(1)$             | $\mathcal{O}(n)$                | $\mathcal{O}(1)$             |
-| pop_back                   | $\mathcal{O}(1)$ | $\mathcal{O}(n)$                | $\mathcal{O}(n)$             | $\mathcal{O}(n)$                | $\mathcal{O}(1)$             |
-| get_back                   | $\mathcal{O}(1)$ | $\mathcal{O}(n)$                | $\mathcal{O}(1)$             | $\mathcal{O}(n)$                | $\mathcal{O}(1)$             |
-| get_at                     | $\mathcal{O}(1)$ | $\mathcal{O}(n)$                | $\mathcal{O}(n)$             | $\mathcal{O}(n)$                | $\mathcal{O}(n)$             |
-| find_key                   | $\mathcal{O}(n)$ | $\mathcal{O}(n)$                | $\mathcal{O}(n)$             | $\mathcal{O}(n)$                | $\mathcal{O}(n)$             |
-| erase_key                  | $\mathcal{O}(n)$ | $\mathcal{O}(n)$                | $\mathcal{O}(n)$             | $\mathcal{O}(n)$                | $\mathcal{O}(n)$             |
-| is_empty                   | $\mathcal{O}(1)$ | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             |
-| add_before                 | $\mathcal{O}(n)$ | $\mathcal{O}(n)$                | $\mathcal{O}(n)$             | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             |
-| add_after                  | $\mathcal{O}(n)$ | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             |
+| pop_back                   | $\mathcal{O}(1)$  | $\mathcal{O}(n)$                | $\mathcal{O}(n)$             | $\mathcal{O}(n)$                | $\mathcal{O}(1)$             |
+| get_back                   | $\mathcal{O}(1)$  | $\mathcal{O}(n)$                | $\mathcal{O}(1)$             | $\mathcal{O}(n)$                | $\mathcal{O}(1)$             |
+| get_at                     | $\mathcal{O}(1)$  | $\mathcal{O}(n)$                | $\mathcal{O}(n)$             | $\mathcal{O}(n)$                | $\mathcal{O}(n)$             |
+| find_key                   | $\mathcal{O}(n)$  | $\mathcal{O}(n)$                | $\mathcal{O}(n)$             | $\mathcal{O}(n)$                | $\mathcal{O}(n)$             |
+| erase_key                  | $\mathcal{O}(n)$  | $\mathcal{O}(n)$                | $\mathcal{O}(n)$             | $\mathcal{O}(n)$                | $\mathcal{O}(n)$             |
+| is_empty                   | $\mathcal{O}(1)$  | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             |
+| add_before                 | $\mathcal{O}(n)$  | $\mathcal{O}(n)$                | $\mathcal{O}(n)$             | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             |
+| add_after                  | $\mathcal{O}(n)$  | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             | $\mathcal{O}(1)$                | $\mathcal{O}(1)$             |
 
 **Note: За XOR linked list - add_before и add_after са с линейна сложност!**
 
@@ -415,7 +523,7 @@ https://www.geeksforgeeks.org/dsa/doubly-linked-list-using-sentinel-nodes/
 - Във всяка задача има много edge cases около
 	- празен list
  	- това дали елемент е head или tail
-	- дали елемент е nullptr
+	- дали елемент е nullptr/Null
 - Много често задачите могат да бъдат решени по повече от един начин
 
 ### Easy
@@ -476,7 +584,9 @@ public:
 
 <details>
   <summary>Python</summary>
-	TODO:
+
+В момента имплементацията е на PR: https://github.com/TheAlgorithms/Python/pull/13699/files
+
 </details>
 
 ---
@@ -503,11 +613,6 @@ void XORLinkedList<T>::print() const {
 }
 ```
 
-</details>
-
-<details>
-  <summary>Python</summary>
-	TODO:
 </details>
 
 ---
