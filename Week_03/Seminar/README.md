@@ -241,7 +241,27 @@ int lowerBound(const std::vector<int>& nums, int target) {
 <details>
   <summary>Python</summary>
 
-	TODO...
+Аналогично поведение като bisect.bisect_left()
+
+```python
+def binary_search_lower_bound(arr, X):
+    left = 0
+    right = len(arr) - 1
+
+    Xi = len(arr) - 1
+
+    while left <= right:
+        mid = left + (right - left) // 2
+
+        if X <= arr[mid]:
+            right = mid - 1
+            Xi = mid
+        else:
+            left = mid + 1
+
+    return Xi
+```
+
 </details>
 
 ---
@@ -272,12 +292,33 @@ int upperBound(const std::vector<int>& nums, int target) {
 
 <details>
   <summary>Python</summary>
-	TODO...
+
+Аналогично поведение като bisect.bisect_right()
+
+```python
+def binary_search_upper_bound(arr, X):
+    left = 0
+    right = len(arr) - 1
+
+    Xi = len(arr)
+
+    while left <= right:
+        mid = left + (right - left) // 2
+
+        if X < arr[mid]:
+            right = mid - 1
+            Xi = mid
+        else:
+            left = mid + 1
+
+    return Xi
+```
+
 </details>
 
 ---
 
-**В следния snippet са използвани имплементации от стандартната библиотека на на binary_search, lower_bound, upper_bound.** 
+**В следния snippet са използвани имплементации от стандартната библиотека на binary_search, lower_bound, upper_bound.** 
 
 Изпробвайте следния code snippet с target - 0, 5, 6, 11. При target 11 връща v.end() на C++, а на Python - len(v).
 
