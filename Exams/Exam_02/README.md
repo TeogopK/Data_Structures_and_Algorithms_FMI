@@ -45,7 +45,7 @@ Node* positiveStalinSort(Node* list);
 class Node:
     def __init__(self, data=0, next_node=None):
         self.data = data
-        self.next = next_node
+        self.next_node = next_node
 
 def positiveStalinSort(lst: Optional[Node]) -> Optional[Node]:
     pass
