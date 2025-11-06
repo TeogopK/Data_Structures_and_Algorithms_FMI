@@ -154,4 +154,3 @@ Sliding window е техника за оптимизация, използван
 - [Min stack](https://leetcode.com/problems/min-stack/) - Medium
   - 2*n памет
   - n памет
-- [Number of visible people in a queue](https://leetcode.com/problems/number-of-visible-people-in-a-queue/) - Hard
