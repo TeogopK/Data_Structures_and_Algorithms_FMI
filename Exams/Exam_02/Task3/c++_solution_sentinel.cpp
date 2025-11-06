@@ -1,3 +1,5 @@
+// gpt generated
+
 struct Node {
     int value;
     Node* next;
