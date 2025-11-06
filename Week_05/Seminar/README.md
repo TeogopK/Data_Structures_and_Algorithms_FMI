@@ -71,7 +71,7 @@
 ### Имплементации в стандартните библиотеки 
 - [C++](https://en.cppreference.com/w/cpp/container/stack)
 - [Python TODO](#)
-- 
+
 ### Задачи
 - [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - Easy
 - [Asteroid collision](https://leetcode.com/problems/asteroid-collision/) - Medium
