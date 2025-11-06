@@ -15,7 +15,7 @@ Node* positiveStalinSort(Node* list) {
     Node* current = head;
     while (current && current->next) {
         // Свързваме текущия с по-следващия елемент, изтривайки по-малкия следващ
-        if (current->data > current->next->data) {
+        if (current->next->data < 0 || current->data > current->next->data) {
             Node* temp = current->next;
             current->next = current->next->next;
             delete temp;  // Изтриваме възел за предотвратяване на утечки
