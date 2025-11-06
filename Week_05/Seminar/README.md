@@ -97,6 +97,11 @@
 
 Monotonic stack е техника, използвана често за решаване на задачи тип - намиране на следващ по-голям/по-малък елемент в масив. Основната идея на монотонния стек е, че подреждаме елементите в стека така, че те да бъдат сортирани в монотонно нарастващ или монотонно намаляващ ред. Това означава, че когато добавяме нов елемент в стека, премахваме елементи, които нарушават реда.
 
+
+
+<details>
+  <summary>C++</summary>
+
 ```c++
 void monotonicStackExample(const std::vector<int>& v) {
     // Нека v = {4, 1, 2, 6, 7, 3}
@@ -125,6 +130,45 @@ void monotonicStackExample(const std::vector<int>& v) {
     // credit: https://github.com/stoychoX/Data-structures-and-algorithms/
 }
 ```
+
+
+</details>
+
+
+<details>
+  <summary>Python</summary>
+
+```python
+from typing import List
+from collections import deque
+
+def monotonicStackExample(v: List[int]) -> None:
+    # Let's say v = [4, 1, 2, 6, 7, 3]
+    # We can store values or indices in the stack depending on the task.
+    # From the name you can tell what we are storing and the type of the stack.
+    minMonotonicValues = deque()
+
+    for i in range(len(v)):
+        while minMonotonicValues and minMonotonicValues[-1] < v[i]:
+            minMonotonicValues.pop()
+        minMonotonicValues.append(v[i])
+
+    """
+    At the end of the for loop at index i, the stack looks like this:
+    (top of the stack is the rightmost element)
+    i = 0 : [4]
+    i = 1 : [4, 1]
+    i = 2 : [4, 2]
+    i = 3 : [6]
+    i = 4 : [7]
+    i = 5 : [7, 3]
+    """
+
+# credit: https://github.com/stoychoX/Data-structures-and-algorithms/
+```
+
+</details>
+
 Какво можем да забележим от този пример? Примерно, вярно е, че при i = k максимума на подмасива [0..k - 1] е на дъното на стека.
 
 ### Задачи
