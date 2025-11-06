@@ -31,7 +31,9 @@
 | isEmpty()        | $\mathcal{O}(1)$                   | $\mathcal{O}(1)$ |
 | initialize       | $\mathcal{O}(p)$ - allocate memory | $\mathcal{O}(1)$ |
 
-[Stl queue documentation](https://en.cppreference.com/w/cpp/container/queue)
+### Имплементации в стандартните библиотеки 
+- [C++](https://en.cppreference.com/w/cpp/container/queue)
+- [Python TODO](#)
 
 ### Задачи
 - [Number of recent calls](https://leetcode.com/problems/number-of-recent-calls/) - Easy
@@ -66,8 +68,10 @@
 | isEmpty()    | $\mathcal{O}(1)$                   | $\mathcal{O}(1)$ |
 | initialize   | $\mathcal{O}(p)$ - allocate memory | $\mathcal{O}(1)$ |
 
-[Stl stack documentation](https://en.cppreference.com/w/cpp/container/stack)
-
+### Имплементации в стандартните библиотеки 
+- [C++](https://en.cppreference.com/w/cpp/container/stack)
+- [Python TODO](#)
+- 
 ### Задачи
 - [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - Easy
 - [Asteroid collision](https://leetcode.com/problems/asteroid-collision/) - Medium
@@ -91,13 +95,13 @@
 | isEmpty()      | $\mathcal{O}(1)$                   | $\mathcal{O}(1)$ |
 | initialize     | $\mathcal{O}(p)$ - allocate memory | $\mathcal{O}(1)$ |
 
-[Stl deque documentation](https://en.cppreference.com/w/cpp/container/deque)
+### Имплементации в стандартните библиотеки 
+- [C++](https://en.cppreference.com/w/cpp/container/deque)
+- [Python TODO](#)
 
 ## Monotonic Stack
 
 Monotonic stack е техника, използвана често за решаване на задачи тип - намиране на следващ по-голям/по-малък елемент в масив. Основната идея на монотонния стек е, че подреждаме елементите в стека така, че те да бъдат сортирани в монотонно нарастващ или монотонно намаляващ ред. Това означава, че когато добавяме нов елемент в стека, премахваме елементи, които нарушават реда.
-
-
 
 <details>
   <summary>C++</summary>
