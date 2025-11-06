@@ -129,9 +129,9 @@ void monotonicStackExample(const std::vector<int>& v) {
 
 ### Задачи
 - [Next greater element 2](https://leetcode.com/problems/next-greater-element-ii/description/) - Medium
-- [Number of visible people in a queue](https://leetcode.com/problems/number-of-visible-people-in-a-queue/) - Hard
 - [Next Greater Node in Linked List](https://leetcode.com/problems/next-greater-node-in-linked-list/) - Medium
 - [Daily temperatures](https://leetcode.com/problems/daily-temperatures/) - Medium
+- [Welcome to the jungle](https://www.hackerrank.com/contests/practice-4-sda/challenges/welcome-to-the-jungle) - Medium
 
 ## Sliding window
 Sliding window е техника за оптимизация, използвана при задачи, в които трябва да се обработват подмасиви (или поднизове) с фиксирана или променлива дължина, разположени последователно в основния масив или низ. Тази техника ни помага да избегнем многократно пресмятане на едни и същи елементи, което я прави много ефективна за задачи като намиране на сума, средна стойност, максимум, минимум и други характеристики на подмасиви или низове.
@@ -154,3 +154,4 @@ Sliding window е техника за оптимизация, използван
 - [Min stack](https://leetcode.com/problems/min-stack/) - Medium
   - 2*n памет
   - n памет
+- [Number of visible people in a queue](https://leetcode.com/problems/number-of-visible-people-in-a-queue/) - Hard
