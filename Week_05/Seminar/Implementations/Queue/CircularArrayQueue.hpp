@@ -1,5 +1,6 @@
 // Implementation from OOP course
 // credit: https://github.com/Angeld55/Object-oriented_programming_FMI/blob/3f196145e68e357cf32eaf609c4c274d374b77c5/Week%2012/Templates/Queue/Queue.hpp
+#pragma once
 #include <iostream>
 #include <exception>
 template <typename T>
