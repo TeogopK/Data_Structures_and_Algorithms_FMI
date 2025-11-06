@@ -139,13 +139,10 @@ void monotonicStackExample(const std::vector<int>& v) {
   <summary>Python</summary>
 
 ```python
-from typing import List
-from collections import deque
-
 def monotonicStackExample(v: List[int]) -> None:
-    # Let's say v = [4, 1, 2, 6, 7, 3]
-    # We can store values or indices in the stack depending on the task.
-    # From the name you can tell what we are storing and the type of the stack.
+    # Нека v = {4, 1, 2, 6, 7, 3}
+    # В стека можем да пазим стойности или индекси в зависимост от задачата. 
+    # По името може да познаете какво пазим и какъв е типа на стека.
     minMonotonicValues = deque()
 
     for i in range(len(v)):
@@ -154,14 +151,14 @@ def monotonicStackExample(v: List[int]) -> None:
         minMonotonicValues.append(v[i])
 
     """
-    At the end of the for loop at index i, the stack looks like this:
-    (top of the stack is the rightmost element)
+    В края на for цикъла при индекс i стека изглежда така:
+    (върха на стека е най - десния елемент)
     i = 0 : [4]
     i = 1 : [4, 1]
     i = 2 : [4, 2]
     i = 3 : [6]
     i = 4 : [7]
-    i = 5 : [7, 3]
+    i = 5 : [7, 3]  
     """
 
 # credit: https://github.com/stoychoX/Data-structures-and-algorithms/
