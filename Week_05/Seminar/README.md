@@ -75,6 +75,7 @@
 
 ### Задачи
 - [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) - Easy
+- [Backspace String compare](https://leetcode.com/problems/backspace-string-compare/) - Easy
 - [Asteroid collision](https://leetcode.com/problems/asteroid-collision/) - Medium
 - [Evaluate reverse polish notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) - Medium
 
