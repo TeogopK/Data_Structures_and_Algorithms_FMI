@@ -20,7 +20,9 @@ def positiveStalinSort(lst: Optional[Node]) -> Optional[Node]:
     current = head
     while current and current.next_node:
         # Свързваме текущия с по-следващия елемент, изтривайки по-малкия следващ
-        if current.next_node.data < 0 or current.data > current.next_node.data:
+        if current.data > current.next_node.data:
+            # Не е нужно да търсим `if current.next_node.data < 0 or current.data > current.next_node.data:`,
+            # тъй като или ще имаме само отрицателни в началото и празен списък, или поне едно по-голямо от тях.
             current.next_node = current.next_node.next_node
             continue
         # В противен случай продължаваме напред
