@@ -200,7 +200,8 @@ Sliding window е техника за оптимизация, използван
 <details>
   <summary>Визуализация на това как би трябвало да работи последната</summary>
     
-  ![sliding_window_maximum](https://github.com/user-attachments/assets/2b728e60-4f88-4fcf-8296-12aaa448a880)
+  ![sliding_window_maximum](https://github.com/user-attachments/assets/2dc64aff-eefb-43b7-ae62-00f63d3aa429)
+
 </details>
 
 # Бонус
