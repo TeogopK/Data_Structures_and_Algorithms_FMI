@@ -1086,6 +1086,7 @@ def get_balance(node):
 
 В C++ съществуват *ordered* варианти на горните колекции, които подреждат елементите/ ключовете по-големина. При обхождане на структурите последователността е *inorder*.
 Това са структурите *[set](https://en.cppreference.com/w/cpp/container/set.html)*, *[map](https://en.cppreference.com/w/cpp/container/map.html)*, *[multiset](https://en.cppreference.com/w/cpp/container/multiset.html)* и *[multimap](https://en.cppreference.com/w/cpp/container/multimap.html)*.
+"Behind the scenes" работят с червено-черни дървета.
 
 #### Map
 Структура key - value. Key е уникален. Дървото е сортирано по key.
