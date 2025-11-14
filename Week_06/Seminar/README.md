@@ -1118,7 +1118,6 @@ def get_balance(node):
 ## Още задачи за дървета
 
 ### Easy
-- [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 - [Same Tree](https://leetcode.com/problems/same-tree/)
 - [Symetric Tree](https://leetcode.com/problems/symmetric-tree/)
 - [Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)
