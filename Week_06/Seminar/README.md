@@ -1086,6 +1086,7 @@ def get_balance(node):
 
 В C++ съществуват *ordered* варианти на горните колекции, които подреждат елементите/ ключовете по-големина. При обхождане на структурите последователността е *inorder*.
 Това са структурите *[set](https://en.cppreference.com/w/cpp/container/set.html)*, *[map](https://en.cppreference.com/w/cpp/container/map.html)*, *[multiset](https://en.cppreference.com/w/cpp/container/multiset.html)* и *[multimap](https://en.cppreference.com/w/cpp/container/multimap.html)*.
+"Behind the scenes" работят с червено-черни дървета.
 
 #### Map
 Структура key - value. Key е уникален. Дървото е сортирано по key.
@@ -1112,20 +1113,17 @@ def get_balance(node):
 - [Binary Tree Right side view](https://leetcode.com/problems/binary-tree-right-side-view/)
 	- bfs
  	- dfs
+- [Maximum depth of binary tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/)
 
 ## Още задачи за дървета
 
 ### Easy
-- [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 - [Same Tree](https://leetcode.com/problems/same-tree/)
 - [Symetric Tree](https://leetcode.com/problems/symmetric-tree/)
 - [Range Sum of BST](https://leetcode.com/problems/range-sum-of-bst/)
 - [Diameter of a binary tree](https://leetcode.com/problems/diameter-of-binary-tree/description/)
 
 ### Medium
-- [Binary Tree prunning](https://leetcode.com/problems/binary-tree-pruning/description/)
-- [Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)
-- [Trim BST](https://leetcode.com/problems/trim-a-binary-search-tree/)
 - [Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/)
 - [Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)
 - Имаме дърво с уникални числа на всеки Node. Като вход ще получим много заявки за проверка дали един Node е наследник на друг. Заявките са от вида 1 наследник ли е на 3.
