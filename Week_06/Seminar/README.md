@@ -1124,9 +1124,6 @@ def get_balance(node):
 - [Diameter of a binary tree](https://leetcode.com/problems/diameter-of-binary-tree/description/)
 
 ### Medium
-- [Binary Tree prunning](https://leetcode.com/problems/binary-tree-pruning/description/)
-- [Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)
-- [Trim BST](https://leetcode.com/problems/trim-a-binary-search-tree/)
 - [Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/)
 - [Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)
 - Имаме дърво с уникални числа на всеки Node. Като вход ще получим много заявки за проверка дали един Node е наследник на друг. Заявките са от вида 1 наследник ли е на 3.
