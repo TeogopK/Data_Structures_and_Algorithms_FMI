@@ -25,7 +25,7 @@ class BinarySearchTree:
         return node
 
     def printSpecific(self, val):
-        """Implement here"""
+        print("asdf")
 
 
 tree = BinarySearchTree()
