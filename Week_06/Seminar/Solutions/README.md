@@ -1,0 +1,40 @@
+# Решения
+
+## Структура на папките
+
+- **Fundamental/** - Основни операции и обхождания на двоични дървета
+  - **BinaryTreeRightSideView/** - Задача за намиране на елементите, видими отдясно на дърво
+    - Решения с масив, BFS и DFS подход
+  - **MaximumDepthOfBinaryTree/** - Задача за намиране на максималната дълбочина на двоично дърво
+    - Решения с DFS и обхождане по нива
+  - **Traversals/** - Различни видове обхождания на двоични дървета
+    - **BinaryTreeInorderTraversal/** - Inorder обхождане (ляво-корен-дясно)
+      - Рекурсивни и итеративни решения на C++ и Python
+    - **BinaryTreeLevelOrderTraversal/** - Обхождане по нива
+      - Решения с опашка на C++ и Python
+    - **BinaryTreePostOrderTraversal copy/** - Postorder обхождане (ляво-дясно-корен)
+    - **BinaryTreePreOrderTraversal/** - Preorder обхождане (корен-ляво-дясно)
+  - **TreeOperations/** - Основни операции в двоично дърво за търсене (BST)
+    - **DeleteNodeInBST/** - Изтриване на възел от BST
+    - **InsertIntoBST/** - Вмъкване на възел в BST
+      - Итеративно и рекурсивно решение на C++
+    - **SearchInABinarySearchTree/** - Търсене на елемент в BST
+      - DFS и итеративни решения на C++ и Python
+  - **ValidateBinarySearchTree/** - Проверка дали дърво е валидно BST
+    - Решения с inorder обхождане, долна/горна граница и сравнение на съседни елементи
+- **TreeTasks/** - По-сложни задачи с дървета
+  - **DescendantQueries/** - Заявки за наследници в дърво
+  - **DiameterOfBinaryTree/** - Намиране на диаметъра на двоично дърво
+  - **LowestCommonAncestorOfDeepestLeaves/** - Най-нисък общ предшественик на най-дълбоките листа
+  - **RangeSumOfBst/** - Сума на стойности в BST в даден диапазон
+    - BFS и DFS решения на C++
+  - **SameTree/** - Проверка дали две дървета са еднакви
+    - Решения с DFS, вектори и inorder обхождане
+  - **SymmetricTree/** - Проверка дали дърво е симетрично
+    - Решения с DFS, BFS и сравнение на указатели
+- **MapSet/** - Задачи използващиMap и Set структури от данни
+  - **ContinuousSubarrays/** - Задача за намиране на непрекъснати подмасиви
+  - **SmallestNumberInInfiniteSet/** - Задача за намиране на най-малко число в безкрайно множество
+    - "Проста" и оптимизирана версия на C++
+  - **VolleyballFriends/** - Задача с приятели и волейбол
+    - C++ и Python решения
