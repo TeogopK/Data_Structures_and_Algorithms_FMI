@@ -1112,6 +1112,7 @@ def get_balance(node):
 - [Binary Tree Right side view](https://leetcode.com/problems/binary-tree-right-side-view/)
 	- bfs
  	- dfs
+- [Maximum depth of binary tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/)
 
 ## Още задачи за дървета
 
