@@ -1084,8 +1084,14 @@ def get_balance(node):
 
 Примерна имплементация [AVL Tree in Python](https://github.com/TheAlgorithms/Python/blob/master/data_structures/binary_tree/avl_tree.py) и [Red-Black Tree in Python](https://github.com/TheAlgorithms/Python/blob/master/data_structures/binary_tree/red_black_tree.py).
 
-В C++ съществуват *ordered* варианти на горните колекции, които подреждат елементите/ ключовете по-големина. Така е нужно *inorder* обхождане, което е присъщо на балансираните дървета.
-Това са структурите *set*, *map*, *multiset* и *multimap*.
+В C++ съществуват *ordered* варианти на горните колекции, които подреждат елементите/ ключовете по-големина. При обхождане на структурите последователността е *inorder*.
+Това са структурите *[set](https://en.cppreference.com/w/cpp/container/set.html)*, *[map](https://en.cppreference.com/w/cpp/container/map.html)*, *[multiset](https://en.cppreference.com/w/cpp/container/multiset.html)* и *[multimap](https://en.cppreference.com/w/cpp/container/multimap.html)*.
+
+#### Map
+Структура key - value. Key е уникален. Дървото е сортирано по key.
+
+#### Set
+Структура от уникални елементи. Дървото е сортирано по елементите.
 
 # Задачи
 
@@ -1122,13 +1128,13 @@ def get_balance(node):
 - [Trim BST](https://leetcode.com/problems/trim-a-binary-search-tree/)
 - [Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/)
 - [Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)
-- Имаме дърво с уникални числа на всеки нод. Като вход ще получим много заявки за проверка дали един Node е наследник на друг. Заявките са от вида 1 наследник ли е на 3.
+- Имаме дърво с уникални числа на всеки Node. Като вход ще получим много заявки за проверка дали един Node е наследник на друг. Заявките са от вида 1 наследник ли е на 3.
 	- entry и exit time
 
 ## Задачи за Map и Set
-- https://www.hackerrank.com/contests/sda-hw-8/challenges/volleyball-friends
-- https://leetcode.com/problems/smallest-number-in-infinite-set/description/
-- https://leetcode.com/problems/continuous-subarrays/description/
+- [Volleyball friends](https://www.hackerrank.com/contests/sda-hw-8/challenges/volleyball-friends)
+- [Smallest number in infinite set](https://leetcode.com/problems/smallest-number-in-infinite-set/description/)
+- [Continuous subarrays](https://leetcode.com/problems/continuous-subarrays/description/)
 
 # Бонус
 - Имплементиране на итератор на дърво
