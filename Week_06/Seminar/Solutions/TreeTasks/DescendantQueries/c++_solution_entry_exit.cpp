@@ -7,6 +7,7 @@ struct Node {
     vector<Node*> children;
 };
 
+// populate entry and exit time
 void dfs(Node* node, vector<int>& entry, vector<int>& exit, int& timer) {
     entry[node->value] = ++timer;
     for (Node* child : node->children)
@@ -14,7 +15,11 @@ void dfs(Node* node, vector<int>& entry, vector<int>& exit, int& timer) {
     exit[node->value] = ++timer;
 }
 
-// values will be unique in the range 1 to N
+// root -> root of already created tree
+//     - values will be unique in the range 1 to N
+// queries will be in the following format
+//    - first - descendant value (1 to N)
+//    - second - ascestor value (1 to N)
 vector<bool> answerQueries(Node* root, const vector<pair<int, int>>& queries, int N) {
     vector<int> entry(N + 1), exit(N + 1);
     int timer = 0;
