@@ -1088,11 +1088,65 @@ def get_balance(node):
 Това са структурите *[set](https://en.cppreference.com/w/cpp/container/set.html)*, *[map](https://en.cppreference.com/w/cpp/container/map.html)*, *[multiset](https://en.cppreference.com/w/cpp/container/multiset.html)* и *[multimap](https://en.cppreference.com/w/cpp/container/multimap.html)*.
 "Behind the scenes" работят с червено-черни дървета.
 
+<details>
+  <summary>C++ Map and Set</summary>
+
 #### Map
-Структура key - value. Key е уникален. Дървото е сортирано по key.
+- Структура key - value
+- Key е уникален
+- Дървото е сортирано по key
+- Операции: `insert()`, `erase()`, `find()`, `[]` - всички *O(logN)*
+- Пример за използване:
+  ```cpp
+  std::map<int, string> m;
+  m[1] = "one";
+  m.insert({2, "two"});
+  m[3] = "three";
+  
+  // Търсене
+  if (m.find(1) != m.end()) { /* намерен */ }
+  
+  // Премахване
+  m.erase(2);  // по ключ
+  auto it = m.find(3);
+  if (it != m.end()) {
+      m.erase(it);  // по итератор
+  }
+  
+  // Итериране (в сортиран ред по ключ)
+  for (const auto& [key, value] : m) {
+      std::cout << key << ": " << value << "\n";
+  }
+  ```
 
 #### Set
-Структура от уникални елементи. Дървото е сортирано по елементите.
+- Структура от уникални елементи
+- Дървото е сортирано по елементите
+- Операции: `insert()`, `erase()`, `find()`, `count()` - всички *O(logN)*
+- Пример за използване:
+  ```cpp
+  std::set<int> s;
+  s.insert(5);
+  s.insert(3);
+  s.insert(8);
+  
+  // Търсене
+  if (s.count(5)) { /* съществува */ }
+  
+  // Премахване
+  s.erase(3);  // по стойност
+  auto it = s.find(8);
+  if (it != s.end()) {
+      s.erase(it);  // по итератор
+  }
+  
+  // Итериране (в сортиран ред)
+  for (int val : s) {
+      std::cout << val << " ";
+  }
+  ```
+
+</details>
 
 # Задачи
 
