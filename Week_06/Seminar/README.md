@@ -1189,7 +1189,31 @@ def get_balance(node):
 - [Convert BST to Greater Tree](https://leetcode.com/problems/convert-bst-to-greater-tree/)
 - [Lowest Common Ancestor of Deepest Leaves](https://leetcode.com/problems/lowest-common-ancestor-of-deepest-leaves/)
 - Имаме дърво с уникални числа на всеки Node. Като вход ще получим много заявки за проверка дали един Node е наследник на друг. Заявките са от вида 1 наследник ли е на 3.
-	- entry и exit time
+	- бавно решение - всеки път проверка
+    - entry и exit time
+
+<details>
+	<summary>Explanation</summary>
+
+```
+      1
+     / \
+    2   3
+   /   / \
+  4   5   6
+
+// entry and exit times (of the dfs operation) of every node
+      1 (en:1, ex:12)
+     /             \
+  2 (2,5)          3 (6,11)
+  /                /      \
+4(3,4)            5(7,8)   6(9,10)
+
+// x is descendant of y if entry[y] < entry[x] && exit[x] < exit[y]
+```
+
+</details>
+
 
 ## Задачи за Map и Set
 - [Volleyball friends](https://www.hackerrank.com/contests/sda-hw-8/challenges/volleyball-friends)
