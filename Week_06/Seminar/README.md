@@ -1099,6 +1099,10 @@ def get_balance(node):
 - Пример за използване:
   ```cpp
   std::map<int, string> m;
+  // Map with custom comparator (за низходящ ред по ключ)
+  // Може да дадете и собствен компаратор
+  // std::map<int, string, std::greater<int>> m_desc;
+  
   m[1] = "one";
   m.insert({2, "two"});
   m[3] = "three";
@@ -1126,6 +1130,10 @@ def get_balance(node):
 - Пример за използване:
   ```cpp
   std::set<int> s;
+  // Set with custom comparator (за низходящ ред)
+  // Може да дадете и собствен компаратор
+  // std::set<int, std::greater<int>> s_desc;
+
   s.insert(5);
   s.insert(3);
   s.insert(8);
