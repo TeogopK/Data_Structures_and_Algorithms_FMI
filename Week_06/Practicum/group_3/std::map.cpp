@@ -46,4 +46,8 @@ int main() {
 
     // 7. Clear map
     mp.clear();
+
+    //WARNING!
+    cout << "ECHO" <<  mp[12421] << "ECHO";
+    //by default accessing map/set with op[] will return the neutral element, not throwing exception, this is a problem to be careful for
 }
