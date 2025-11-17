@@ -2,6 +2,7 @@
 ## Задачи:
 
 #### Easy
+- [**Contains Duplicate**](https://leetcode.com/problems/contains-duplicate/)
 
 #### Medium
 - [**Group Anagrams**](https://leetcode.com/problems/group-anagrams/)
