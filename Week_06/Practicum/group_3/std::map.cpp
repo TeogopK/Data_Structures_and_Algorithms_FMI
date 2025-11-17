@@ -11,9 +11,9 @@ struct Descending {
 //same as the STL std::set, the STL std::map is also implemented by red-black tree (which is self balancing binary tree)
 int main() {
     map<int, string> mp; //sorts by default by keys
-    map<int, string, less<int>> mp; // same
-    map<int, string, greater<int>> mp; // sorts in desc order
-    map<int, string, Descending> mp; // sorts in custom order
+    map<int, string, less<int>> mp2; // same
+    map<int, string, greater<int>> mp3; // sorts in desc order
+    map<int, string, Descending> mp4; // sorts in custom order
     
     // 1. Insert elements
     mp[1] = "one";          // operator[] for change -> override the value

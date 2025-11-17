@@ -11,9 +11,9 @@ struct Descending {
 //The STL std::set is implemented with red-black tree which is self balancing binary tree
 int main() {
     set<string> s; //sort by key 
-    set<string, less<string>> s; //the same
-    set<string, greater<string>> s; //sort by desc order
-    set<string, Descending> s; //sort custom
+    set<string, less<string>> s2; //the same
+    set<string, greater<string>> s3; //sort by desc order
+    set<string, Descending> s4; //sort custom
 
     // 1. Insert
     s.insert("a");
