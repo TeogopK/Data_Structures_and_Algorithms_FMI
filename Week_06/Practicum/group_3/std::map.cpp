@@ -49,5 +49,5 @@ int main() {
 
     //WARNING!
     cout << "ECHO" <<  mp[12421] << "ECHO";
-    //by default accessing map/set with op[] will return the neutral element, not throwing exception, this is a problem to be careful for
+    //by default accessing map with op[] will return the neutral element, not throwing exception, this is a problem to be careful for
 }
