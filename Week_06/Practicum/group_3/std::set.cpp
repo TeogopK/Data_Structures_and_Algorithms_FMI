@@ -15,28 +15,29 @@ int main() {
     set<string, greater<string>> s; //sort by desc order
     set<string, Descending> s; //sort custom
 
-    // Insert
+    // 1. Insert
     s.insert("a");
     s.insert("b");
     s.emplace("c");
 
-    // Find
+    // 2. Find
     if (s.find("b") != s.end()) cout << "Found b" << endl;
 
-    // Check size
+    // 3. Check size
     cout << s.size() << endl;
 
-    // Erase
+    // 4. Erase
     s.erase("c");        // by key
     s.erase(s.begin()); // by iterator
 
-    // Iterate
+    // 5. Iterate
     for (auto& x : s) cout << x << " ";
     cout << endl;
 
-    // Clear
+    // 6. Clear
     s.clear();
 
+    //Example:
     s.insert("m");
     s.insert("i");
     s.insert("a");
