@@ -44,6 +44,19 @@ void findSuccessor(TreeNode* node, long long target, long long& result) {
     }
 }
 
+long long findSuccessorIterative(TreeNode* node, long long target) {
+    long long result = LLONG_MAX; 
+    while (node) {
+        if (node->val > target) {
+            result = node->val;
+            node = node->left;
+        } else {
+            node = node->right;
+        }
+    }
+    return result;
+}
+
 long long main() {
     long long n;
     cin >> n;
