@@ -7,14 +7,12 @@ target = int(input())
 
 # Търсим най-малкото число строго по-голямо от target
 result = float('inf')
-found = False
 
 for num in nums:
     if num > target:
         result = min(result, num)
-        found = True
 
-if not found:
+if result == float('inf'):
     print("NO")
 else:
     print(result)

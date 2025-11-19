@@ -30,18 +30,17 @@ TreeNode* insert(TreeNode* node, long long val) {
 }
 
 // Търсене на най-малкото число строго по-голямо от target
-void findSuccessor(TreeNode* node, long long target, long long& result, bool& found) {
+void findSuccessor(TreeNode* node, long long target, long long& result) {
     if (!node) return;
 
     if (node->val > target) {
         // Възможен кандидат, търсим по-наляво
         result = min(result, node->val);
-        found = true;
-        findSuccessor(node->left, target, result, found);
+        findSuccessor(node->left, target, result);
     }
     else {
         // Търсим вдясно
-        findSuccessor(node->right, target, result, found);
+        findSuccessor(node->right, target, result);
     }
 }
 
@@ -60,10 +59,9 @@ long long main() {
     cin >> target;
 
     long long result = LLONG_MAX;
-    bool found = false;
-    findSuccessor(bst, target, result, found);
+    findSuccessor(bst, target, result);
 
-    if (!found) {
+    if (result == LLONG_MAX) {
         cout << "NO" << endl;
     }
     else {

@@ -27,7 +27,6 @@ def find_successor(node, target, result):
     if node.val > target:
         # Възможен кандидат, търсим по-наляво
         result[0] = min(result[0], node.val)
-        result[1] = True
         find_successor(node.left, target, result)
     else:
         # Търсим вдясно
@@ -44,10 +43,10 @@ for num in nums:
     bst = insert(bst, num)
 
 # Търсене на отговора
-result = [float('inf'), False]  # [резултат, намерено]
+result = [float('inf')]
 find_successor(bst, target, result)
 
-if not result[1]:
+if result[0] == float('inf'):
     print("NO")
 else:
     print(result[0])

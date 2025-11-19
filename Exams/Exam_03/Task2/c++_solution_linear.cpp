@@ -22,16 +22,14 @@ int main() {
 
     // Търсим най-малкото число строго по-голямо от target
     long long result = LLONG_MAX;
-    bool found = false;
 
     for (int i = 0; i < n; i++) {
         if (nums[i] > target) {
             result = min(result, nums[i]);
-            found = true;
         }
     }
 
-    if (!found) {
+    if (result == LLONG_MAX) {
         cout << "NO" << endl;
     }
     else {
