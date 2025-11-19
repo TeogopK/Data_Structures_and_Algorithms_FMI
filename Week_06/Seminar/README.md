@@ -187,6 +187,111 @@ Input: parent[] = {1, 5, 5, 2, 2, -1, 3}
         6 
 ```
 
+## Представяне на дърво чрез `vector<vector<int>>` (вектор от деца)
+Структура, при която всеки възел се представя като вектор от децата му. Често се използва при задачи с произволни дървета (не непременно двоични), където броят наследници може да варира.
+
+**Формат:** `vector<vector<int>> tree(N)`, където:
+- `tree[i]` съдържа вектор от индексите на децата на възел `i`
+- `N` е броят на възлите в дървото
+
+**Пример:**
+
+<details>
+  <summary>C++</summary>
+
+```cpp
+vector<vector<int>> tree = {
+    {1, 2},     // възел 0 има деца 1 и 2
+    {3, 4},     // възел 1 има деца 3 и 4
+    {5},        // възел 2 има дете 5
+    {},         // възел 3 няма деца (листо)
+    {},         // възел 4 няма деца (листо)
+    {6},        // възел 5 има дете 6
+    {}          // възел 6 няма деца (листо)
+};
+```
+
+</details>
+
+<details>
+  <summary>Python</summary>
+
+```python
+tree = [
+    [1, 2],     # възел 0 има деца 1 и 2
+    [3, 4],     # възел 1 има деца 3 и 4
+    [5],        # възел 2 има дете 5
+    [],         # възел 3 няма деца (листо)
+    [],         # възел 4 няма деца (листо)
+    [6],        # възел 5 има дете 6
+    []          # възел 6 няма деца (листо)
+]
+```
+
+</details>
+
+
+**Визуализация:**
+```
+          0
+        /   \
+       1     2
+      / \    |
+     3   4   5
+             |
+             6
+```
+
+**Типично използване:**
+
+<details>
+  <summary>C++</summary>
+
+```cpp
+// Построяване на дърво от ребра
+vector<vector<int>> buildTree(int n, vector<vector<int>>& edges) {
+    vector<vector<int>> tree(n);
+    for (const auto& edge : edges) {
+        int parent = edge[0];
+        int child = edge[1];
+        tree[parent].push_back(child);
+    }
+    return tree;
+}
+
+// DFS обхождане
+void dfs(int node, const vector<vector<int>>& tree, vector<bool>& visited) {
+    cout << node << " ";
+    
+    for (int child : tree[node]) {
+        dfs(child, tree, visited);
+    }
+}
+```
+
+</details>
+
+<details>
+  <summary>Python</summary>
+
+```python
+# Построяване на дърво от ребра
+def build_tree(n, edges):
+    tree = [[] for _ in range(n)]
+    for parent, child in edges:
+        tree[parent].append(child)
+    return tree
+
+# DFS обхождане
+def dfs(node, tree, visited):
+    print(node, end=' ')
+    
+    for child in tree[node]:
+        dfs(child, tree, visited)
+```
+
+</details>
+
 ## Добавяне, Търсене и премахване на елемент
 
 ### Търсене
