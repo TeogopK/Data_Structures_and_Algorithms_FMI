@@ -1214,6 +1214,10 @@ def get_balance(node):
   
   // Търсене
   if (m.find(1) != m.end()) { /* намерен */ }
+
+  // lower bound и upper bound
+  auto lb = m.lower_bound(2); // първи елемент с key >= 2
+  auto ub = m.upper_bound(2); // първи елемент с key > 2
   
   // Премахване
   m.erase(2);  // по ключ
@@ -1242,6 +1246,10 @@ def get_balance(node):
   s.insert(5);
   s.insert(3);
   s.insert(8);
+
+  // lower bound и upper bound
+  auto lb = s.lower_bound(5); // първи елемент >= 5
+  auto ub = s.upper_bound(5); // първи елемент > 5
   
   // Търсене
   if (s.count(5)) { /* съществува */ }
