@@ -9,6 +9,7 @@
 |  04   | [Свързан списък.](Week_04/Seminar)                                  | [задачи](Week_04/Seminar) | [практикум](Week_04/Practicum) | [условие](https://www.hackerrank.com/contests/sda-hw-3-2025) | [решение](Week_04/Homework) | [контролно 2](Exams/Exam_02) |
 |  05   | [Стек и опашка.](Week_05/Seminar)                                   | [задачи](Week_05/Seminar) | [практикум](Week_05/Practicum) | [условие](https://www.hackerrank.com/contests/sda-hw-4-2025) | [решение](Week_05/Homework) |              -               |
 |  06   | [Двоични дървета за търсене. Балансирани дървета.](Week_06/Seminar) | [задачи](Week_06/Seminar) | [практикум](Week_06/Practicum) | [условие](https://www.hackerrank.com/contests/sda-hw-5-2025) | [решение](Week_06/Homework) |              [контролно 3](Exams/Exam_03) |
+|  07   | [Хештаблица.](Week_07/Seminar) | [задачи](Week_07/Seminar) | [практикум](Week_07/Practicum) | [условие](https://www.hackerrank.com/contests/sda-hw-6-2025) | [решение](Week_07/Homework) |              -               |
 
 ## Материали от минали години
 
