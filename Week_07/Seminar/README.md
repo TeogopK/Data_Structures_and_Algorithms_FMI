@@ -218,7 +218,7 @@ hash("bcd") = (hash("abc") - 1·31²) · 31 + 4·31⁰ = (1026 - 961) · 31 + 4 
 ```
 
 Задача, която можем да решим с тази техника:
-- [*Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences)
+- [Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences)
 
 Полезни ресурси:
 - [Rolling hash](https://en.wikipedia.org/wiki/Rolling_hash)
@@ -247,7 +247,7 @@ hash("bcd") = (hash("abc") - 1·31²) · 31 + 4·31⁰ = (1026 - 961) · 31 + 4 
 ## Бонус
 
 ### Задачи
-#### Hard
+#### Hard (вероятно е да останат за следващия път)
 - [LRU Cache](https://leetcode.com/problems/lru-cache/)
   - използване на няколко структури
 - [0-1 Subarray](https://www.hackerrank.com/contests/sda-homework-9/challenges/0-1-1)
