@@ -238,7 +238,6 @@ hash("bcd") = (hash("abc") - 1·31²) · 31 + 4·31⁰ = (1026 - 961) · 31 + 4 
   - добра за live coding
 - [Group Anagrams](https://leetcode.com/problems/group-anagrams)
 - [Special Triples](https://www.hackerrank.com/contests/sda-hw-9-2022/challenges/challenge-3771/)
-- [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/)
 - [Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs)
 
 ### Hard
