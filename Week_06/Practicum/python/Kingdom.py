@@ -1,13 +1,9 @@
-class Node:
-    def __init__(self):
-        self.children = []
-
 def dfs(tree, node, ans):
-    if not tree[node].children:
+    if not tree[node]:
         return 1
     
     number_ancestors = 0
-    for child in tree[node].children:
+    for child in tree[node]:
         number_ancestors += dfs(tree, child, ans)
         
     ans[node] = number_ancestors
@@ -15,17 +11,13 @@ def dfs(tree, node, ans):
 
 N = int(input())
 
-tree = [Node() for _ in range(N)]
+tree = [[] for _ in range(N)]
 ans = [0 for _ in range(N)]
 
-for i in range(N):
-    try:
-        parent, child = [int(x) for x in input().split()]
-        tree[parent].children.append(child)
-    except EOFError:
-        break
+for i in range(N - 1):
+    parent, child = [int(x) for x in input().split()]
+    tree[parent].append(child)
 
 dfs(tree, 0, ans)
 
 print(*ans)
-
