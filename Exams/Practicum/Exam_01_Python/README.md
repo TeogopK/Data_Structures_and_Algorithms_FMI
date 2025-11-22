@@ -1,0 +1,1 @@
+Линк към Контролно 1 задачи за практикум по СДА на Анализ на Данни: https://www.hackerrank.com/contests/sda-ad-2025-2026-prakt-k1/challenges
