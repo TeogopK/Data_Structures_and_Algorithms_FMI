@@ -1,0 +1,1 @@
+Линк към Контролно 1 задачи за практикум по СДА на Софтуерно Инженерство: https://www.hackerrank.com/contests/sda-practicum-test-1/challenges
