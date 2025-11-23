@@ -6,5 +6,6 @@
 - [**Ransom Note**](https://leetcode.com/problems/ransom-note/)
 
 #### Medium
-  
+- [**Contiguous Array**](https://leetcode.com/problems/contiguous-array/)
+
 #### Hard
