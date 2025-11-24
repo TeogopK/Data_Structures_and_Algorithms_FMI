@@ -7,5 +7,6 @@
 
 #### Medium
 - [**Contiguous Array**](https://leetcode.com/problems/contiguous-array/)
-
+- [**Longest Substring**](https://leetcode.com/problems/longest-substring-without-repeating-characters)
+  
 #### Hard
