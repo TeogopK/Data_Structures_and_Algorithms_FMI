@@ -212,5 +212,4 @@ class TrieNode:
 ### Задачи
 - [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/description/)
 - [Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/)
-- [Design File System](https://leetcode.com/problems/design-file-system/)
 - [Search Suggestions System](https://leetcode.com/problems/search-suggestions-system/)
