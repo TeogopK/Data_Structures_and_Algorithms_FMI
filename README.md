@@ -10,6 +10,7 @@
 |  05   | [Стек и опашка.](Week_05/Seminar)                                   | [задачи](Week_05/Seminar) | [практикум](Week_05/Practicum) | [условие](https://www.hackerrank.com/contests/sda-hw-4-2025) | [решение](Week_05/Homework) |              -               |
 |  06   | [Двоични дървета за търсене. Балансирани дървета.](Week_06/Seminar) | [задачи](Week_06/Seminar) | [практикум](Week_06/Practicum) | [условие](https://www.hackerrank.com/contests/sda-hw-5-2025) | [решение](Week_06/Homework) |              [контролно 3](Exams/Seminar/Exam_03) |
 |  07   | [Хештаблица.](Week_07/Seminar) | [задачи](Week_07/Seminar) | [практикум](Week_07/Practicum) | [условие](https://www.hackerrank.com/contests/sda-hw-6-2025) | [решение](Week_07/Homework) |              [контролно 1 практикум](Exams/Practicum/)               |
+|  07   | [Свободна програма.](Week_08/Seminar) | [задачи](Week_08/Seminar) | [практикум](Week_08/Practicum) | - | - |    -          |
 
 ## Материали от минали години
 
