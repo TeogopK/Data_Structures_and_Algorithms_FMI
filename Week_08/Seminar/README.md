@@ -55,6 +55,7 @@
 
 ### Задачи
 - [LRU Cache](https://leetcode.com/problems/lru-cache/description/)
+       - hashmap + doubly linked list (а защо не [singly](https://stackoverflow.com/questions/49621983/lru-cache-with-a-singly-linked-list))
 - [LFU Cache](https://leetcode.com/problems/lfu-cache/description/)
 
 ## [Prefix sum](https://en.wikipedia.org/wiki/Prefix_sum) (също и Suffix sum)
