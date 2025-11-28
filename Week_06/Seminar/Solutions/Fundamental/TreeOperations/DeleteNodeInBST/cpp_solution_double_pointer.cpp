@@ -40,6 +40,7 @@ public:
         if (!(*current))
             return root;
 
+        // на този етап current e указател към right или left указателя на родителя на node-а, който ще трием
         // toDelete сочи към node-а който ще изтрием
         TreeNode* toDelete = *current;
         if (!toDelete->left && !toDelete->right)
@@ -63,10 +64,7 @@ public:
             (*current)->left = toDelete->left;   // Запазваме лявото поддърво
             (*current)->right = toDelete->right; // Запазваме дясното поддърво
         }
-
-        // Забележка: toDelete не се delete-ва, тъй като в LeetCode паметта се управлява автоматично
-        // В реална имплементация трябва да добавим: delete toDelete;
-
+        // not needed in leetcode
         // delete toDelete;
 
         return root;
