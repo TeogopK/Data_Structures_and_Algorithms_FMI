@@ -484,7 +484,8 @@ def remove(self, value):
 
 </details>
 
-Алтернативна имплементация с разместване на node-ове [тук](./Solutions/Fundamental/TreeOperations/DeleteNodeInBST/cpp_solution_double_pointer.cpp)
+Алтернативна итеративна имплементация с разместване на поинтъри на node-ове [тук](./Solutions/Fundamental/TreeOperations/DeleteNodeInBST/cpp_solution_double_pointer.cpp). Спестява копирания на данни като само пренасочва поинтъри.
+
 
 ## Алгоритми за обхождане
 Примерите са показани за BST, но важат за всяко двоично дърво.
