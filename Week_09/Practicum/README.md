@@ -1,4 +1,4 @@
-# Difference Arrays
+# Dynamic Programming
 
 ### Medium
 - [**Decode ways**](https://leetcode.com/problems/decode-ways/description/)
