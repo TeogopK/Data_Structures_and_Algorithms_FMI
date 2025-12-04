@@ -1,5 +1,14 @@
 class Solution {
 public:
+    // Примерна таблица за текст1 = "abcde", text2 = "ace"
+    //      "" a  c  e
+    //   "" 0  0  0  0
+    //   a  0  1  1  1
+    //   b  0  1  1  1
+    //   c  0  1  2  2
+    //   d  0  1  2  2
+    //   e  0  1  2  3
+
     int longestCommonSubsequence(string text1, string text2) {
         // dp[i][j] ще съдържа дължината на най-дългата обща подпоследователност
         // между text1[0..i-1] и text2[0..j-1]
