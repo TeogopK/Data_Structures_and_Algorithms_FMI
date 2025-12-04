@@ -226,12 +226,12 @@ int uniquePaths(int m, int n) {
 ### Medium to hard
 - [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
 	- [wiki](https://en.wikipedia.org/wiki/Longest_common_subsequence)
-  	- https://www.youtube.com/watch?v=Qf5R-uYQRPk
+  	- [клип с обяснение](https://www.youtube.com/watch?v=Qf5R-uYQRPk)
 	- [Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/description/)
 		- чрез рекурентна зависимост
 		- чрез LCS
 - 0/1 Knapsack problem
-	- https://www.youtube.com/watch?v=xOlhR_2QCXY
+	- [клип с обяснение](https://www.youtube.com/watch?v=xOlhR_2QCXY)
 - [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 
 ## Бонус
