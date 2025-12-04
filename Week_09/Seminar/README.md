@@ -217,6 +217,7 @@ int uniquePaths(int m, int n) {
 		- [Unique Paths](https://leetcode.com/problems/unique-paths/description/)
 		- [Unique Paths 2](https://leetcode.com/problems/unique-paths-ii/)
 - [Triangle](https://leetcode.com/problems/triangle/description/)
+- [Jump Game - Medium](https://leetcode.com/problems/jump-game/)
 
 ### Medium to hard
 - [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
@@ -228,6 +229,5 @@ int uniquePaths(int m, int n) {
 - [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
 
 ## Бонус
-- [Jump Game - Medium](https://leetcode.com/problems/jump-game/)
 - [Minimum insertion steps to make a string palindrome - Hard](https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/)
 	- коя задача можем да преизползваме за тази?
