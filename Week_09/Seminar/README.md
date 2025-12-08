@@ -74,7 +74,14 @@ size_t fibonacci(size_t n) {
 </details>
 
 <details>
-	<summary>Python TODO</summary>
+	<summary>Python</summary>
+
+```python
+def fibonacci(n):
+    if n == 0 or n == 1:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+```
 	
 </details>
 
@@ -105,7 +112,21 @@ size_t fibonacci(size_t n) {
 </details>
 
 <details>
-	<summary>Python TODO</summary>
+	<summary>Python</summary>
+
+```python
+memo = {}
+
+def fibonacci(n):
+    if n == 0 or n == 1:
+        return n
+
+    if n not in memo:
+        memo[n] = fibonacci(n - 1) + fibonacci(n - 2)
+
+    return memo[n]
+```
+
 </details>
 
 
@@ -138,7 +159,21 @@ long long fibonacci(size_t n) {
 
 
 <details>
-	<summary>Python TODO</summary>
+	<summary>Python</summary>
+
+```python
+def fibonacci(n):
+    if n == 0 or n == 1:
+        return n
+
+    prev_prev, prev = 0, 1
+    for _ in range(2, n + 1):
+        curr = prev_prev + prev
+        prev_prev, prev = prev, curr
+
+    return curr
+```
+
 	
 </details>
 
@@ -197,7 +232,42 @@ int uniquePaths(int m, int n) {
 
 
 <details>
-	<summary>Python TODO</summary>
+	<summary>Python</summary>
+
+```python
+# O(n^2) memory
+def uniquePaths(m, n):
+    dp = [[1] * n for _ in range(m)]
+
+    for i in range(1, m):
+        for j in range(1, n):
+            dp[i][j] = dp[i - 1][j] + dp[i][j - 1]
+
+    return dp[m - 1][n - 1]
+
+
+# O(n) memory
+def uniquePaths(m, n):
+    prev = [1] * n
+
+    for _ in range(1, m):
+        curr = [1] * n
+        for j in range(1, n):
+            curr[j] = prev[j] + curr[j - 1]
+        prev = curr
+
+    return prev[-1]
+
+
+# O(n) smarter (works in some cases)
+def uniquePaths(m, n):
+    dp = [1] * n
+    for _ in range(1, m):
+        for j in range(1, n):
+            dp[j] += dp[j - 1]
+    return dp[-1]
+```
+
 	
 </details>
 
