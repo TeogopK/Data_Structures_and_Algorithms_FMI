@@ -6,11 +6,10 @@
 
 - [**Kth Largest Element in a Stream**](https://leetcode.com/problems/kth-largest-element-in-a-stream/description/)
 - [**Relative Ranks**](https://leetcode.com/problems/relative-ranks/description/)
--
 
 ### Medium
 
-- [**The Number of the Smallest Unoccupied Chair**] (https://leetcode.com/problems/the-number-of-the-smallest-unoccupied-chair/description)
+- [**The Number of the Smallest Unoccupied Chair**](https://leetcode.com/problems/the-number-of-the-smallest-unoccupied-chair/description)
 - [**Магазин за Баници**](https://www.hackerrank.com/contests/sda-hw-8-2021/challenges/fullstack-developer)
 
 ### Hard
