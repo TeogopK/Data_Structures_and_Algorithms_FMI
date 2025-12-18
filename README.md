@@ -14,6 +14,7 @@
 | 08  | [Свободна програма.](Week_08/Seminar)                               | [задачи](Week_08/Seminar) | [практикум](Week_08/Practicum) |                              -                               |              -              |                     -                     |
 | 09  | [Динамично програмиране](Week_09/Seminar)                           | [задачи](Week_09/Seminar) | [практикум](Week_09/Practicum) | [условие](https://www.hackerrank.com/contests/sda-hw-7-2025) | [решение](Week_09/Homework) |   [контролно 4](Exams/Seminar/Exam_04)    |
 | 10  | [Приоритетна опашка](Week_10/Seminar)                               | [задачи](Week_10/Seminar) | [практикум](Week_10/Practicum) | [условие](https://www.hackerrank.com/contests/sda-hw-8-2025) | [решение](Week_10/Homework) |                     -                     |
+| 11  | [Обхождане на граф.](Week_11/Seminar)                               | [задачи](Week_11/Seminar) | [практикум](Week_11/Practicum) | [условие](https://www.hackerrank.com/contests/sda-hw-9-2025) | [решение](Week_11/Homework) |                     -                     |
 
 ## Материали от минали години
 
