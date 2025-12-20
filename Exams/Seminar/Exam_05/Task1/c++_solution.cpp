@@ -5,7 +5,7 @@ using namespace std;
 unordered_map<int, vector<int>> graph;
 unordered_set<int> visited;
 
-void dfs(int node, long long& edgeCount) {
+void dfs(int node, int& edgeCount) {
     visited.insert(node);
     // every edge will be counted twice
     edgeCount += graph[node].size();
@@ -31,10 +31,10 @@ int main() {
         graph[v2].push_back(v1);
     }
     
-    vector<long long> result;
+    vector<int> result;
     for(int i = 0; i < V; i++) {
         if(!visited.count(i)) {
-            long long edgeCount = 0;
+            int edgeCount = 0;
             dfs(i, edgeCount);
             result.push_back(edgeCount / 2);
         }
