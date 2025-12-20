@@ -22,5 +22,14 @@ int main() {
         if (maxHeap.size() > k) {
             maxHeap.pop();
         }
+
+        // alternative - no useless pushesh
+        // if (maxHeap.size() < k) {
+        //     maxHeap.push(num);
+        // }
+        // else if (num < maxHeap.top()) {
+        //     maxHeap.pop();
+        //     maxHeap.push(num);
+        // }
     }
 }
