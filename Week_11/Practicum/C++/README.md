@@ -2,7 +2,7 @@
 ## BFS в матрица
 
 ```c++
-// Схема за bfs в матрица
+// Алгоритмична схема за bfs в матрица
 
 int start, end; // начални координати в матрицата
 int bfs(vector<vector<int>>& grid) {
@@ -12,14 +12,14 @@ int bfs(vector<vector<int>>& grid) {
     queue<pair<int, int>>q;
     vector<vector<bool>>visited(rows, vector<bool>(cols, false)); // ако е възможно може да модифицираме входната матрица
     visited[start][end] = true;
-    q.push({start, end}); // ако е multisource bfs задачата тук в опашката вкарваме всички начални позиции, като се ъпдейтва и visited съответно
+    q.push({start, end}); // ако е multisource bfs задачата, тук в опашката вкарваме всички начални позиции, update visited
     int level = 0;
     while (!q.empty()) {
         size_t currentSize = q.size();
         for (auto i = 0; i < currentSize; i++) {
             int currentI = q.front().first;
             int currentJ = q.front().second;
-            if (condition) return level; // намери ли сме целевата клетка
+            if (condition) return level; // намерили сме целевата клетка
             q.pop();
             for (const auto& direction : directions) {
                 int newI = currentI + direction[0];
@@ -32,6 +32,7 @@ int bfs(vector<vector<int>>& grid) {
         }
         level++;
     }
+    return -1 // или нещо подобно зависи от условието какво се случва, ако не намерим търсена клетка
 }
 ```
 
