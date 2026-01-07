@@ -226,6 +226,9 @@ std::vector<int> bellman_ford(int start, int nodesCount, const std::vector<Edge>
 
 ## Най-кратък път в DAG - използвайки топологична сортировка
 
+- Сложност _O(V + E)_
+- По-оптимален от Дийкстра и Белман-Форд при работа с DAG.
+
 Стъпки:
 
 1. Сортираме топологически DAG-a.
