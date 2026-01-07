@@ -496,6 +496,8 @@ vector<int> topological_sort(unordered_map<int, unordered_set<int>> &graph) {
 
 Може да ги видите като псевдокод [тук](https://en.wikipedia.org/wiki/Topological_sorting)
 
+И имплементации в [Implementations](Implementations/Toposort/).
+
 ### Допълнителни проблеми и решения на задачите
 
 Примерни програми с разгледаните алгоритми в [Примерите](Examples/)

@@ -316,5 +316,59 @@ std::vector<int> dagShortedPath(int start, int V, const std::unordered_map<int, 
 - Защо O(logV)~O(logE) (не мултиграф)
 - Друг алгоритъм за намиране на най-кратък път между всички възможни двойки от върхове - [Floyd-Warshall](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)
 	- може да го изпобвате - https://www.hackerrank.com/challenges/floyd-city-of-blinding-lights/problem
-- [0-1 BFS (Shortest Path in a Binary Weight Graph)](https://www.geeksforgeeks.org/0-1-bfs-shortest-path-binary-graph/)
 
+### [0-1 BFS (Shortest Path in a Binary Weight Graph)](https://www.geeksforgeeks.org/0-1-bfs-shortest-path-binary-graph/)
+
+- Модификация на BFS за намиране на най-кратък път в граф, където ребрата имат тежест 0 или 1 (или само две допустими стойности).
+- Сложност O(V + E).
+- Логиката се основава на използването на двустранна опашка (deque), където върховете, достигнати чрез ребра с тежест 0, се добавят в началото на опашката, а тези, достигнати чрез ребра с тежест 1, се добавят в края. По този начин се гарантира, че върховете с по-ниска тежест се обработват първо.
+
+
+<details>
+  <summary>C++</summary>
+
+```c++
+#include <deque>
+#include <vector>
+
+std::vector<int> zeroOneBFS(int start, int V, std::unordered_map<int, std::vector<Edge>>& graph) {
+    std::vector<int> distances(V, INT_MAX);
+    distances[start] = 0;
+
+    std::deque<int> dq;
+    dq.push_front(start);
+
+    while (!dq.empty()) {
+        int current = dq.front();
+        dq.pop_front();
+        
+        if (graph.find(current) == graph.end()) {
+            continue;
+        }
+
+        for (const auto& edge : graph[current]) {
+            int newDistance = distances[current] + edge.weight;
+
+            if (newDistance < distances[edge.to]) {
+                distances[edge.to] = newDistance;
+                if (edge.weight == 0) {
+                    dq.push_front(edge.to);
+                } else {
+                    dq.push_back(edge.to);
+                }
+            }
+        }
+    }
+
+    return distances;
+}
+
+```
+
+</details>
+
+<details>
+  <summary>Python TODO</summary>
+
+
+</details>
