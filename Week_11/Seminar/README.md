@@ -554,6 +554,7 @@ sys.setrecursionlimit(100_000)
 - [Find the town judge](https://leetcode.com/problems/find-the-town-judge/)
   - бонус въпрос: може ли да има двама съдии едновременно?
 - [Breadth First Search: Shortest Reach](https://www.hackerrank.com/challenges/bfsshortreach/problem)
+- [Find if path exists in graph](https://leetcode.com/problems/find-if-path-exists-in-graph/description/)
 
 ### Medium
 

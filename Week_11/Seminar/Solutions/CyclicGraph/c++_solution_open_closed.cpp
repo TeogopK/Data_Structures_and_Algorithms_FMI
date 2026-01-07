@@ -1,53 +1,64 @@
+/*
+Solution using coloring with 0, 1, 2.
+
+Nodes that are in the current dfs stack are marked with 1.
+When they are exiting the stack - marked with 2.
+
+When we visit a node that is already checked we skipped it.
+When we visit a node that is already in the stack (state 1) there is a cycle.
+
+States are:
+0 - not visited
+1 - in progress
+2 - already checked
+*/
+
 #include <iostream>
 #include <unordered_set>
-#include <stack>
 #include <unordered_map>
 
 // This is global, we must clean it after each calling of the solve method
 std::unordered_map<int, std::unordered_set<int>> graph;
 
-bool dfs(int current, std::unordered_set<int> &inProgress, std::unordered_set<int> &visited, std::unordered_map<int, std::unordered_set<int>> &graph)
+bool dfs(int current, std::unordered_map<int, int> &colours, std::unordered_map<int, std::unordered_set<int>> &graph)
 {
-    visited.insert(current);
-    inProgress.insert(current);
+    colours[current] = 1;
 
     for (int neighbor : graph[current])
     {
-        if (inProgress.count(neighbor))
+        if (colours[neighbor] == 1)
         {
             return true;
         }
 
-        if (visited.count(neighbor))
+        if (colours[neighbor] == 2)
         {
             continue;
         }
 
-        if (dfs(neighbor, inProgress, visited, graph))
+        if (dfs(neighbor, colours, graph))
         {
             return true;
         }
     }
-    inProgress.erase(current);
+
+    colours[current] = 2;
 
     return false;
 }
 
 bool hasCycle(std::unordered_map<int, std::unordered_set<int>> &graph)
 {
-    std::unordered_set<int> visited;
+    std::unordered_map<int, int> colours;
 
     for (auto it = graph.cbegin(); it != graph.cend(); it++)
     {
-        // Cleaned each time
-        std::unordered_set<int> inProgress;
-
-        if (visited.count(it->first) != 0)
+        if (colours.count(it->first) != 0)
         {
             continue;
         }
 
-        if (dfs(it->first, inProgress, visited, graph))
+        if (dfs(it->first, colours, graph))
         {
             return true;
         }

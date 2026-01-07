@@ -1,0 +1,1 @@
+import heapq; K = int(input()); pq = []; [print(-pq[0] if len(pq) >= K else -1) if num == 0 else (heapq.heappush(pq, -num) if len(pq) < K else (heapq.heappop(pq), heapq.heappush(pq, -num)) if num < -pq[0] else 1) for num in map(int, input().split())]
