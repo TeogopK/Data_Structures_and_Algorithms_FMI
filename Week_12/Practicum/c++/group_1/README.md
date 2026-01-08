@@ -8,7 +8,7 @@
 
 - [**Path with Maximum Probability**](https://leetcode.com/problems/path-with-maximum-probability/description/)
 - [**Network Delay Time**](https://leetcode.com/problems/network-delay-time/description/)
-- [**Course Schedule IV**](https://leetcode.com/problems/course-schedule-iv/description/)
+- [**Number of Ways to Arrive at Destination**]([https://leetcode.com/problems/course-schedule-iv/description/](https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/description/))
 
 ### Hard
 
