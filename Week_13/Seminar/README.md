@@ -293,5 +293,3 @@ std::vector<Edge> kruskal(int n, std::vector<Edge>& edges) {
 
 // TODO: .... next week
 
-## Бонус
-[Prim vs Kruskal for sparse and dense graphs](https://medium.com/@dilkyliyanage/implementation-efficiency-comparison-of-mst-algorithms-9993953b1307)
