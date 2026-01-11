@@ -119,6 +119,7 @@ std::vector<int> dijkstra(int start, int V, std::unordered_map<int, std::vector<
         for (const auto& edge : graph[currentNode.index]) {
             int newWeight = currentNode.distance + edge.weight;
             if (newWeight < distances[edge.to]) {
+                // relaxation
                 distances[edge.to] = newWeight;
                 nextToProcess.push({ edge.to, newWeight });
             }
@@ -142,6 +143,115 @@ std::vector<int> dijkstra(int start, int V, std::unordered_map<int, std::vector<
    сме сигурни, че най-кратката дистанция до него е намерена и го бележим като посетен. Пропускаме итерация при взимането на вече посетен връх от приоритетната опашка, тъй като по-кратки пътища от него не можем да намерим.
 
 Пример в [playground-а](./Examples/playground_11.ipynb).
+
+### Как чрез алгоритъм на Дийкстра да открием минималния път между два върха?
+
+- След като намерим най-кратките дистанции от началния връх до всички останали, можем да проследим пътя обратно от крайната точка до началната.
+- За целта, при всяка релаксацията, трябва да запазваме и предшественика на всеки връх. т.е да имаме масив `predecessors`, където `predecessors[v]` ще съдържа върха, от който сме достигнали `v` с най-краткия път.
+- След като приключим с алгоритъма, можем да използваме масива `predecessors`, за да проследим пътя от крайната точка обратно до началната, като започнем от крайната точка и последователно вземаме предшественика ѝ, докато не достигнем началната точка или -1.
+
+<details>
+  <summary>Python code</summary>
+
+```python
+from heapq import heappop, heappush
+
+INF = float('infinity')
+
+def dijkstra(start, V, graph):
+    distances = [INF] * V
+    # to store predecessors
+    predecessors = [-1] * V
+    distances[start] = 0
+
+    visited = set()
+
+    pq = [(0, start)]
+
+    while pq:
+        total_weight, current = heappop(pq)
+
+        if current in visited:
+            continue
+        visited.add(current)
+
+        for neighb, added_weight in graph[current]:
+            if neighb in visited:
+                continue
+
+            new_weight = total_weight + added_weight
+
+            if distances[neighb] == INF or new_weight < distances[neighb]:
+                distances[neighb] = new_weight
+                # update predecessor
+                predecessors[neighb] = current
+                heappush(pq, (new_weight, neighb))
+
+    return distances
+
+dijkstra(0, 5, undirected_graph) # [0, 1, 6, 8, 3]
+
+def reconstruct_path(start, end, predecessors):
+    path = []
+    at = end
+    while at != -1:
+        path.append(at)
+        at = predecessors[at]
+    path.reverse()
+    return path if path[0] == start else []  # return empty path if there is no path from start to end
+```
+
+</details>
+
+<details>
+  <summary>C++ code</summary>
+
+```c++
+
+std::vector<int> dijkstra(int start, int V, std::unordered_map<int, std::vector<Edge>>& graph) {
+    std::vector<int> distances(V, INT_MAX);
+    // to store predecessors
+    std::vector<int> predecessors(V, -1);
+    distances[start] = 0;
+
+    std::priority_queue<Node> nextToProcess;
+    nextToProcess.push({ start, 0 });
+
+    while (!nextToProcess.empty()) {
+        auto currentNode = nextToProcess.top();
+        nextToProcess.pop();
+
+        if (currentNode.distance > distances[currentNode.index]) {
+            continue;
+        }
+
+        for (const auto& edge : graph[currentNode.index]) {
+            int newWeight = currentNode.distance + edge.weight;
+            if (newWeight < distances[edge.to]) {
+                // relaxation
+                distances[edge.to] = newWeight;
+                // update predecessor
+                predecessors[edge.to] = currentNode.index;
+                nextToProcess.push({ edge.to, newWeight });
+            }
+        }
+    }
+
+    return distances;
+}
+
+vector<int> reconstructPath(int start, int end, const vector<int>& predecessors) {
+    vector<int> path;
+    for (int at = end; at != -1; at = predecessors[at]) {
+        path.push_back(at);
+    }
+    reverse(path.begin(), path.end());
+    return path[0] == start ? std::vector<int>{} : path; // return empty path if there is no path from start to end
+}
+
+```
+
+</details>
 
 ## Bellman-Ford algorithm (Алгоритъм на Белман-Форд)
 
