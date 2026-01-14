@@ -8,7 +8,7 @@
 bool dfs(std::unordered_map<int, std::unordered_set<int>>& graph, std::unordered_set<int>& visited, int current, int totalVertices) {
     visited.insert(current);
     if (visited.size() == totalVertices) {
-        // check for cycle
+        // if you are checking for cycle
         // if (graph[current].count(start)) {
         //     return true;
         // }
