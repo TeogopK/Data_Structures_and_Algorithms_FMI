@@ -307,6 +307,7 @@ std::vector<Edge> kruskal(int n, std::vector<Edge>& edges) {
 - [Prim's (MST) : Special Subtree](https://www.hackerrank.com/challenges/primsmstsub/problem)
 - [Kruskal (MST): Really Special Subtree](https://www.hackerrank.com/challenges/kruskalmstrsub/problem)
 - [Min cost to connect all points](https://leetcode.com/problems/min-cost-to-connect-all-points/description/)
+- [Clusters](https://www.hackerrank.com/contests/2024-2025-2/challenges/clusterstask)
 
 ### Hard
 - [Optimize water supply](https://github.com/azl397985856/leetcode/blob/master/problems/1168.optimize-water-distribution-in-a-village-en.md)
