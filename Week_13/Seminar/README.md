@@ -314,7 +314,7 @@ std::vector<Edge> kruskal(int n, std::vector<Edge>& edges) {
 - [Find critical and pseudo critical edges in MST](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/description/)
 
 ### Задачи, които може да режите и с материал от предишните седмици
-- [Number of provinces - Medium](https://leetcode.com/problems/number-of-provinces/description/)
+- [Number of provinces](https://leetcode.com/problems/number-of-provinces/description/)
 - [Tree Validator](https://www.hackerrank.com/contests/2024-2025-2/challenges/treevalidator)
 
 ## Бонус
