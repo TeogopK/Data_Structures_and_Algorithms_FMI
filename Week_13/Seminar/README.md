@@ -1,4 +1,4 @@
-# Упражнение 12
+# Упражнение 13
 
 # Минимално покриващо дърво
 
@@ -8,12 +8,12 @@
 - Алгоритъм на Прим (Prim)
 - Disjoint-set
 - Алгоритъм на Крускал (Kruskal)
-  
+
 ## Покриващо дърво (Spanning tree) на граф
 
 - Дърво е свързан ацикличен свързан граф.
 - Покриващо дърво на граф е дърво, подграф на дадения граф, което свързва всички възли на графа.
-- Покриващото дърво на граф *G(V, E)* съдържа *V* на брой върха и *V - 1* ребра.
+- Покриващото дърво на граф _G(V, E)_ съдържа _V_ на брой върха и _V - 1_ ребра.
 - Добавянето на ребро към покриващо дърво, ще създаде граф с цикъл.
 - Премахването на ребро от покриващо дърво, ще създаде граф с две несвързани компоненти.
 
@@ -25,10 +25,11 @@
 
 - Минимално покриващо дърво на претеглен ненасочен граф е покриващото дърво на графa с минимална сума на ребрата.
 - Възможно е да съществува повече от 1 МПД (MST) за даден граф.
-  
+
 ![Multiple Minimum spanning trees of a graph example](media/minimum_spanning_trees.png)
 
 ## Свойство на минималния разрез (Cut property)
+
 - Нека имаме граф G(V, E) и някакво разделяне на върховете му на две непразни множества S и V\S.
 - Нека e да е реброто с най-малка тежест, което свързва върховете от S с върховете от V\S.
 - Тогава съществува минимално покриващо дърво, което съдържа реброто e.
@@ -38,7 +39,7 @@
 - Намира минимално покриващо дърво на граф.
 - Започва от даден връх и добавя реброто с най-малка тежест до съседен връх, който все още не е част от дървото.
 - Сложността по време зависи от структурата за извличане на реброто с най-малка тежест.
-- При използването на *Binary Heap* сложността е *O(E\*logE)*. (При използване на друг вид heap може да достигне до *O(E\*logV)*)
+- При използването на _Binary Heap_ сложността е _O(E\*logE)_. (При използване на друг вид heap може да достигне до _O(E\*logV)_)
 
 <details>
   <summary>Python code</summary>
@@ -50,29 +51,28 @@ def prim(start, V, graph):
     visited = set()
     pq = [(0, start)]
     mst_weight = 0
-    
+
     while len(visited) != V:
         current_weight, current_vertex = heappop(pq)
-        
+
         if current_vertex in visited:
             continue
-        
+
         visited.add(current_vertex)
         mst_weight += current_weight
-        
+
         for neighb, weight in graph[current_vertex]:
             if neighb in visited:
                 continue
-                            
+
             heappush(pq, (weight, neighb))
-    
+
     return mst_weight
 
 prim(5, 5, graph) # 13
 ```
 
 </details>
-
 
 <details>
   <summary>C++ code</summary>
@@ -168,7 +168,7 @@ int prim2(int n, int start, std::unordered_map<int, std::vector<Edge>>& graph) {
 
 </details>
 
-Пример при започване от *връх 5*:
+Пример при започване от _връх 5_:
 
 ![Prim's algorithm creating a MST of a graph, step by step example.](media/prims_algorithm_example.png)
 
@@ -176,15 +176,17 @@ int prim2(int n, int start, std::unordered_map<int, std::vector<Edge>>& graph) {
 - В случай, че искаме да поддържаме гора от MST трябва да променим имплементацията
 
 ## Disjoint-set структура от данни (Union find data structure)
+
 Структура от данни предназначена за работа с несвързани множества. Две множества са несвързани, ако нямат общи елементи ({1, 2} и {3, 4}).
 Относно структурата - първоначално инициализира всеки елемент да бъде в свое собствено множество.
 Поддържа две основни операции:
+
 - Проверка дали два елемента са в едно множество
-- Да обедини множествата на два елемента 
+- Да обедини множествата на два елемента
 
 Пример от реалния живот - редене на пъзел.
 
-Структурата е удобна за използване в алгоритъм на Крускал. Сложността за обединяване на N елемента е О(N*α(N)), където α е обратната функцията на Акерман.
+Структурата е удобна за използване в алгоритъм на Крускал. Сложността за обединяване на N елемента е О(N\*α(N)), където α е обратната функцията на Акерман.
 
 Подробно описание как работи Disjoint-set (Union-find) структурата в [playground-а](playground_12.ipynb). (Имплементацията в playground-а е на Python)
 Аналогична C++ имплементация има в съответната папка.
@@ -195,9 +197,9 @@ int prim2(int n, int start, std::unordered_map<int, std::vector<Edge>>& graph) {
 
 - Намира минимално покриващо дърво на граф.
 - Сортира ребрата по минимална тежест, като на всяка стъпка добавя реброто с най-малка тежест, което няма да създаде цикъл в графа.
-- Използва структурата *Disjoint set* за оптимална проверка за цикличност.
-- Сложност по време *O(E\*logE)* заради сортирането на всички ребра.
-- При *dense* граф, когато *Е = V<sup>2</sup>*, *O(ElogE) = O(ElogV<sup>2</sup>) = O(2ElogV) = O(ElogV)*
+- Използва структурата _Disjoint set_ за оптимална проверка за цикличност.
+- Сложност по време _O(E\*logE)_ заради сортирането на всички ребра.
+- При _dense_ граф, когато _Е = V<sup>2</sup>_, _O(ElogE) = O(ElogV<sup>2</sup>) = O(2ElogV) = O(ElogV)_
 
 <details>
   <summary>Python code</summary>
@@ -206,11 +208,12 @@ int prim2(int n, int start, std::unordered_map<int, std::vector<Edge>>& graph) {
 def find(x, parents):
     if parents[x] == x:
         return x
-    
+
     furthest_parent = find(parents[x], parents)
     parents[x] = furthest_parent
 
     return furthest_parent
+
 
 def union(x, y, parents, rank):
     x_root = find(x, parents)
@@ -223,6 +226,7 @@ def union(x, y, parents, rank):
     else:
         parents[x_root] = y_root
         rank[y_root] += 1
+
 
 def kruskal(V, edges):
     edges.sort(key=lambda x: x[2])
