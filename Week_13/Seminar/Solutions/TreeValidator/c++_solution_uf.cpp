@@ -54,6 +54,8 @@ void UnionFind::unionVertices(size_t first, size_t second) {
     // second will have lower size
     parentsContainer[parentOfSecond] = parentOfFirst;
     sizes[parentOfFirst] += sizes[parentOfSecond];
+
+    // after merge we decrease the count of unions => merging two sets creates one
     unionsCount--;
 }
 
