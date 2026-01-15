@@ -17,7 +17,7 @@
 | 11  | [Обхождане на граф.](Week_11/Seminar)                               | [практикум](Week_11/Practicum) | [условие](https://www.hackerrank.com/contests/sda-hw-9-2025)  |       [контролно 5](Exams/Seminar/Exam_05)       |
 | 12  | [Най-кратък път в граф.](Week_12/Seminar)                           | [практикум](Week_12/Practicum) | [условие](https://www.hackerrank.com/contests/sda-hw-10-2025) |       [контролно 6](Exams/Seminar/Exam_06)       |
 | 13  | [Минимално покриващо дърво.](Week_13/Seminar)                       | [практикум](Week_13/Practicum) | [условие](https://www.hackerrank.com/contests/sda-hw-11-2025) | [контролно 2 практикум](Exams/Practicum/Exam_02) |
-| 13  | [Ойлеров и Хамилтонов път в граф.](Week_13/Seminar)                 | [практикум](Week_13/Practicum) |  |   |
+| 14  | [Ойлеров и Хамилтонов път в граф.](Week_13/Seminar)                 | [практикум](Week_13/Practicum) |  |   |
 
 ## Материали от минали години
 
