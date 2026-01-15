@@ -144,6 +144,9 @@ std::vector<int> dijkstra(int start, int V, std::unordered_map<int, std::vector<
 
 Пример в [playground-а](./Examples/playground_11.ipynb).
 
+
+Още за Дийкстра може да прочетете [тук](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm).
+
 ### Как чрез алгоритъм на Дийкстра да открием минималния път между два върха?
 
 - След като намерим най-кратките дистанции от началния връх до всички останали, можем да проследим пътя обратно от крайната точка до началната.
@@ -253,7 +256,6 @@ vector<int> reconstructPath(int start, int end, const vector<int>& predecessors)
 
 </details>
 
-Още за Дийкстра може да прочетете [тук](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm).
 
 ## Bellman-Ford algorithm (Алгоритъм на Белман-Форд)
 
@@ -335,6 +337,9 @@ std::vector<int> bellman_ford(int start, int nodesCount, const std::vector<Edge>
 </details>
 
 Интуиция: Алгоритъмът последователно намира най-кратките пътища от началния връх до всички останали с дължина най-много 1, след това с най-много 2 и т.н. до дължина най-много V - 1. Най-краткият път с най-много ребра без цикъл може да бъде с най-много (_V - 1_) ребра.
+
+
+Още за Белман-Форд може да прочетете [тук](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm).
 
 ## Най-кратък път в DAG - използвайки топологична сортировка
 
