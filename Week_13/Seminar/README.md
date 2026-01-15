@@ -182,6 +182,11 @@ int prim2(int n, int start, std::unordered_map<int, std::vector<Edge>>& graph) {
 
 Още за Прим може да прочетете [тук](https://en.wikipedia.org/wiki/Prim%27s_algorithm).
 
+### Сложности
+
+<img width="691" height="154" alt="image" src="https://github.com/user-attachments/assets/3637551f-5379-4b42-98a5-9700e5496ad1" />
+
+
 ## Disjoint-set структура от данни (Union find data structure)
 
 Структура от данни предназначена за работа с несвързани множества. Две множества са несвързани, ако нямат общи елементи ({1, 2} и {3, 4}).
@@ -300,6 +305,8 @@ std::vector<Edge> kruskal(int n, std::vector<Edge>& edges) {
 ![Kruskal's algorithm creating a MST of a graph, step by step example.](media/kruskals_algorithm_example.png)
 
 Крускал поддържа гора от покриващи дървета с леки промени в имплементацията.
+
+Още за Крускал може да прочетете [тук](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm).
 
 ## Задачи за упражнение
 
