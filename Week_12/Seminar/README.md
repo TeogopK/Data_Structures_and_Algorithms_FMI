@@ -253,6 +253,8 @@ vector<int> reconstructPath(int start, int end, const vector<int>& predecessors)
 
 </details>
 
+Още за Дийкстра може да прочетете [тук](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm).
+
 ## Bellman-Ford algorithm (Алгоритъм на Белман-Форд)
 
 - Алгоритъм, който пресмята най-кратък път от начален връх до всички останали в **ориентиран** претеглен граф.
