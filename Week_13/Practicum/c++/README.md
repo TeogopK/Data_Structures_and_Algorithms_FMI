@@ -1,4 +1,4 @@
-## Dijkstra's algorithm
+## MST / DSU
 
 ### Medium
 
