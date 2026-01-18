@@ -175,6 +175,18 @@ int prim2(int n, int start, std::unordered_map<int, std::vector<Edge>>& graph) {
 - Имплементацията наподобява тази на алгоритъма на Дийкстра с разликата, че приоритетната опашка държи ребра, а не двойка връх и изминат път от началото до него.
 - В случай, че искаме да поддържаме гора от MST трябва да променим имплементацията
 
+### Eager vs Lazy Prim
+
+- Имплементацията по-горе е Lazy Prim, тъй като в приоритетната опашка се добавят всички съседни ребра на текущия връх, без значение дали върховете, към които водят, са вече посетени.
+- Eager Prim поддържа за всеки връх най-късото ребро, чрез което може да бъде достигнат от вече посетените върхове. Следователно се използва друг тип приоритетна опашка, която позволява актуализация на приоритетите. Следователно тя използва най-много O(V) памет, вместо O(E) при Lazy Prim.
+
+Още за Прим може да прочетете [тук](https://en.wikipedia.org/wiki/Prim%27s_algorithm).
+
+### Сложности
+
+<img width="691" height="154" alt="image" src="https://github.com/user-attachments/assets/3637551f-5379-4b42-98a5-9700e5496ad1" />
+
+
 ## Disjoint-set структура от данни (Union find data structure)
 
 Структура от данни предназначена за работа с несвързани множества. Две множества са несвързани, ако нямат общи елементи ({1, 2} и {3, 4}).
@@ -294,13 +306,26 @@ std::vector<Edge> kruskal(int n, std::vector<Edge>& edges) {
 
 Крускал поддържа гора от покриващи дървета с леки промени в имплементацията.
 
+Още за Крускал може да прочетете [тук](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm).
+
 ## Задачи за упражнение
 
+### Medium
 - [Prim's (MST) : Special Subtree](https://www.hackerrank.com/challenges/primsmstsub/problem)
 - [Kruskal (MST): Really Special Subtree](https://www.hackerrank.com/challenges/kruskalmstrsub/problem)
-- [Min cost to connect all points - Medium](https://leetcode.com/problems/min-cost-to-connect-all-points/description/)
-- [Optimize water supply - Hard](https://github.com/azl397985856/leetcode/blob/master/problems/1168.optimize-water-distribution-in-a-village-en.md)
+- [Min cost to connect all points](https://leetcode.com/problems/min-cost-to-connect-all-points/description/)
+- [Clusters](https://www.hackerrank.com/contests/2024-2025-2/challenges/clusterstask)
+
+### Hard
+- [Optimize water supply](https://github.com/azl397985856/leetcode/blob/master/problems/1168.optimize-water-distribution-in-a-village-en.md)
   - като цяло в този гитхъб има условия и на други premium задачи от leetcode
-- [Find critical and pseudo critical edges in MST - Hard](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/description/)
-- [Number of provinces - Medium](https://leetcode.com/problems/number-of-provinces/description/)
-  - задачата може да се реши и с материала от предишните седмици
+- [Find critical and pseudo critical edges in MST](https://leetcode.com/problems/find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree/description/)
+
+### Задачи, които може да режите и с материал от предишните седмици
+- [Number of provinces](https://leetcode.com/problems/number-of-provinces/description/)
+- [Tree Validator](https://www.hackerrank.com/contests/2024-2025-2/challenges/treevalidator)
+
+## Бонус
+- [Find duplicate subtrees](https://leetcode.com/problems/find-duplicate-subtrees/)
+  - не е свързано с покриващи дървета
+  - [Hash/Merkle tree](https://en.wikipedia.org/wiki/Merkle_tree)
