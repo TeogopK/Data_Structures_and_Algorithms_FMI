@@ -20,10 +20,6 @@ int main() {
         graph[y].push_back({ x, w });
     }
 
-    for (int i = 0; i < MAXN; i++) {
-        parent[i] = -1;
-    }
-
     priority_queue<pair<int, int>, vector<pair<int, int>>, std::greater<>>pq;
     pq.push({ 0, s });
     dist[s] = 0;
