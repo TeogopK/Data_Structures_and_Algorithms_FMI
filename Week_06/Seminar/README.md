@@ -1340,7 +1340,7 @@ def get_balance(node):
   - **Hint** - Stack
   - forward iter - https://www.geeksforgeeks.org/implement-binary-search-treebst-iterator/
   - [Binary search tree iterator](https://leetcode.com/problems/binary-search-tree-iterator/description/?envType=problem-list-v2&envId=design)
-
+- [B tree](https://www.youtube.com/watch?v=K1a2Bk8NrYQ)
 
 ## Бонус: Red-Black tree (Червено-черно дърво)
 
