@@ -12,10 +12,14 @@
     sort(arr.begin(), arr.end());
     stable_sort(arr.begin(), arr.end());
     
-    // подредба в намаляващ ред
+    // подредба в намаляващ ред с custom sort func
     sort(v.begin(), v.end(), [](const int& a, const int& b) {
 		return a > b;
 	});
+
+    // подредба в намаляващ ред с reverse iterator-ите на вектора
+	sort(v.rbegin(), v.rend());
+
 ```
 
 - [max_element](https://en.cppreference.com/w/cpp/algorithm/max_element) 
