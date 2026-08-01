@@ -307,3 +307,4 @@ def uniquePaths(m, n):
 ## Бонус
 - [Minimum insertion steps to make a string palindrome - Hard](https://leetcode.com/problems/minimum-insertion-steps-to-make-a-string-palindrome/)
 	- коя задача можем да преизползваме за тази?
+- [maximum-subarray](https://leetcode.com/problems/maximum-subarray/description/)
