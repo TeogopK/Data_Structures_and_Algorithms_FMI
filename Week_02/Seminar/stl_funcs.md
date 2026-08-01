@@ -16,6 +16,8 @@
     sort(v.begin(), v.end(), [](const int& a, const int& b) {
 		return a > b;
 	});
+	// или
+	sort(v.begin(), v.end(), std::greater<int>());
 
     // подредба в намаляващ ред с reverse iterator-ите на вектора
 	sort(v.rbegin(), v.rend());
