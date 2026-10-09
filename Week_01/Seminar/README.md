@@ -99,13 +99,6 @@
   - За изпробване на хакеранк [Solve Me First](https://www.hackerrank.com/challenges/solve-me-first/problem)
 - <https://leetcode.com/>
 
-<details>
-  <summary>C++: Компилатор в HackerRank и LeetCode</summary>
-
-**Note:** И двете платформи използват gcc компилатора, а не майкрософт компилатора (MSVC), с който сте свикнали във Visual studio! Следователно може да срещнете някои различия в поведението на кода.
-
-</details>
-
 ### Какво ни дават?
 
 - Предварително зададени тестове.
@@ -125,10 +118,12 @@
 - Abort Called - грешка от ниско ниво (в C++, напр. std::abort(), failed assert, bad_alloc).
 - Segmentation Fault - опит за достъп до памет, която е недостъпна.
 
-[HackerRank cheatsheet](./HackerrankHacks)
-
 <details>
-  <summary>C++: Важно за динамичната памет в HackerRank и LeetCode в рамките на курса</summary>
+  <summary>C++: Важно за HackerRank и LeetCode</summary>
+
+- [HackerRank cheatsheet за бързодействие на кода](./HackerrankHacks)
+
+- **Note:** И двете платформи използват gcc компилатора, а не майкрософт компилатора (MSVC), с който сте свикнали във Visual studio! Следователно може да срещнете някои различия в поведението на кода.
 
 - **Само и единствено при решаване на задачи в LeetCode и HackerRank в рамките на курса** няма да освобождаваме динамичната памет, а по-големите обекти ще заделяме като глобални – единствено с цел бързодействие на кода и да не препълваме стека. В реални условия това е изключително лоша практика.
 
@@ -678,5 +673,4 @@ def example6(n):
 ### Задачи
 
 - [Majority element](https://leetcode.com/problems/majority-element/?envType=problem-list-v2&envId=divide-and-conquer)
-
-- Boyer-Moore Majority Voting Algorithm
+  - Boyer-Moore Majority Voting Algorithm
