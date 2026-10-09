@@ -93,14 +93,18 @@
   
 </details>
 
-
 ## Запознаване с HackerRank и LeetCode
 
 - <https://www.hackerrank.com/>
   - За изпробване на хакеранк [Solve Me First](https://www.hackerrank.com/challenges/solve-me-first/problem)
 - <https://leetcode.com/>
 
-**Note:** И двете платформи използват gcc компилатора!
+<details>
+  <summary>C++: Компилатор в HackerRank и LeetCode</summary>
+
+**Note:** И двете платформи използват gcc компилатора, а не майкрософт компилатора (MSVC), с който сте свикнали във Visual studio! Следователно може да срещнете някои различия в поведението на кода.
+
+</details>
 
 ### Какво ни дават?
 
@@ -123,10 +127,12 @@
 
 [HackerRank cheatsheet](./HackerrankHacks)
 
-### Важно за HackerRank и LeetCode в рамките на курса
+<details>
+  <summary>C++: Важно за динамичната памет в HackerRank и LeetCode в рамките на курса</summary>
 
 - **Само и единствено при решаване на задачи в LeetCode и HackerRank в рамките на курса** няма да освобождаваме динамичната памет, а по-големите обекти ще заделяме като глобални – единствено с цел бързодействие на кода и да не препълваме стека. В реални условия това е изключително лоша практика.
-- **Само и единствено при решаване на задачи в LeetCode и HackerRank в рамките на курса** не е важно code quality-то стига тестовете да минават успешно
+
+</details>
 
 ## Структури от данни и алгоритми
 
@@ -146,13 +152,13 @@
   - Best, Worst, Average, Amortized
 - **Амортизирана сложност** е средната цена на една операция, пресметната върху **последователност от операции** в най-лошия случай.
   - **Средната сложност** е очакваната цена на алгоритъма, усреднена по всички възможни входове според вероятността им. **Амортизираната сложност** разглежда последователност от операции върху един и същ вход: отделна операция може да е скъпа, но тъй като такива операции са редки, общата цена на n операции, разделена на n, е по-малка от цената на една операция в най-лошия случай.
-  - **Пример:** добавяне на елемент в края на динамичен масив (`std::vector::push_back`) е **амортизирано O(1)**, въпреки че отделно добавяне може да струва O(n).
 
 <details>
-  <summary><b>Изчисление за push_back</b></summary>
+  <summary>C++: Изчисление на добавянето на елемент в края на динамичен масив <b>`std::vector::push_back`</b></summary>
 
+- добавяне на елемент в края на динамичен масив (`std::vector::push_back`) е **амортизирано O(1)**
 - Ако масивът е пълен, заделяме нов масив с **двоен капацитет**, копираме всички стари елементи и записваме новия: цена **k + 1**, където k е текущият брой елементи.
-- Нека започнем с капацитет 1 и направим n добавяния. Разширяване има, когато размерът достигне 1, 2, 4, 8, …, т.е. най-много при степените на двойката до n.
+- Нека започнем с капацитет 1 и направим n добавяния. Разширяване има, когато размерът достигне 1, 2, 4, 8, …, т.е. удвояваме докато стигнем степен на двойката, която да побере n.
   - Записи на нови елементи: **n*1=n**
   - Копирания при разширяване: *1 + 2 + 4 + … + 2<sup>⌊log n⌋</sup> < 2n*
   - Обща цена: *T(n) < n + 2n = 3n*
@@ -627,12 +633,12 @@ def example6(n):
 
 ## Задачи
 
+Решения на задачите на C++ и Python можете да намерите в папката [Solutions](./Solutions).
+
 ### Easy
 
 - [Simple Array Sum](https://www.hackerrank.com/challenges/simple-array-sum/problem)
 - [Roommates](https://www.hackerrank.com/contests/sda-hw-1-2022/challenges/1-410)
-- [Single Number 1](https://leetcode.com/problems/single-number/)
-  - Може ли да се реши с O(1) допълнителна памет и O(n) време?
 - [Move zeroes](https://leetcode.com/problems/move-zeroes/)
 - [Plus one](https://leetcode.com/problems/plus-one/)
   
@@ -645,13 +651,13 @@ def example6(n):
 - [Rotate Array](https://leetcode.com/problems/rotate-array/)
 - [Rotate image](https://leetcode.com/problems/rotate-image/)
 - [Container with most water](https://leetcode.com/problems/container-with-most-water/)
+- [Single Number 1](https://leetcode.com/problems/single-number/)
+  - Може ли да се реши с O(1) допълнителна памет и O(n) време?
 
 ### Hard
 
 - [First missing positive](https://leetcode.com/problems/first-missing-positive/)
   - Първо се опитайте да го решите с O(N) време и O(N) памет.
-
-Решения на задачите на C++ и Python можете да намерите в папката [Solutions](./Solutions).
 
 ## Quiz
 
@@ -659,13 +665,18 @@ def example6(n):
 
 ### Теория
 
+<details>
+  <summary>C++: Оптимизация на компилатора при опашкова рекурсия</summary>
+
 - Опашкова рекурсия
   - <https://www.informatika.bg/lectures/recursion>
   - Рекурсия е опашкова, когато рекурсивното извикване е последната операция във функцията (след него няма какво да се изпълни). Така компилаторът (с включени оптимизации, напр. Release / `-O2`) може да превърне рекурсията в цикъл и стекът не расте с дълбочината на рекурсията.
   - изпробвайте примера: [TailRecursion.cpp](./Revision/TailRecursion.cpp)
 
+</details>
+
 ### Задачи
 
-Majority element - <https://leetcode.com/problems/majority-element/?envType=problem-list-v2&envId=divide-and-conquer>
+- [Majority element](https://leetcode.com/problems/majority-element/?envType=problem-list-v2&envId=divide-and-conquer)
 
 - Boyer-Moore Majority Voting Algorithm
