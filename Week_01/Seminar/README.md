@@ -268,11 +268,11 @@ Big O нотацията описва **асимптотична горна гр
 
 ```c++
 int f(int n) {
- int result = 0;
- for (size_t i = 0; i < 32; i++) {
-  result += n;
- }
- return result;
+    int result = 0;
+    for (size_t i = 0; i < 32; i++) {
+        result += n;
+    }
+    return result;
 }
 ```
 
@@ -287,10 +287,10 @@ int f(int n) {
 
 ```c++
 int f(int n) {
- int arr[INT_MAX];
- arr[1] = 1;
- arr[2] = 2;
- return 1;
+    int arr[INT_MAX];
+    arr[1] = 1;
+    arr[2] = 2;
+    return 1;
 }
 ```
 
@@ -305,11 +305,11 @@ int f(int n) {
 
 ```c++
 int f(int n) {
- int result = 1;
- for (size_t i = 0; i < INT_MAX; i++) {
-  result += i;
- }
- return 1;
+    int result = 1;
+    for (size_t i = 0; i < INT_MAX; i++) {
+        result += i;
+    }
+    return 1;
 }
 ```
 
@@ -324,11 +324,11 @@ int f(int n) {
 
 ```c++
 int f(int n) {
- int result = 1;
- for (size_t i = 1; i < n; i *= 2) {
-  result += i;
- }
- return 1;
+    int result = 1;
+    for (size_t i = 1; i < n; i *= 2) {
+        result += i;
+    }
+    return 1;
 }
 ```
 
@@ -343,11 +343,11 @@ int f(int n) {
 
 ```c++
 int fibonacci(int n) {
- if (n <= 1) {
-  return n;
- }
-
- return fibonacci(n - 1) + fibonacci(n - 2);
+    if (n <= 1) {
+        return n;
+    }
+    
+    return fibonacci(n - 1) + fibonacci(n - 2);
 }
 ```
 
@@ -364,16 +364,16 @@ int fibonacci(int n) {
 
 ```c++
 void permute(std::string s, int left, int right) {
- if (left == right) {
-  std::cout << s << std::endl;
-  return;
- }
-
- for (int i = left; i <= right; i++) {
-  swap(s[left], s[i]);
-  permute(s, left + 1, right);
-  swap(s[left], s[i]);
- }
+    if (left == right) {
+        std::cout << s << std::endl;
+        return;
+    }
+    
+    for (int i = left; i <= right; i++) {
+        swap(s[left], s[i]);
+        permute(s, left + 1, right);
+        swap(s[left], s[i]);
+    }
 }
 ```
 
@@ -388,13 +388,13 @@ void permute(std::string s, int left, int right) {
 
 ```cpp
 void brothers(int N, int M) {
- for (int i = 0; i < N; ++i) {
-  std::cout << i << std::endl;
- }
-
- for (int j = 0; j < M; ++j) {
-  std::cout << j << std::endl;
- }
+    for (int i = 0; i < N; ++i) {
+        std::cout << i << std::endl;
+    }
+    
+    for (int j = 0; j < M; ++j) {
+        std::cout << j << std::endl;
+    }
 }
 ```
 
@@ -409,14 +409,14 @@ void brothers(int N, int M) {
 
 ```cpp
 void example2(std::vector<int>& arr) {
- size_t n = arr.size();
- for (auto& el : arr) {
-  for (size_t i = 1; i <= n; i++) {
-   if ((el + i) % 2 == 0) {
-    break;
-   }
-  }
- }
+    size_t n = arr.size();
+    for (auto& el : arr) {
+        for (size_t i = 1; i <= n; i++) {
+            if ((el + i) % 2 == 0) {
+                break;
+            }
+        }
+    }
 }
 ```
 
@@ -433,11 +433,11 @@ void example2(std::vector<int>& arr) {
 
 ```cpp
 unsigned example6(unsigned n) {
- if (n <= 1) {
-  return 1;
- }
-
- return example6(n / 2) + example6(n / 2);
+    if (n <= 1) {
+        return 1;
+    }
+      
+    return example6(n / 2) + example6(n / 2);
 }
 ```
 
