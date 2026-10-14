@@ -4,19 +4,20 @@ public:
     int maxArea(vector<int>& heights) {
         int leftIdx = 0;
         int rightIdx = heights.size() - 1;
-        int max = std::min(heights[leftIdx], heights[rightIdx]) * (rightIdx - leftIdx);
+        int result = INT_MIN;
 
         while(leftIdx < rightIdx) {
-            int currentMax = std::min(heights[leftIdx], heights[rightIdx]) * (rightIdx - leftIdx);
-            max = std::max(max, currentMax);
-
-            if(heights[leftIdx] > heights[rightIdx]) {
-                rightIdx--;
-            }
-            else {
+            int curr = min(heights[leftIdx], heights[rightIdx]) * (rightIdx - leftIdx);
+            result = max(result, curr);
+            
+            if(heights[leftIdx] < heights[rightIdx]) {
                 leftIdx++;
             }
+            else {
+                rightIdx--;
+            }
         }
-        return max;
+
+        return result;
     }
 };
