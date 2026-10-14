@@ -47,13 +47,12 @@
     - Temporal locality - ако даден елемент от паметта е бил достъпен наскоро, има голяма вероятност да бъде достъпен отново скоро
     - Spacial locality - ако даден елемент от паметта бъде достъпен, има голяма вероятност скоро да бъдат достъпени и елементи, намиращи се близо до него по адрес.
 - Сравнение на обхождане на матрица (статична и динамична) по редове срещу обхождане колони
-    - обхождането по редове е по-ефективно тъй като елементите в паметта са подредени по редове, което води до по-добро използване на кеша.
+  - обхождането по редове е по-ефективно тъй като елементите в паметта са подредени по редове, което води до по-добро използване на кеша.
 - **Бонус:**
-  - https://www.geeksforgeeks.org/locality-of-reference-and-cache-operation-in-cache-memory/
+  - <https://www.geeksforgeeks.org/locality-of-reference-and-cache-operation-in-cache-memory/>
   - [CPU cache](https://en.wikipedia.org/wiki/CPU_cache) и [Locality of reference](https://en.wikipedia.org/wiki/Locality_of_reference)
 
 </details>
-
 
 <details>
   <summary><b>Бонус: Защо долната граница за сортиране чрез сравнения е O(n log n)?</b></summary>
@@ -83,7 +82,6 @@
 
 </details>
 
-
 ## Ще разгледаме
 
 - бавни алгоритми за сортиране
@@ -92,7 +90,7 @@
   - Insertion sort
 - бързи алгоритми за сортиране
   - Merge sort
-  - Quick sort 
+  - Quick sort
 - други (алгоритми, които не използват сравнения)
   - Counting sort
 
@@ -155,8 +153,8 @@ void optimizedBubbleSort(std::vector<int>& arr) {
     }
 }
 ```
-</details>
 
+</details>
 
 <details>
   <summary>Python</summary>
@@ -190,7 +188,6 @@ print(arr) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 Идея: На всяка итерация се търси индексът на най-малкия елемент в несортираната част. След това този елемент се разменя с първия елемент на несортираната част.
 
-
 ### Имплементация
 
 <details>
@@ -215,6 +212,7 @@ void selectionSort(std::vector<int>& arr) {
     }
 }
 ```
+
 </details>
 
 <details>
@@ -255,9 +253,7 @@ print(arr) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 Идея: Елементите се вземат един по един, както картоиграч тегли карти. Всяка нова карта се вмъква на правилното място в ръката (сортираната част), като по-големите стойности се изместват с една позиция надясно.
 
-
 ### Имплементация
-
 
 <details>
   <summary>C++</summary>
@@ -309,12 +305,14 @@ print(arr) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
 [Подходящ](https://www.toptal.com/developers/sorting-algorithms) за малки и почти сортирани масиви. Това се дължи на ранното приключване на вътрешния цикъл, когато елементът вече е на правилното място (best case сложността на алгоритъма е *O(N)*). Често се ползва в комбинация с други алгоритми.
 
 Защо insertion sort е полезен за малки масиви?
+
 - Има добра локалност (работи със съседни елементи).
 - Няма рекурсивни извиквания - *O(1)* памет.
 - Прави отмествания вместо размени.
 - Адаптивен е - при почти сортирани данни работи почти линейно.
 
 ---
+
 ### Обобщение на бавните алгоритми
 
 |              | Bubble sort        | Selection sort     | Insertion sort     |
@@ -344,9 +342,7 @@ print(arr) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 Идея: Масивът се разделя на два подмасива (половини). Всяка половина продължава да се разделя. Процесът спира при достигане на масив с един елемент, който сам по себе си е сортиран. Тогава започва обратният процес - сливане на подмасивите. Две вече сортирани половинки се сливат в по-голям подмасив, като се "придърпват" в правилния ред елементи ту от левия, ту от десния.
 
-
 ### Имплементация
-
 
 <details>
   <summary>C++</summary>
@@ -455,7 +451,6 @@ print(arr) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 </details>
 
-
 Merge sort гарантира $$\mathcal{O}(n*log(n))$$ сложност дори в най-лошия случай, за разлика от Quick sort.
 
 ## Quick sort (Бързо сортиране)
@@ -475,9 +470,7 @@ Merge sort гарантира $$\mathcal{O}(n*log(n))$$ сложност дор�
 
 - *O(logN)* сложност по [памет в средния случай](https://en.wikipedia.org/wiki/Quicksort#Space_complexity)!
 
-
 Идея: Избира се елемент от масива (pivot), спрямо който ще се извършва подредбата. Чрез последователни размени всички по-малки от избрания елемент се преместват в лявата част на масива, а по-големите - в дясната. Избраният елемент се разменя с първия по-голям от него, за да се позиционира между двете групи. Спрямо индекса на избрания елемент масивът се дели на два подмасива. Във всеки от тях се повтарят действията по избиране на елемент и разделяне на по-малки и по-големи числа.
-
 
 ### Имплементация
 
@@ -518,7 +511,6 @@ quickSort(arr, 0, arr.size() - 1);
 ```
 
 </details>
-
 
 <details>
   <summary>Python</summary>
@@ -574,7 +566,6 @@ print(arr) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
 Идея: Не използва директни сравнения. Заделя се масив с размер, равен на броя на възможните стойности (*K*). Линейно се обхожда първоначалният масив и се броят срещанията на стойностите.
 Броят срещания се преобразува в индекси, показващи докъде в сортирания масив ще достига всяка група елементи. Чрез обхождане на оригиналния масив в обратна посока (за да е стабилен алгоритъмът) всеки елемент се поставя на последния свободен индекс за своята група. След това този индекс се намалява. Поставянето в сортиран ред се случва в нов масив. Накрая сортираните стойности от новия масив се презаписват в стария.
 
-
 ### Имплементация
 
 <details>
@@ -610,7 +601,6 @@ void countingSort(std::vector<int>& arr) {
 
 </details>
 
-
 <details>
   <summary>Python</summary>
 
@@ -638,6 +628,7 @@ for i in range(N):
 
 print(arr)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
+
 </details>
 
 Counting sort, когато е възможно ползването му, позволява сортиране с линейна сложност.
@@ -653,9 +644,7 @@ Counting sort, когато е възможно ползването му, по�
 | Памет (Worst Case)   | *O(N)*     | *O(N)*             | *O(N + K)*    |
 | Стабилен             | да         | не                 | да            |
 
-
 ## Функции от стандартните библиотеки
-
 
 <details>
   <summary>C++</summary>
@@ -697,18 +686,17 @@ Counting sort, когато е възможно ползването му, по�
 - [Find the Difference](https://leetcode.com/problems/find-the-difference/)
 - [Squares of a Sorted array](https://leetcode.com/problems/squares-of-a-sorted-array/)
 - [Intersection of two arrays 2](https://leetcode.com/problems/intersection-of-two-arrays-ii/)
+- [Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/)
 - [Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/)
 
 ### Medium
+
 - [K-th largest element in an array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
-	- [Quick select algorithm](https://en.wikipedia.org/wiki/Quickselect)
+ 	- [Quick select algorithm](https://en.wikipedia.org/wiki/Quickselect)
 - [Sort characters by frequency](https://leetcode.com/problems/sort-characters-by-frequency/)
 - [Sort the students by their kth score](https://leetcode.com/problems/sort-the-students-by-their-kth-score/description/)
 - [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
 - [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
-
-### Hard
-...
 
 ## Бонус
 
@@ -717,7 +705,7 @@ Counting sort, когато е възможно ползването му, по�
 
 - **Online** - Показва дали алгоритъмът се нуждае от всички входни данни, за да започне да сортира. Ако алгоритъмът е "online", той може да започне да сортира, получавайки данните си на части. Такива алгоритми са полезни за четене и обработване на данни от потоци. Обратното на "online" алгоритъм ще наричаме "offline".
 - **External** - Показва дали алгоритъмът би работил върху данни, които не могат да се съберат в оперативната памет. Такива алгоритми са създадени, за да обработват големи обеми от данни, които в повечето случаи идват като потоци от данни с източник файл.
-	- Пример - merge sort
+ 	- Пример - merge sort
 - **Parallel** - Показва дали алгоритъмът може да бъде изпълняван на няколко нишки едновременно с цел намаляване на времето за изпълнение.
 
 |                | Online | External | Parallel |
@@ -740,5 +728,5 @@ Counting sort, когато е възможно ползването му, по�
 
 ### Задачи
 
-  - [Ред в хаоса - Hard](https://www.hackerrank.com/contests/sda-test1-2022-2023/challenges/challenge-3676/problem)
-  - [Earliest Possible Day of Full Bloom - Hard](https://leetcode.com/problems/earliest-possible-day-of-full-bloom/)
+- [Ред в хаоса - Hard](https://www.hackerrank.com/contests/sda-test1-2022-2023/challenges/challenge-3676/problem)
+- [Earliest Possible Day of Full Bloom - Hard](https://leetcode.com/problems/earliest-possible-day-of-full-bloom/)
