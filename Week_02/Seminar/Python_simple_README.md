@@ -245,6 +245,74 @@ for i in range(N):
 print(arr) # [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
+<details>
+  <summary>Вариации</summary>
+
+- Опростена версия на алгоритъма, която често се използва за задачи (не е стабилна):
+
+```python
+arr = [9, 4, 3, 2, 6, 7, 1, 8, 5]
+
+K = max(arr) + 1
+count = [0] * K # O(K)
+
+for num in arr:
+    count[num] += 1 # O(N)
+
+i = 0
+for num in range(K):  # O(K)
+    for _ in range(count[num]): # Specific cases: will add 1 number N times or each time will add one number, so O(N + K)
+        arr[i] = num
+        i += 1
+
+print(arr)  # [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+- Същата идея, но множеството ни е латинската азбука:
+
+```python
+arr = ['d', 'a', 'c', 'b', 'a', 'd']
+
+K = 26 # Another common option is to use 256 (ASCII)
+count = [0] * K
+
+for char in arr:
+    # ord('a') is 97, we want to make 'a' the first index in the counts array
+    count[ord(char) - ord('a')] += 1
+
+i = 0
+for j in range(K):
+    for _ in range(count[j]):
+        arr[i] = chr(j + ord('a'))
+        i += 1
+
+print(arr)  # ['a', 'a', 'b', 'c', 'd', 'd']
+```
+
+- За множество с отрицателни числа:
+
+```python
+arr = [3, -2, 5, -1, 0, -3, 2]
+
+min_val = min(arr) # -3
+K = max(arr) - min_val + 1
+count = [0] * K
+
+for num in arr:
+    count[num - min_val] += 1 # The number -2 should be on index: -2 - (-3) = 1
+
+i = 0
+for j in range(K):
+    for _ in range(count[j]):
+        arr[i] = j + min_val
+        i += 1
+
+print(arr)  # [-3, -2, -1, 0, 2, 3, 5]
+```
+
+</details>  
+
+
 Counting sort, когато е възможно ползването му, позволява сортиране с линейна сложност.
 
 ### Обобщение на бързите алгоритми:
