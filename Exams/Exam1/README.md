@@ -1,12 +1,24 @@
 Решения ще бъдат качени по-късно днес
 
 **Контролно 1 2026/27**\
+Структури от данни и алгоритми\
+Софтуерно инженерство
+
+| | |
+|---|---|
+| **Име:** | |
+| **Факултетен номер:** | |
+| **Административна група:** | |
+
+---
 
 ## Задача 1: (150 точки)
 
 Определете сложността откъм **време и памет** в най-лошия случай на всеки един от дадените фрагменти. **ЗАДЪЛЖИТЕЛНО** обосновете отговора си в рамките на 2-3 изречения.
 
 ### 1.1)
+
+**C++:**
 
 ```cpp
 void f1(int n) {
@@ -18,7 +30,18 @@ void f1(int n) {
 }
 ```
 
+**Python:**
+
+```python
+def f1(n):
+    for i in range(n):
+        for j in range(0, n, (n + 1) // 2):
+            pass
+```
+
 ### 1.2)
+
+**C++:**
 
 ```cpp
 void f2(const std::vector<int>& a, int k) {
@@ -34,7 +57,22 @@ void f2(const std::vector<int>& a, int k) {
 }
 ```
 
+**Python:**
+
+```python
+def f2(a, k):
+    n = len(a)
+    j = 0
+    result = []
+    for i in range(n):
+        while j < i:
+            result.append(a[j])
+            j += 1
+```
+
 ### 1.3)
+
+**C++:**
 
 ```cpp
 void f3(int n) {
@@ -47,7 +85,20 @@ void f3(int n) {
 }
 ```
 
+**Python:**
+
+```python
+def f3(n):
+    if n == 0:
+        return
+
+    for i in range(n):
+        f3(n - 1)
+```
+
 ### 1.4)
+
+**C++:**
 
 ```cpp
 // matrix има N реда и M колони
@@ -58,7 +109,18 @@ void f4(std::vector<std::vector<int>>& matrix) {
 }
 ```
 
+**Python:**
+
+```python
+# matrix има N реда и M колони
+def f4(matrix):
+    for row in matrix:
+        row.sort()
+```
+
 ### 1.5)
+
+**C++:**
 
 ```cpp
 int f5(int n) {
@@ -72,7 +134,22 @@ int f5(int n) {
 }
 ```
 
+**Python:**
+
+```python
+def f5(n):
+    if n <= 1:
+        return n
+
+    while n % 2 != 0:
+        n -= 1
+
+    return f5(n // 2)
+```
+
 ### 1.6)
+
+**C++:**
 
 ```cpp
 void f6(int n) {
@@ -82,6 +159,19 @@ void f6(int n) {
     for (int i = 0; i < n; i++) { cout << i; }
     f6(n - 1);
 }
+```
+
+**Python:**
+
+```python
+def f6(n):
+    if n <= 0:
+        return
+
+    for i in range(n):
+        pass
+
+    f6(n - 1)
 ```
 
 ---
