@@ -1,5 +1,6 @@
 // O(M * logM + N * logN) time complexity
-// O(M + N) space complexity
+// O(logM + logN) additional space complexity for std::sort (introsort, in-place)
+// O(M + N) if we count the input vectors
 
 #include <iostream>
 #include <vector>
