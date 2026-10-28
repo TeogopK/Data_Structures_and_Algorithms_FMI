@@ -545,8 +545,10 @@ class DoublyLinkedList:
   - O(1) time and space
 - [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
   - Как да се реши с O(1) допълнителна памет?
+  - [Find first node of loop in a linked list](https://www.geeksforgeeks.org/dsa/find-first-node-of-loop-in-a-linked-list/)
 - [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
 - [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)
+- [Partition List](https://leetcode.com/problems/partition-list/)
 
 # Бонус
 
