@@ -84,15 +84,15 @@
 
 ## Ще разгледаме
 
-- бавни алгоритми за сортиране
-  - Bubble sort
-  - Selection sort
-  - Insertion sort
-- бързи алгоритми за сортиране
-  - Merge sort
-  - Quick sort
+- [бавни алгоритми за сортиране](#бавни-алгоритми-за-сортиране)
+  - [Bubble sort](#bubble-sort-метод-на-мехурчето)
+  - [Selection sort](#selection-sort-метод-на-пряката-селекция)
+  - [Insertion sort](#insertion-sort-метод-на-картоиграча)
+- [бързи алгоритми за сортиране](#бързи-алгоритми-за-сортиране)
+  - [Merge sort](#merge-sort-сортиране-със-сливане)
+  - [Quick sort](#quick-sort-бързо-сортиране)
 - други (алгоритми, които не използват сравнения)
-  - Counting sort
+  - [Counting sort](#counting-sort-сортиране-с-броене)
 
 ## Бавни алгоритми за сортиране
 

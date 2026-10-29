@@ -4,13 +4,13 @@
 
 ## Днес ще разгледаме
 
-- Linear search
-- Binary search
-    - Lower bound
-    - Upper bound
-    - Binary search по отговора
-- Ternary search
-- Jump search
+- [Linear search](#linear-search-линейно-търсене)
+- [Binary search](#binary-search-двоично-търсене)
+    - [Lower bound](#lower-bound)
+    - [Upper bound](#upper-bound)
+    - [Binary search по отговора](#binary-search-по-отговора-binary-search-on-answer)
+- [Ternary search](#ternary-search-тристранно-търсене)
+- [Jump search](#jump-search-търсене-със-скокове)
 
 ## Linear search (Линейно търсене)
 
