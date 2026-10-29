@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/peak-index-in-a-mountain-array/
 """Using ternary search to find the maximum of parabolic function"""
 
 

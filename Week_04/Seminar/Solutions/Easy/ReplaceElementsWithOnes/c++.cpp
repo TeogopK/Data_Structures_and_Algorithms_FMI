@@ -1,3 +1,4 @@
+// https://www.hackerrank.com/contests/sda-test-2022-2023-wdfgs/challenges/challenge-3729
 
 void SinglyLinkedList::replace(int X) {
     if(!head || X == 1)

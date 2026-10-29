@@ -1,3 +1,4 @@
+# https://www.hackerrank.com/challenges/simple-array-sum/problem
 N = int(input())
 line = input()
 number_strings = line.split(" ")

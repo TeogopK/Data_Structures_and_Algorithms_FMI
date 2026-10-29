@@ -1,3 +1,4 @@
+# https://www.hackerrank.com/contests/sda-homework-3/challenges/challenge-2674
 """Here we just return the count. Solved in class"""
 
 n, k = [int(x) for x in input().split()]

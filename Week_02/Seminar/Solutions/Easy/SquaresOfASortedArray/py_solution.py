@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/squares-of-a-sorted-array/
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         count = [0 for _ in range(10**4 + 1)]

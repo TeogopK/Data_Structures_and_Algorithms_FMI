@@ -1,3 +1,4 @@
+// https://www.hackerrank.com/contests/sda-homework-3/challenges/challenge-2674
 // Literally the same solution as puncakes
 // just renamed the variables
 #include <iostream>

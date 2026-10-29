@@ -1,3 +1,4 @@
+# https://leetcode.com/problems/two-sum/
 # Loops through the list and adds each elements index in a dictionary.
 # Then, checks if the potential partner was seen via the dictionary.
 # Finally, gets the index of the partner through the dictionary.
