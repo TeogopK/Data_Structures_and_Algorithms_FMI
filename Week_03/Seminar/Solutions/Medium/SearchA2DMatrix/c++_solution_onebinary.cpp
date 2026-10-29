@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/search-a-2d-matrix/
+
 // Treat the 2D matrix as a 1D array and perform binary search on it.
 class Solution {
 public:

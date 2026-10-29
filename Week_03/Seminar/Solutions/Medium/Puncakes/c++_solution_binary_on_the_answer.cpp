@@ -1,4 +1,5 @@
 // https://www.hackerrank.com/contests/exam-2022-part2-sda/challenges/puncakes/problem
+
 // Literally the same solution as PerfectPrinter
 // just renamed the variables
 #include <iostream>

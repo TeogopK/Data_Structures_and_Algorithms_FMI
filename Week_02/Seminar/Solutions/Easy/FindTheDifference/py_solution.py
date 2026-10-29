@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/find-the-difference/
+
 class Solution:
     def findTheDifference(self, s: str, t: str) -> str:
         c1, c2 = [0 for _ in range(26)], [0 for _ in range(26)]

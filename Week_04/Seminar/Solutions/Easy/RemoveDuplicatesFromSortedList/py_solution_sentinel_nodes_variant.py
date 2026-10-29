@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/remove-duplicates-from-sorted-list/
+
 """
 No need to use a sentinel node since
 we do not to delete the first element,

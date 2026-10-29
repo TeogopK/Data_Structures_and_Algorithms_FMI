@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/search-insert-position/
+
 """Solution using the implemented binary search for leftmost index"""
 
 import bisect

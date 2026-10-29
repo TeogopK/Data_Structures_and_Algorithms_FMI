@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/merge-intervals/
+
 class Solution {
 public:
     // O(n * log n) time | O(log n) space

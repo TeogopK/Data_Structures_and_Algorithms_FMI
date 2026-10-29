@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/plus-one/
+
 # Adds one to the last digit.
 # If last digit was not 9, stops.
 # Else - "increments" each digit starting from the end of the list.

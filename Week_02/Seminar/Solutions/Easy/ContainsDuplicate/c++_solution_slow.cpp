@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/contains-duplicate/
+
 class Solution {
 public:
     // O(n ^ 2) time | O(1) space

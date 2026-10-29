@@ -1,4 +1,5 @@
 // https://www.hackerrank.com/challenges/simple-array-sum/problem
+
 #include <iostream>
 
 // Since we know the max number of elements is 1000

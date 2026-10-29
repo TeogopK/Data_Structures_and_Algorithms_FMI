@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/linked-list-random-node/
+
 /**
  * Definition for singly-linked list.
  * struct ListNode {

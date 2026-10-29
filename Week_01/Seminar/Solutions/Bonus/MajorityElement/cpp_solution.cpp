@@ -1,4 +1,5 @@
 // https://leetcode.com/problems/majority-element/
+
 class Solution {
 public:
     // Boyer-Moore Majority Voting Algorithm
