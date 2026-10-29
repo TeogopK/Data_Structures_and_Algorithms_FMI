@@ -10,7 +10,7 @@
 
 ## Свързан списък
 
-**Note:** В папка LinkedLists може да намерите имплементации на структурите.
+**Note:** В папка LinkedLists може да намерите имплементации на структурите на C++.
 
 За Python версии може да разгледате GitHub хранилището [TheAlgorithms](https://github.com/TheAlgorithms/Python) и неговия подраздел [LinkedLists](https://github.com/TheAlgorithms/Python/tree/master/data_structures/linked_list). По-опростени версии има в playground-а от семинара.
 
@@ -33,7 +33,7 @@
 Кога бихме го използвали и защо ни е Linked list:
 - Всичко, изискващо Next/Prev функционалност
 - Специфични задачи с много добавяния (в началото и края) и конкатенации на списъци
-- Да разберем поинтърите
+- Да разберем пойнтърите
 - Използва се в други по-сложни структури от данни
 
 ### Представяне в паметта
@@ -451,6 +451,8 @@ class DoublyLinkedList:
 Добавят се dummy nodes в началото и края, които никога не се трият, с цел да се спестят всички проверки, свързани с head и tail.
 [Doubly Linked List using Sentinel Nodes (GeeksforGeeks)](https://www.geeksforgeeks.org/dsa/doubly-linked-list-using-sentinel-nodes/)
 
+Подходяща задача за тази техника - виж [решенията](./Solutions/Medium/RemoveDuplicatesFromSortedListII) на [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)
+
 ## Linked List или Array
 
 Предимства на Linked List:
@@ -543,6 +545,8 @@ class DoublyLinkedList:
 ### Medium
 - [Delete Node in a Linked List](https://leetcode.com/problems/delete-node-in-a-linked-list/)
   - O(1) time and space
+- [Remove Duplicates from Sorted List II](https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/)
+  - Какви са възможните постановки на входния лист?
 - [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
   - Как да се реши с O(1) допълнителна памет?
   - [Find first node of loop in a linked list](https://www.geeksforgeeks.org/dsa/find-first-node-of-loop-in-a-linked-list/)
@@ -608,7 +612,7 @@ public:
 <details>
   <summary>Python</summary>
 
-В момента имплементацията е в [отворен PR в TheAlgorithms/Python](https://github.com/TheAlgorithms/Python/pull/13699/files).
+Виж в [TheAlgorithms/Python](https://github.com/TheAlgorithms/Python/blob/master/data_structures/linked_list/xor_linked_list.py).
 
 </details>
 
