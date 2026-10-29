@@ -4,11 +4,11 @@
 
 ## Easy
 
+- [Solve Me First](https://www.hackerrank.com/challenges/solve-me-first/problem) - [решения](./Easy/SolveMeFirst)
 - [Simple Array Sum](https://www.hackerrank.com/challenges/simple-array-sum/problem) - [решения](./Easy/SimpleArraySum)
 - [Roommates](https://www.hackerrank.com/contests/sda-hw-1-2022/challenges/1-410) - [решения](./Easy/Roommates)
 - [Move zeroes](https://leetcode.com/problems/move-zeroes/) - [решения](./Easy/MoveZeroes)
 - [Plus one](https://leetcode.com/problems/plus-one/) - [решения](./Easy/PlusOne)
-- [Solve Me First](https://www.hackerrank.com/challenges/solve-me-first/problem) - [решения](./Easy/SolveMeFirst)
 
 ## Medium
 
