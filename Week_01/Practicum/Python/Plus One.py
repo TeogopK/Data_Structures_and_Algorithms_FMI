@@ -6,11 +6,11 @@ class Solution:
             new_digit = (digits[i] + increment + carry) % 10
             carry = (digits[i] + increment + carry) // 10
             digits[i] = new_digit
-            increment = 0 # Increment only the last digit
+            increment = 0  # Increment only the last digit
 
         if carry:
             return [1] + digits
         return digits
-        
+
         # One-liner solution
         # return list(map(int, list(str(int("".join(map(str, digits))) + 1))))

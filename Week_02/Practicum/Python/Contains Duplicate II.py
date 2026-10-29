@@ -1,6 +1,6 @@
 class Solution:
     def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
-        
+
         nums_idx = [(nums[i], i) for i in range(len(nums))]
         nums_idx.sort()
 

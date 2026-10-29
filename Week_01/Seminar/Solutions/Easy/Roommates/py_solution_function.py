@@ -1,5 +1,6 @@
 # https://www.hackerrank.com/contests/sda-hw-1-2022/challenges/1-410
 
+
 def solve(M, Q):
     count = 0
     for i in range(1, len(Q)):

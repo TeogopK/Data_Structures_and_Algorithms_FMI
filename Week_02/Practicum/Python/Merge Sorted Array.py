@@ -1,7 +1,7 @@
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         midx = m - 1
-        nidx = n - 1 
+        nidx = n - 1
         right = m + n - 1
 
         while nidx >= 0:

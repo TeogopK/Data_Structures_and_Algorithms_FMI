@@ -16,6 +16,5 @@ class Solution:
                 # Greedily move the burst location to the front
                 burst_location = min(burst_location, baloons[j][1])
                 j += 1
-                
 
         return counter

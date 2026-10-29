@@ -1,11 +1,11 @@
 class Solution:
     def groupThePeople(self, groupSizes: List[int]) -> List[List[int]]:
-        
+
         count_lst = [[] for _ in range(501)]
 
         for i, num in enumerate(groupSizes):
             count_lst[num].append(i)
-        
+
         groups = []
 
         for idx, group_lst in enumerate(count_lst):

@@ -21,7 +21,6 @@ class Solution:
         if left > len(matrix) - 1:
             return False
 
-
         # Use binary search to find the column
         idx = bisect.bisect_left(matrix[left], target)
 

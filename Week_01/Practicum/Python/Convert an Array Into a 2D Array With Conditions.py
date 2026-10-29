@@ -1,5 +1,5 @@
 class Solution:
-    def findMatrix(self, nums: List[int]) -> List[List[int]]: 
+    def findMatrix(self, nums: List[int]) -> List[List[int]]:
         count_lst = [0 for _ in range(max(nums) + 1)]
 
         for num in nums:

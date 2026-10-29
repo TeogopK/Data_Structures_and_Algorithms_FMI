@@ -4,6 +4,7 @@
 # If last digit was not 9, stops.
 # Else - "increments" each digit starting from the end of the list.
 
+
 class Solution:
     def plusOne(self, digits: List[int]) -> List[int]:
         for i in range(len(digits) - 1, -1, -1):
@@ -14,6 +15,6 @@ class Solution:
                 return digits
 
         # variation: return [1] + digits
-        digits.insert(0, 1) 
+        digits.insert(0, 1)
 
-        return digits 
+        return digits

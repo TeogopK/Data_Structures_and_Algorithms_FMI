@@ -7,7 +7,7 @@ class Solution:
 
             if mid * mid > x:
                 right = mid - 1
-            
+
             else:
                 left = mid + 1
 
