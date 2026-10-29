@@ -11,6 +11,7 @@
     - [Binary search по отговора](#binary-search-по-отговора-binary-search-on-answer)
 - [Ternary search](#ternary-search-тристранно-търсене)
 - [Jump search](#jump-search-търсене-със-скокове)
+- [Задачи](#задачи-за-упражнение)
 
 ## Linear search (Линейно търсене)
 
