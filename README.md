@@ -7,7 +7,7 @@
 | 01  | [Въведение, преговор и сложности](Week_01/Seminar)  | [АД](Week_01/Practicum/Python) \ [СИ](Week_01/Practicum/C++) |  |  |
 | 02  | [Сортиране](Week_02/Seminar)  | [АД](Week_02/Practicum/Python) \ [СИ](Week_02/Practicum/C++) |  |[контролно 1](Exams/Seminar/Exam_01)|
 | 03  | [Търсене](Week_03/Seminar)  | [АД](Week_03/Practicum/Python) \ [СИ](Week_03/Practicum/C++) |  |  |
-| 04  | [Свързан списък](Week_04/Seminar) | [АД](Week_04/Practicum/Python) \ [СИ](Week_04/Practicum/C++) |   |              |
+| 04  | [Свързан списък](Week_04/Seminar) | [АД](Week_04/Practicum/Python) \ [СИ](Week_04/Practicum/C++) |   |[контролно 2](Exams/Seminar/Exam_02)|
 
 ## Материали от минали години
 
