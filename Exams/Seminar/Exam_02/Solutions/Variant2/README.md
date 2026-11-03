@@ -108,5 +108,6 @@ def filterRocksSortDesc(first, second):
 | --- | --- | --- |
 | `bad_solution_insertion_sort` ([C++](./Task2/c++_bad_solution_insertion_sort.cpp) / [Python](./Task2/py_bad_solution_insertion_sort.py)) – изтриваме камъните и вмъкваме всеки нормален възел на правилното място в резултата (insertion sort върху списък в низходящ ред), без да ползваме, че входът е сортиран | $O((N + M)^2)$ | $O(1)$ |
 | `solution_merge` (оптимално, [C++](./Task2/c++_solution_merge.cpp) / [Python](./Task2/py_solution_merge.py)) – сливаме двата списъка както в [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/), но взимаме по-голямата стойност, а след всеки взет възел прескачаме (и изтриваме) камъните след него | $O(N + M)$ | $O(1)$ |
+| `solution_recursive` ([C++](./Task2/c++_solution_recursive.cpp) / [Python](./Task2/py_solution_recursive.py)) – същото сливане, но рекурсивно: прескачаме камъните в началото на двата списъка, взимаме по-голямата глава и закачаме за нея рекурсивно слетия остатък. Без dummy възел и без отделен цикъл за остатъка, но с памет за стека на рекурсията | $O(N + M)$ | $O(N + M)$ |
 
 И двете решения преизползват възлите на входните списъци, без да заделят нови. В C++ възлите камъни се освобождават с `delete`.

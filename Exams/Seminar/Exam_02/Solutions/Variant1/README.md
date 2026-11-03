@@ -107,5 +107,6 @@ def noiseFilterMerge(first, second):
 | --- | --- | --- |
 | `bad_solution_insertion_sort` ([C++](./Task2/c++_bad_solution_insertion_sort.cpp) / [Python](./Task2/py_bad_solution_insertion_sort.py)) – изтриваме шума и вмъкваме всеки нормален възел на правилното място в резултата (insertion sort върху списък), без да ползваме, че входът е сортиран | $O((N + M)^2)$ | $O(1)$ |
 | `solution_merge` (оптимално, [C++](./Task2/c++_solution_merge.cpp) / [Python](./Task2/py_solution_merge.py)) – сливаме двата списъка както в [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/), като след всеки взет възел прескачаме (и изтриваме) шума след него | $O(N + M)$ | $O(1)$ |
+| `solution_recursive` ([C++](./Task2/c++_solution_recursive.cpp) / [Python](./Task2/py_solution_recursive.py)) – същото сливане, но рекурсивно: прескачаме шума в началото на двата списъка, взимаме по-малката глава и закачаме за нея рекурсивно слетия остатък. Без dummy възел и без отделен цикъл за остатъка, но с памет за стека на рекурсията | $O(N + M)$ | $O(N + M)$ |
 
 И двете решения преизползват възлите на входните списъци, без да заделят нови. В C++ възлите шум се освобождават с `delete`.
