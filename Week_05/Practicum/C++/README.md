@@ -8,7 +8,10 @@
 
 ### Medium
 - [**Decode String**](https://leetcode.com/problems/decode-string/)
+- [**132 Pattern**](https://leetcode.com/problems/132-pattern/)
+- [**Next Greater Element I**](https://leetcode.com/problems/next-greater-element-i/description/)
 - [**Viruses**](https://arena.infosbg.com/api/public/problems/416/pdf)
+- [**First Negative in Windows of Size K**](https://www.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k3345/1)
 
 ### Hard
 - [**Number of visible people in a Queue**](https://leetcode.com/problems/number-of-visible-people-in-a-queue/)
