@@ -8,6 +8,8 @@
 | 02  | [Сортиране](Week_02/Seminar)  | [АД](Week_02/Practicum/Python) \ [СИ](Week_02/Practicum/C++) |  |[контролно 1](Exams/Seminar/Exam_01)|
 | 03  | [Търсене](Week_03/Seminar)  | [АД](Week_03/Practicum/Python) \ [СИ](Week_03/Practicum/C++) |  |  |
 | 04  | [Свързан списък](Week_04/Seminar) | [АД](Week_04/Practicum/Python) \ [СИ](Week_04/Practicum/C++) |   |[контролно 2](Exams/Seminar/Exam_02)|
+| 05  | [Стек и опашка](Week_05/Seminar) | [АД](Week_05/Practicum/Python) \ [СИ](Week_05/Practicum/C++) |   |  |
+| 06  | [Дървета](Week_06/Seminar) |  |   |  |
 
 ## Материали от минали години
 
