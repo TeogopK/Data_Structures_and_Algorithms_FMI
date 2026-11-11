@@ -47,6 +47,7 @@ Exams/
 - Opens with a table of contents of the major themes (`## Темата включва` / `## Днес ще разгледаме`), each item a Markdown anchor link to a heading in the same file. When adding or renaming a heading, update the anchor (GitHub slug of the Bulgarian/English heading text, e.g. `#binary-search-двоично-търсене`).
 - Code examples are given in both languages inside collapsible `<details><summary>C++</summary>` / `<details><summary>Python</summary>` blocks.
 - Ends with `## Задачи` (optionally `### Подходи и съвети за задачи`), then `### Easy` / `### Medium` / (`### Hard`) problem lists as `- [Problem title](url)`, with optional nested hint bullets, then `# Бонус` / `## Бонус задачи`.
+- **Multi-topic weeks** (e.g. Week_05 Queue/Stack/Monotonic Stack/Sliding window, Week_06 trees/map and set): tasks are grouped by topic instead of by difficulty — either a `### Задачи` list at the end of each topic section, or `## <topic>` subsections under `# Задачи`. A difficulty can still be noted per task by appending `- Medium` after the link. Bonus tasks stay in `# Бонус` / `## Бонус задачи`.
 - A week may have an extra simplified variant (e.g. `Week_02/Seminar/Python_simple_README.md`) linked from the main README; keep its anchors consistent with the main one.
 
 ### Seminar Solutions
@@ -55,6 +56,7 @@ Exams/
 - File names: `c++_solution[_<approach>].cpp` and `py_solution[_<approach>].py`, where the suffix names the technique (`_iterative`, `_recursive`, `_two_pointers`, `_fast_slow`, `_counting`, `_quickselect`, …). Intentionally suboptimal versions are `c++_bad_solution_<approach>` / `py_bad_solution_<approach>` or `_slow`. (Week_01 uses the older `cpp_solution` prefix; new files use `c++_`.)
 - First line of every solution is a comment with the problem URL (`// https://...` or `# https://...`), followed by a blank line. For LeetCode, keep the provided commented-out node definition (`ListNode`, etc.) as in the editor template.
 - `Solutions/README.md` format: `# Решения - <тема>`, the line `Задачите са от [семинара](../README.md). Всяка папка съдържа решенията на C++ и/или Python.`, then `## Easy` / `## Medium` / `## Hard` / `## Bonus` with entries `- [Problem title](url) - [решения](./<Difficulty>/<ProblemName>)`. Add an entry whenever you add a solution folder.
+- **Multi-topic weeks:** replace the difficulty buckets with one PascalCase folder per topic, matching the topic grouping in the seminar README (`Week_05`: `Queue/`, `Stack/`, `MonotonicStack/`, `SlidingWindow/`, `Bonus/`; `Week_06`: `Fundamental/`, `TreeTasks/`, `MapSet/`, `Bonus/`). A topic may have sub-topic folders (`Fundamental/Traversals/`). `Solutions/README.md` then uses `## <Topic>` (and `### <Subtopic>`) sections instead of `## Easy` / `## Medium` / …, with entries linking `./<Topic>/<ProblemName>`.
 
 ### Practicum
 - `Practicum/Python/`: `README.md` is `# Задачи` + list of `- [Title](url)` (optionally ` - Easy/Medium/Hard`); solution files are named exactly after the LeetCode title with spaces (`Merge Intervals.py`, `Sqrt(x).py`), may hold several `class Solution` variants separated by comments.
