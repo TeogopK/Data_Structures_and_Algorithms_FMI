@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="350" viewBox="0 0 500 350" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+  </defs>
+  <rect width="500" height="350" fill="#fafafa"/>
+
+  <g stroke="#000" stroke-width="3" marker-end="url(#arrow)">
+    <line x1="227.4" y1="82.6" x2="161.9" y2="148.1"/>
+    <line x1="272.6" y1="82.6" x2="338.1" y2="148.1"/>
+    <line x1="125.7" y1="198.6" x2="98.9" y2="252.3"/>
+    <line x1="154.3" y1="198.6" x2="181.1" y2="252.3"/>
+    <line x1="374.3" y1="198.6" x2="401.1" y2="252.3"/>
+  </g>
+
+  <g fill="#fff" stroke="#000" stroke-width="5">
+    <circle cx="250" cy="60" r="26"/>
+    <circle cx="140" cy="170" r="26"/>
+    <circle cx="360" cy="170" r="26"/>
+    <circle cx="85" cy="280" r="26"/>
+    <circle cx="195" cy="280" r="26"/>
+    <circle cx="415" cy="280" r="26"/>
+  </g>
+
+  <g font-size="22" font-weight="bold" text-anchor="middle" dominant-baseline="central">
+    <text x="250" y="60">1</text>
+    <text x="140" y="170">2</text>
+    <text x="360" y="170">3</text>
+    <text x="85" y="280">4</text>
+    <text x="195" y="280">5</text>
+    <text x="415" y="280">6</text>
+  </g>
+
+  <g font-size="16" fill="#555" dominant-baseline="central">
+    <text x="286" y="60">корен (root)</text>
+    <text x="104" y="170" text-anchor="end">ляво дете</text>
+    <text x="396" y="170">дясно дете</text>
+    <text x="85" y="327" text-anchor="middle">листо</text>
+    <text x="195" y="327" text-anchor="middle">листо</text>
+    <text x="415" y="327" text-anchor="middle">листо</text>
+  </g>
+</svg>

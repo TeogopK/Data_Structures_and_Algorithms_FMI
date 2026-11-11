@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="510" viewBox="0 0 560 510" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+  </defs>
+  <rect width="560" height="510" fill="#fafafa"/>
+
+  <text x="16" y="24" font-size="14" fill="#777">стрелките сочат от възела към родителя му</text>
+
+  <g transform="translate(0, 30)">
+
+  <!-- child -> parent -->
+  <g stroke="#000" stroke-width="3" marker-end="url(#arrow)">
+    <line x1="193.7" y1="128.5" x2="257.1" y2="70.9"/>
+    <line x1="366.3" y1="128.5" x2="302.9" y2="70.9"/>
+    <line x1="126.5" y1="222.6" x2="154.1" y2="176.6"/>
+    <line x1="346.5" y1="222.6" x2="374.1" y2="176.6"/>
+    <line x1="433.5" y1="222.6" x2="405.9" y2="176.6"/>
+    <line x1="301.9" y1="320.3" x2="318.5" y2="278.8"/>
+  </g>
+
+  <g fill="#fff" stroke="#000" stroke-width="5">
+    <circle cx="280" cy="50" r="26"/>
+    <circle cx="170" cy="150" r="26"/>
+    <circle cx="390" cy="150" r="26"/>
+    <circle cx="110" cy="250" r="26"/>
+    <circle cx="330" cy="250" r="26"/>
+    <circle cx="450" cy="250" r="26"/>
+    <circle cx="290" cy="350" r="26"/>
+  </g>
+  <g font-size="22" font-weight="bold" text-anchor="middle" dominant-baseline="central">
+    <text x="280" y="50">5</text>
+    <text x="170" y="150">1</text>
+    <text x="390" y="150">2</text>
+    <text x="110" y="250">0</text>
+    <text x="330" y="250">3</text>
+    <text x="450" y="250">4</text>
+    <text x="290" y="350">6</text>
+  </g>
+  <text x="316" y="50" font-size="15" fill="#777" dominant-baseline="central">корен</text>
+
+  <!-- parent array -->
+  <g font-size="18" text-anchor="middle" dominant-baseline="central">
+    <g fill="#fff" stroke="#000" stroke-width="2">
+      <rect x="120" y="400" width="50" height="40"/>
+      <rect x="170" y="400" width="50" height="40"/>
+      <rect x="220" y="400" width="50" height="40"/>
+      <rect x="270" y="400" width="50" height="40"/>
+      <rect x="320" y="400" width="50" height="40"/>
+      <rect x="370" y="400" width="50" height="40" fill="#fdebd0"/>
+      <rect x="420" y="400" width="50" height="40"/>
+    </g>
+    <g font-weight="bold">
+      <text x="145" y="420">1</text>
+      <text x="195" y="420">5</text>
+      <text x="245" y="420">5</text>
+      <text x="295" y="420">2</text>
+      <text x="345" y="420">2</text>
+      <text x="395" y="420">-1</text>
+      <text x="445" y="420">3</text>
+    </g>
+    <g font-size="14" fill="#c0392b">
+      <text x="145" y="458">0</text>
+      <text x="195" y="458">1</text>
+      <text x="245" y="458">2</text>
+      <text x="295" y="458">3</text>
+      <text x="345" y="458">4</text>
+      <text x="395" y="458">5</text>
+      <text x="445" y="458">6</text>
+    </g>
+  </g>
+  <g font-size="15" text-anchor="end" dominant-baseline="central">
+    <text x="110" y="420" font-family="Consolas, monospace">parent[]</text>
+    <text x="110" y="458" fill="#c0392b">индекс</text>
+  </g>
+  </g>
+</svg>
