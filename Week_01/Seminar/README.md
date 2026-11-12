@@ -662,6 +662,8 @@ def example6(n):
 - [First missing positive](https://leetcode.com/problems/first-missing-positive/)
   - Първо се опитайте да го решите с O(N) време и O(N) памет.
 
+[Решения](./Solutions/README.md)
+
 ## Quiz
 
 ## Бонус

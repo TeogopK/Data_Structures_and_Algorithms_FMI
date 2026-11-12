@@ -44,6 +44,8 @@
 - [Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/)
 - [Rotting Oranges](https://leetcode.com/problems/rotting-oranges/)
 
+[Решения](./Solutions/README.md)
+
 ## Stack (Стек)
 Стекът е абстрактен тип данни, който представлява колекция от елементи с три основни операции:
 
@@ -82,6 +84,8 @@
 - [Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/)
 - [Asteroid Collision](https://leetcode.com/problems/asteroid-collision/)
 - [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
+
+[Решения](./Solutions/README.md)
 
 ## Deque (Дек)
 Дек (double-ended queue, опашка с два края) е абстрактен тип данни, подобен на опашката, но елементи могат да бъдат добавяни/премахвани/преглеждани и в двата края на структурата (front и back).
@@ -189,6 +193,8 @@ monotonicStackExample([4, 1, 0, 2, 6, 7, 3])
 - [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
 - [Welcome to the jungle](https://www.hackerrank.com/contests/practice-4-sda/challenges/welcome-to-the-jungle)
 
+[Решения](./Solutions/README.md)
+
 ## Sliding window (Плъзгащ се прозорец)
 Sliding window е техника за оптимизация при задачи, в които трябва да се обработват последователни подмасиви (или поднизове) с фиксирана или променлива дължина. Тя ни помага да избегнем многократното пресмятане на едни и същи елементи и затова е ефективна за задачи като намиране на сума, средна стойност, максимум, минимум и други характеристики на подмасиви или поднизове.
 
@@ -206,6 +212,8 @@ Sliding window е техника за оптимизация при задачи
   ![sliding_window_maximum](https://github.com/user-attachments/assets/2dc64aff-eefb-43b7-ae62-00f63d3aa429)
 
 </details>
+
+[Решения](./Solutions/README.md)
 
 # Бонус
 

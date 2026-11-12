@@ -617,6 +617,8 @@ Jump Search е **най-ефективен при скок m = √n** и има 
 - [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/)
 	- **Бонус:** [Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/description/) 
 
+[Решения](./Solutions/README.md)
+
 # Бонус материал
 
 ## Exponential search (Експоненциално търсене)

@@ -553,6 +553,8 @@ class DoublyLinkedList:
 - [Odd Even Linked List](https://leetcode.com/problems/odd-even-linked-list/)
 - [Partition List](https://leetcode.com/problems/partition-list/)
 
+[Решения](./Solutions/README.md)
+
 # Бонус
 
 ## Бонус задачи

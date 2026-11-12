@@ -700,6 +700,8 @@ Counting sort, когато е възможно ползването му, по�
 - [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
 - [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
 
+[Решения](./Solutions/README.md)
+
 ## Бонус
 
 <details>

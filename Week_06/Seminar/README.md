@@ -1418,6 +1418,8 @@ def insert(node, key):
  	- dfs
 - [Maximum depth of binary tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
 
+[Решения](./Solutions/README.md)
+
 ## Още задачи за дървета
 
 ### Easy
@@ -1455,10 +1457,14 @@ def insert(node, key):
 
 </details>
 
+[Решения](./Solutions/README.md)
+
 ## Задачи за map и set
 - [Volleyball friends](https://www.hackerrank.com/contests/sda-hw-8/challenges/volleyball-friends)
 - [Smallest Number in Infinite Set](https://leetcode.com/problems/smallest-number-in-infinite-set/)
 - [Continuous Subarrays](https://leetcode.com/problems/continuous-subarrays/)
+
+[Решения](./Solutions/README.md)
 
 # Бонус
 
