@@ -81,7 +81,7 @@ class TreeNode:
 
 ### Чрез масив
 
-Възелът на индекс `i` има ляво дете на индекс `2*i+1` и дясно – на `2*i+2`. Ако даден възел липсва, на неговия индекс в масива стои `null`.
+Възелът на индекс `i` има ляво дете на индекс `2*i+1` и дясно – на `2*i+2`. Ако даден възел липсва, на неговия индекс в масива стои `null`/ `None`.
 
 Ниво $k$ заема индексите $[2^k - 1,\ 2^{k+1} - 2]$:
 - Ниво 0 (корен): индекс 0
@@ -92,6 +92,9 @@ class TreeNode:
 Пример: `[1, 2, 3, null, 5, null, 4]` (в Python `[1, 2, 3, None, 5, None, 4]`):
 
 <img width="500" alt="image" src="images/array_representation.svg" />
+
+
+Забележете, че родителят на възела на индекс `i` е на индекс $\lfloor (i-1)/2 \rfloor$ – закръгляне надолу. Чрез код това може да стане с целочислено деление: `(i-1)/2` в C++, `(i-1)//2` в Python.
 
 ### Чрез parent array (масив от родители)
 
@@ -174,6 +177,22 @@ void dfs(int node, const vector<vector<int>>& tree) {
         dfs(child, tree);
     }
 }
+
+// BFS обхождане
+void bfs(int root, const vector<vector<int>>& tree) {
+    queue<int> q;
+    q.push(root);
+
+    while (!q.empty()) {
+        int node = q.front();
+        q.pop();
+        cout << node << " ";
+
+        for (int child : tree[node]) {
+            q.push(child);
+        }
+    }
+}
 ```
 
 </details>
@@ -195,6 +214,19 @@ def dfs(node, tree):
 
     for child in tree[node]:
         dfs(child, tree)
+
+# BFS обхождане
+from collections import deque
+
+def bfs(root, tree):
+    q = deque([root])
+
+    while q:
+        node = q.popleft()
+        print(node, end=' ')
+
+        for child in tree[node]:
+            q.append(child)
 ```
 
 </details>
