@@ -29,7 +29,8 @@ Week_NN/
 │   │   ├── Medium/<ProblemName>/
 │   │   ├── Hard/<ProblemName>/
 │   │   └── Bonus/<ProblemName>/
-│   └── <topic folders>         # e.g. all_sorts/, Implementations/, Examples/, images/
+│   ├── media/                  # images used by the README (never GitHub-hosted links)
+│   └── <topic folders>         # e.g. all_sorts/, Implementations/, Examples/
 ├── Practicum/
 │   ├── Python/                 # README.md task list + "<LeetCode Title>.py" solutions
 │   └── C++/                    # README.md task list (+ solutions)
@@ -46,6 +47,7 @@ Exams/
 ### Seminar README
 - Opens with a table of contents of the major themes (`## Темата включва` / `## Днес ще разгледаме`), each item a Markdown anchor link to a heading in the same file. When adding or renaming a heading, update the anchor (GitHub slug of the Bulgarian/English heading text, e.g. `#binary-search-двоично-търсене`).
 - Code examples are given in both languages inside collapsible `<details><summary>C++</summary>` / `<details><summary>Python</summary>` blocks.
+- Images are stored in the repo, in `Week_NN/Seminar/media/` with descriptive snake_case names (`binary_tree_example.svg`), and linked relatively: `![Binary tree](media/binary_tree_example.svg)`, or `<img width="<width>" alt="..." src="media/...">` when the size must be set (the author picks the width per image; there is no fixed default). Never link GitHub-hosted images (`github.com/user-attachments/...`, `githubusercontent.com`): download them into `media/` and relink. Don't use `images/` or other folder names.
 - Text outside those blocks is language-neutral: no `std::` names, C++/Python container names (`vector`, `unordered_map`, `dict`), `nullptr`/`None`, or Java/C# names (`HashMap`, `equals()`). Use neutral wording ("списък", "липсващо дете", "map") and move language-specific notes and links (library names, cppreference links, links to C++-only `Examples/` or `Implementations/`) into the matching `<details>` block, as in `Week_06`.
 - Ends with `## Задачи` (optionally `### Подходи и съвети за задачи`), then `### Easy` / `### Medium` / (`### Hard`) problem lists as `- [Problem title](url)`, with optional nested hint bullets, then `# Бонус` / `## Бонус задачи`.
 - **Multi-topic weeks** (e.g. Week_05 Queue/Stack/Monotonic Stack/Sliding window, Week_06 trees/map and set): tasks are grouped by topic instead of by difficulty — either a `### Задачи` list at the end of each topic section, or `## <topic>` subsections under `# Задачи`. A difficulty can still be noted per task by appending `- Medium` after the link. Bonus tasks stay in `# Бонус` / `## Бонус задачи`.

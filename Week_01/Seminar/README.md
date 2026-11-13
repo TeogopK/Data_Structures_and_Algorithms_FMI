@@ -203,9 +203,9 @@ Big O нотацията описва **асимптотична горна гр
 
 - Как сравняваме сложности? (как сравняваме две функции f и g)
 
-<img width="240" height="81" alt="Сравняване на сложности чрез граница" src="./images/compare_complexities.png" />
+<img width="240" height="81" alt="Сравняване на сложности чрез граница" src="./media/compare_complexities.png" />
 
-<img width="1201" height="794" alt="image" src="https://github.com/user-attachments/assets/282344ab-b0fc-438a-a463-052450b71b8a" />
+<img width="1201" height="794" alt="image" src="media/big_o_complexity_chart.png" />
 
 ### Правила за смятане на Big O изрази
 

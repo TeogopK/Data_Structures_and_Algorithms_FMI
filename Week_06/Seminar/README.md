@@ -35,11 +35,11 @@
 
 ### Пример
 
-<img width="500" alt="image" src="images/binary_tree_example.svg" />
+<img width="500" alt="image" src="media/binary_tree_example.svg" />
 
 ### Видове двоични дървета
 
-![image](images/binary_tree_types.png)
+![image](media/binary_tree_types.png)
 
 ## Tree representation (Представяне на дърво)
 
@@ -91,7 +91,7 @@ class TreeNode:
 
 Пример: `[1, 2, 3, null, 5, null, 4]` (в Python `[1, 2, 3, None, 5, None, 4]`):
 
-<img width="500" alt="image" src="images/array_representation.svg" />
+<img width="500" alt="image" src="media/array_representation.svg" />
 
 
 Забележете, че родителят на възела на индекс `i` е на индекс $\lfloor (i-1)/2 \rfloor$ – закръгляне надолу. Чрез код това може да стане с целочислено деление: `(i-1)/2` в C++, `(i-1)//2` в Python.
@@ -102,7 +102,7 @@ class TreeNode:
 
 Пример: `parent[] = {1, 5, 5, 2, 2, -1, 3}` – родителят на 0 е 1, родителят на 1 е 5 и т.н.
 
-<img width="500" alt="Parent array representation" src="images/parent_array.svg" />
+<img width="500" alt="Parent array representation" src="media/parent_array.svg" />
 
 ### Чрез children list (списък от деца)
 
@@ -150,7 +150,7 @@ tree = [
 
 **Визуализация:**
 
-<img width="520" alt="Children list representation" src="images/children_vector.svg" />
+<img width="520" alt="Children list representation" src="media/children_vector.svg" />
 
 **Типично използване:**
 
@@ -242,7 +242,7 @@ def bfs(root, tree):
 
 Примерно двоично дърво за търсене:
 
-<img width="500" alt="image" src="images/bst_example.svg" />
+<img width="500" alt="image" src="media/bst_example.svg" />
 
 ## BST operations (Операции в BST)
 [BST интерактивно](https://www.cs.usfca.edu/~galles/visualization/BST.html).
@@ -913,10 +913,10 @@ Level 2: 0 4 8
 #### Визуализация на операциите по балансиране
 Интерактивно: [AVL визуализация](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html).
 
-![AVL tree operations GIF](images/avl_tree_example.gif)
+![AVL tree operations GIF](media/avl_tree_example.gif)
 
 ### Различните случаи на дисбаланс и как се коригират чрез ротации:
-<img width="600" alt="image" src="images/avl_rotations.png" />
+<img width="600" alt="image" src="media/avl_rotations.png" />
 
 ### Balance Factor (Баланс фактор)
 
@@ -1529,6 +1529,6 @@ def insert(node, key):
 - Родителят на червен възел е винаги черен.
 - Възел с точно едно (не-NIL) дете е винаги черен, а детето му е червено.
 
-<img width="500" alt="Example of Red-Black tree" src="images/red_black_tree_example.png" />
+<img width="500" alt="Example of Red-Black tree" src="media/red_black_tree_example.png" />
 
 

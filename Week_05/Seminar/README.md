@@ -209,7 +209,7 @@ Sliding window е техника за оптимизация при задачи
 <details>
   <summary>Визуализация на това как би трябвало да работи Sliding Window Maximum</summary>
 
-  ![sliding_window_maximum](https://github.com/user-attachments/assets/2dc64aff-eefb-43b7-ae62-00f63d3aa429)
+  ![sliding_window_maximum](media/sliding_window_maximum.gif)
 
 </details>
 

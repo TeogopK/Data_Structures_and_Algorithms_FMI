@@ -21,7 +21,7 @@
 ### Какво е свързан списък
 Линейна структура от данни, чиито елементи не е задължително да са наредени последователно в паметта, а всеки елемент има указател към следващия.
 
-![image](https://github.com/user-attachments/assets/552c9370-4a1d-485d-8062-a9d27ff9d49b)
+![image](media/linked_list_example.png)
 
 Има различни имплементации:
 - с опашка
@@ -39,11 +39,11 @@
 
 | Array                                                                                                                               | LinkedList                                                                                                                          |
 | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| <img width="1317" height="594" alt="image" src="https://github.com/user-attachments/assets/c082c17e-8440-48fa-b245-8526f7fc46b1" /> | <img width="1304" height="601" alt="image" src="https://github.com/user-attachments/assets/3eab1fd6-23ea-4f22-965f-8077e2f9b0a6" /> |
+| <img width="1317" height="594" alt="image" src="media/array_memory.png" /> | <img width="1304" height="601" alt="image" src="media/linked_list_memory.png" /> |
 
 | Inserting a node                                                                                                                    | Removing a node                                                                                                                     |
 | ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| <img width="1280" height="336" alt="image" src="https://github.com/user-attachments/assets/4bdff99d-5da8-4850-bfb1-f7f2774189f4" /> | <img width="1278" height="574" alt="image" src="https://github.com/user-attachments/assets/5bc0a503-bed9-46d1-a386-395eab39ac2f" /> |
+| <img width="1280" height="336" alt="image" src="media/linked_list_insert.png" /> | <img width="1278" height="574" alt="image" src="media/linked_list_remove.png" /> |
 
 ### Преглед на имплементация на Singly linked list (Едносвързан списък)
 
@@ -654,7 +654,7 @@ void XORLinkedList<T>::print() const {
 ## Skip list
 Skip list е сортиран свързан списък с няколко нива („express lanes“), в които всяко по-горно ниво прескача част от елементите на по-долното, благодарение на което търсенето, добавянето и изтриването стават средно за $\mathcal{O}(\log n)$.
 
-![Skip list](images/skip_list.png)
+![Skip list](media/skip_list.png)
 
 - [Skip List (GeeksforGeeks)](https://www.geeksforgeeks.org/skip-list/)
 - [Skip Lists – лекция от CMU (PDF)](https://www.cs.cmu.edu/~ckingsf/bioinfo-lectures/skiplists.pdf)
