@@ -11,7 +11,7 @@
 ### Medium
 - [**Tree Top View**](https://www.hackerrank.com/challenges/tree-top-view/problem)
 - [**Convert Sorted Array To BST**](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
-- [**Maximum Level Sum Of Binary Tree**](https://leetcode.com/problems/maximum-level-sum-of-binary-tree/)
+- [**Maximum Level Sum Of Binary Tree**](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/description/)
 - [**Flatten Binary Tree To Linked List**](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/)
 - [**Self Balancing Tree**](https://www.hackerrank.com/challenges/self-balancing-tree/problem)
 - [**Validate Binary Search Tree**](https://leetcode.com/problems/validate-binary-search-tree/description/)
