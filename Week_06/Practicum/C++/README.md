@@ -6,7 +6,7 @@
 
 - [**Range Sum of BST**](https://leetcode.com/problems/range-sum-of-bst/description/)
 - [**Contains Duplicate II**](https://leetcode.com/problems/contains-duplicate-ii/description/)
-- [**Maximum Depth of Binary Tree**](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/)
+- [**Minimum Depth of Binary Tree**](https://leetcode.com/problems/minimum-depth-of-binary-tree/description/)
 
 ### Medium
 - [**Tree Top View**](https://www.hackerrank.com/challenges/tree-top-view/problem)
