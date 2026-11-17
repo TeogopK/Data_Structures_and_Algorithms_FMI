@@ -251,3 +251,5 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# LaTeX sources and PDFs of exam drafts
+Exams/Seminar/*/latex/
