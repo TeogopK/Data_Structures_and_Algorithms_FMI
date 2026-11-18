@@ -311,7 +311,6 @@ $$hash_{i+1} = (hash_i - s_i \cdot p^{k-1}) \cdot p + s_{i+k}$$
 - [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
   - сортиран масив/set срещу hash set
 - [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
-  - добра за live coding
 - [Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 - [Special Triples](https://www.hackerrank.com/contests/sda-hw-9-2022/challenges/challenge-3771/)
 - [Count Number of Bad Pairs](https://leetcode.com/problems/count-number-of-bad-pairs/)
