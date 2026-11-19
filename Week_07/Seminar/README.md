@@ -307,6 +307,9 @@ $$hash_{i+1} = (hash_i - s_i \cdot p^{k-1}) \cdot p + s_{i+k}$$
 - [Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/)
 - [Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/)
 
+- [Държавната администрация](https://www.hackerrank.com/contests/sda-2021-2022-test-7-final/challenges/challenge-1770/problem)
+- [Volleyball Friends](https://www.hackerrank.com/contests/sda-hw-8/challenges/volleyball-friends/problem)
+
 ### Medium
 - [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
   - сортиран масив/set срещу hash set
@@ -317,6 +320,11 @@ $$hash_{i+1} = (hash_i - s_i \cdot p^{k-1}) \cdot p + s_{i+k}$$
 - [K-diff Pairs in an Array](https://leetcode.com/problems/k-diff-pairs-in-an-array/)
 - [Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/)
   - техника rolling hash
+- [0-1 Subarray](https://www.hackerrank.com/contests/sda-homework-9/challenges/0-1-1)
+  - техника prefix sum
+
+
+[Решения](./Solutions/README.md)
 
 # Бонус
 

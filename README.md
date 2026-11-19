@@ -10,6 +10,7 @@
 | 04  | [Свързан списък](Week_04/Seminar) | [АД](Week_04/Practicum/Python) \ [СИ](Week_04/Practicum/C++) |   |[контролно 2](Exams/Seminar/Exam_02)|
 | 05  | [Стек и опашка](Week_05/Seminar) | [АД](Week_05/Practicum/Python) \ [СИ](Week_05/Practicum/C++) |   |  |
 | 06  | [Дървета](Week_06/Seminar) | [АД](Week_06/Practicum/Python) \ [СИ](Week_06/Practicum/C++)|   |[контролно 3](Exams/Seminar/Exam_03)|
+| 07  | [Хеш таблици](Week_07/Seminar) |  |   |  |
 
 ## Материали от минали години
 
